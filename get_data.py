@@ -27,6 +27,10 @@ def clean_output(text):
         '\u2088': '8',
         '\u2089': '9'
     }
+    
+    if text is None:
+        print('Debug: Received None as input')  # Debug print for verification
+        return None
 
     # Replace subscript numbers with normal ones
     for sub, norm in subscripts.items():
@@ -37,78 +41,176 @@ def clean_output(text):
 
     # Remove excessive spaces (e.g., around "100%")
     text = re.sub(r'\s+', ' ', text)
+    text = text.strip()
     
     return text
 
 
 def scrape_star_system(url):
-    """Scrapes the star system data from INARA the given url to the system"""
+    """Scrapes the star system data from INARA for the given system URL."""
+       
     response = requests.get(url)
     soup = BeautifulSoup(response.text, 'html.parser')
+    
     # Extract and clean system name
-    name = clean_output(soup.find('h2', class_='itemname').text.strip()).strip()
+    find_system_name = soup.find('h2', class_='itemname')
+    if not find_system_name:
+        raise ValueError("System name not found.")
+    system_name = clean_output(find_system_name.text.strip())
+    
     # Extract planet data
     planets = []
     tree_items = soup.find_all('li', class_='treeitem')
-
     for tree_item in tree_items:
         planet = {}
-
+   
         # Clean planet name (header)
-        planet['name'] = clean_output(tree_item.find('h3', class_='bodyname').text.strip()).strip()
-
+        find_planet_name = tree_item.find('h3', class_='bodyname')
+        if not find_planet_name:
+            raise ValueError("Planet name not found.")
+        planet['name'] = clean_output(find_planet_name.text.strip())
+        
         # Planet attributes
-        attributes = tree_item.find_all('div', class_='itempaircontainer')
-        for attr in attributes:
-            label = attr.find('div', class_='itempairlabel').text.strip().lower().replace(" ", "_")
-            value = clean_output(attr.find('div', class_='itempairvalue').text.strip()).strip()
-            planet[label] = value
+        planet['attributes'] = {}
+        find_attributes_tags = tree_item.find_all('div', class_='itempaircontainer')
+        if not find_planet_name or len(find_attributes_tags) < 10:
+            raise ValueError(f"Insufficient attributes for planet {planet['name']}. Expected 10, found {len(find_attributes_tags)}.")
+        for attr in find_attributes_tags:
+                    find_label_tag = attr.find('div', class_='itempairlabel')
+                    find_value_tag = attr.find('div', class_='itempairvalue')
 
-        # Resources
-        resources = [clean_output(res.text.strip()).strip() for res in tree_item.find_all('a', class_='tag')]
-        planet['resources'] = resources
+                    if not find_label_tag or not find_value_tag:
+                        print(f"Skipped attribute: {find_label_tag}{find_value_tag}")
+                        continue  # Skip if label or value is missing
 
-        # Biomes
-        biomes = [clean_output(biome.text.strip()).strip() for biome in tree_item.find_all('span', class_='tag minor')]
-        planet['biomes'] = [biome.split()[0] for biome in biomes]
+                    label = clean_output(find_label_tag.text.lower().replace(" ", "_").strip())
+                    value = clean_output(find_value_tag.text.strip())
+                    planet['attributes'][label] = value
+        
+         # Resources
+        planet['resources'] = []
+        find_resources_section = tree_item.find('span', string='Resources')
+        if find_resources_section:
+            resources_containers = []
+            # Iterate over the siblings after the Resources section
+            for sibling in find_resources_section.next_siblings:
+                if sibling.name == 'div' and 'tagcontainer' in sibling.get('class', []):
+                    resources_containers.append(sibling)
+                elif sibling.name == 'br':
+                    continue  # Skip <br> tags
+                elif sibling.name == 'span' and 'uppercase' in sibling.get('class', []):
+                    # We've reached the next section
+                    break
+            # Now collect resources from all containers
+            resources = []
+            for container in resources_containers:
+                resources.extend([clean_output(a_tag.text.strip()) for a_tag in container.find_all('a', class_='tag')])
+            planet['resources'] = resources
 
-        # Domesticable flora and fauna
-        planet['domesticable'] = {'flora': {}, 'fauna': {}}
-        domesticable_section = tree_item.find(string='domesticable')
-        if domesticable_section:
-            for item in domesticable_section.find_next('ul').find_all('li'):
-                color_class = item.find('span')['class']
-                value = clean_output(item.text.split('(')[1].split(')')[0].strip())
-                domesticable_name = clean_output(item.find('a').text.strip())
-                if 'npcfloracolor' in color_class:
-                    planet['domesticable']['flora'][value] = domesticable_name
-                elif 'npcfaunacolor' in color_class:
-                    planet['domesticable']['fauna'][value] = domesticable_name
 
-        # Gatherable flora and fauna
-        planet['gatherable'] = {'flora': {}, 'fauna': {}}
-        gatherable_section = tree_item.find(string='gatherable')
-        if gatherable_section:
-            for item in gatherable_section.find_next('ul').find_all('li'):
-                color_class = item.find('span')['class']
-                value = clean_output(item.text.split('(')[1].split(')')[0].strip())
-                gatherable_name = clean_output(item.find('a').text.strip())
-                if 'npcfloracolor' in color_class:
-                    planet['gatherable']['flora'][value] = gatherable_name
-                elif 'npcfaunacolor' in color_class:
-                    planet['gatherable']['fauna'][value] = gatherable_name
 
         # Traits
-        traits_section = tree_item.find(string='Traits')
-        if traits_section:
-            planet['traits'] = [clean_output(trait.text.strip()) for trait in traits_section.find_next('div', class_='tagcontainer').find_all('span', class_='tag')]
+        planet['traits'] = []
+        find_traits_section = tree_item.find(string='Traits')
+        if find_traits_section:
+            find_traits_container = find_traits_section.find_next('div', class_='tagcontainer')
+            if find_traits_container:
+                find_traits_tags = find_traits_container.find_all('span', class_='tag')
+                planet['traits'] = [clean_output(trait.text.strip()) for trait in find_traits_tags]
 
+        # Biomes
+        planet['biomes'] = []
+        find_biomes_section = tree_item.find(string='Biomes')
+        if find_biomes_section:
+            biomes_container = find_biomes_section.find_next('div', class_='tagcontainer')
+            if biomes_container:
+                biomes_tags = biomes_container.find_all('span', class_='tag minor')
+                biomes = [clean_output(biome.text.strip()) for biome in biomes_tags]
+                planet['biomes'] = [biome.split()[0] for biome in biomes]
+
+       
+        # Flora and Fauna Sections
+        # Initialize flora and fauna dictionaries with counts
+        flora_count = planet['attributes'].pop('flora', '0')
+        fauna_count = planet['attributes'].pop('fauna', '0')
+
+        planet['flora'] = {
+            'count': flora_count,
+            'domesticable': {},
+            'gatherable': {}
+        }
+
+        planet['fauna'] = {
+            'count': fauna_count,
+            'domesticable': {},
+            'gatherable': {}
+        }
+
+        for category in ['domesticable', 'gatherable']:
+            find_ff_section = tree_item.find(string=category)
+            if find_ff_section:
+                find_ff_list = find_ff_section.find_next('ul')
+                if find_ff_list:
+                    find_ff_items = find_ff_list.find_all('li')
+                    for item in find_ff_items:
+                        span_tag = item.find('span')
+                        if not span_tag or 'class' not in span_tag.attrs:
+                            continue  # Skip if span tag or class not found
+                        color_class = span_tag['class']
+                        
+                        # Extract the resource and source
+                        try:
+                            organic_resource = clean_output(item.text.split('(')[1].split(')')[0])
+                        except IndexError:
+                            continue  # Skip if the format is unexpected
+                        resource_source_tag = item.find('a')
+                        if not resource_source_tag:
+                            continue  # Skip if resource source not found
+                        resource_source = clean_output(resource_source_tag.text.strip())
+                        
+                        # Assign to flora or fauna directly
+                        if 'npcfloracolor' in color_class:
+                            planet['flora'][category][organic_resource] = resource_source
+                        elif 'npcfaunacolor' in color_class:
+                            planet['fauna'][category][organic_resource] = resource_source
+
+
+        # Initialize moon attributes
+        planet['isMoon'] = False
+        planet['moons'] = []
+        
+         # Check for moons
+        find_moons = tree_item.find_next_sibling('ul', class_='treelevel treeitem')
+        if find_moons:
+            planet['hasMoon'] = True
+            find_moons_items = find_moons.find_all('li', class_='treeitem')
+            for moon_item in find_moons_items:
+                find_moon_name_name = moon_item.find('h3', class_='bodyname')
+                if not find_moon_name_name:
+                    continue
+                moon_name = clean_output(find_moon_name_name.text.strip())
+                planet['moons'].append(moon_name)
+        else:
+            planet['hasMoon'] = False
+        
         planets.append(planet)
 
+    # Update isMoon attribute for moons
+    for planet in planets:
+        if planet['name'] in [moon for p in planets for moon in p['moons']]:
+            planet['isMoon'] = True
+
+    # Get rid of errant empty moons key
+        if planet['hasMoon'] == False:
+            if planet['moons']: 
+                del planet['moons']
+
     return {
-        'name': name,
+        'name': system_name,
         'planets': planets
     }
+
+
 
 def process_resources(planet, organic_dict, inorganic_dict):
     """
@@ -121,37 +223,12 @@ def process_resources(planet, organic_dict, inorganic_dict):
     special = []
     unknown = []
 
-    # Resources to be pulled into special
-    special_resources = ['Aqueous Hematite', 'Caelumite']
-
-    # Gatherable resources
-    gatherable_resources = set()
-    gatherable = planet.get('gatherable', {})
-    
-    # Collecting gatherable flora
-    for flora, name in gatherable.get('flora', {}).items():
-        gatherable_resources.add(flora)
-        
-    # Collecting gatherable fauna
-    for fauna, name in gatherable.get('fauna', {}).items():
-        gatherable_resources.add(fauna)
-
-    # Domesticable resources
-    domesticable_resources = set()
-    domesticable = planet.get('domesticable', {})
-    
-    # Collecting domesticable flora
-    for flora, name in domesticable.get('flora', {}).items():
-        domesticable_resources.add(flora)
-        
-    # Collecting domesticable fauna
-    for fauna, name in domesticable.get('fauna', {}).items():
-        domesticable_resources.add(fauna)
+    domesticable, gatherable = get_gatherable_domesticable(planet)
 
     # Process each resource
     for resource in planet.get('resources', []):
         cleaned_resource = clean_output(resource)
-        if cleaned_resource in special_resources:
+        if cleaned_resource in GATHERABLE_INORGANIC:
             special.append(resource)  # Add to special instead of inorganic
         elif cleaned_resource in inorganic_dict:
             inorganic.append(inorganic_dict[cleaned_resource]['Resource'])
@@ -161,25 +238,26 @@ def process_resources(planet, organic_dict, inorganic_dict):
             unknown.append(resource)
 
     # Remove gatherable resources that are not domesticable from the organic list
-    organic = [res for res in organic if res not in gatherable_resources or res in domesticable_resources]
+    organic = [res for res in organic if res not in gatherable or res in domesticable]
 
     resources = {
         'inorganic': inorganic,
         'organic': organic,
-        'special': special,
     }
+    if special: 
+        resources['special'] = special
     if unknown:
         resources['unknown'] = unknown
 
     planet['resources'] = resources
 
 
-def classify_planet_type(planet):
-    if "giant" in planet['planet_type'].lower():
-        planet['planet_type'] = ['Jovian', planet['planet_type']]
+def classify_planet_type(planet_type):
+    if "giant" in planet_type.lower():
+        new_planet_type = ['Jovian', planet_type]
     else:
-        planet['planet_type'] = ['Terrestrial', planet['planet_type']]
-    return planet
+        new_planet_type = ['Terrestrial', planet_type]
+    return  new_planet_type
 
 def standardize_atmosphere(atmosphere):
     atmosphere = atmosphere.replace('Extr', 'Extreme').replace('Std', 'Standard')
@@ -195,7 +273,11 @@ def standardize_atmosphere(atmosphere):
         }
     return {'density': 'None', 'type': 'None', 'property': None}
 
-def standardize_day_length(day_length): 
+def standardize_day_length(day_length):
+    # Replace '-' with '0'
+    day_length = re.sub(r'-', '0', day_length)
+
+    # Convert day_length to hours
     if 'days' in day_length:
         day_length = float(day_length.split()[0]) * 24  # Convert days to hours
     elif 'hours' in day_length:
@@ -203,30 +285,39 @@ def standardize_day_length(day_length):
 
     return f"{day_length} hours"
 
-def clean_metadata(planet): 
 
-    if 'planetary_habitation' in planet:
-        # Convert "Rank X required" to just "X"
-        match = re.search(r'Rank (\d)', planet['planetary_habitation'])
+def clean_attributes(attributes):
+
+    # Convert "Rank X required" in planetary_habitation to just "X"
+    if 'planetary_habitation' in attributes:
+        match = re.search(r'Rank (\d)', attributes['planetary_habitation'])
         if match:
-            planet['planetary_habitation'] = match.group(1)  # Extract the number
-        elif planet['planetary_habitation'] == '-':
-            planet['planetary_habitation'] = '0'
+            attributes['planetary_habitation'] = match.group(1)
+        elif attributes['planetary_habitation'] == '-':
+            attributes['planetary_habitation'] = '0'
         else:
-            planet['planetary_habitation'] = str(planet['planetary_habitation']).strip()
+            attributes['planetary_habitation'] = str(attributes['planetary_habitation']).strip()
 
-    
-    if 'planet_type' in planet: 
-        planet = classify_planet_type(planet)
+    # Classify planet type
+    if 'planet_type' in attributes:
+        attributes['planet_type'] = classify_planet_type(attributes['planet_type'])
 
-    if 'gravity' in planet:
-        planet['gravity'] = planet['gravity'].replace(' ', '')
-        
-    if 'atmosphere' in planet:
-        planet['atmosphere'] = standardize_atmosphere(planet['atmosphere'])
+    # Clean up gravity
+    if 'gravity' in attributes:
+        attributes['gravity'] = attributes['gravity'].replace(' ', '')
 
-    if 'day_length' in planet:
-        planet['day_length'] = standardize_day_length(planet['day_length'])
+    # Standardize atmosphere
+    if 'atmosphere' in attributes:
+        attributes['atmosphere'] = standardize_atmosphere(attributes['atmosphere'])
+
+    # Standardize day length
+    if 'day_length' in attributes:
+        attributes['day_length'] = standardize_day_length(attributes['day_length'])
+
+    # Update planet with modified attributes
+
+    return attributes
+
 
 
 
@@ -235,16 +326,11 @@ if __name__ == '__main__':
     inorganic_dict = load_resources(INORGANIC_DATA_PATH, shortname=True)
     organic_dict = load_resources(ORGANIC_DATA_PATH, shortname=True)
 
-    if os.path.exists(RAW_SYSTEM_DATA_PATH):
-        with open(RAW_SYSTEM_DATA_PATH, 'r') as f:
-            all_system_data = json.load(f)
-        system_ids = {system['id'] for system in all_system_data}
-    else:
-        all_system_data = []
-        system_ids = set()
+    all_systems = load_system_data(RAW_SYSTEM_DATA_PATH)
+    system_ids = {system['id'] for system in all_systems}
 
     new_data = []
-    for system_id in range(1, 2):  # Inclusive of 1 to 122
+    for system_id in range(1, 123):  # Inclusive of 1 to 122
         if system_id in system_ids:
             continue
 
@@ -253,24 +339,9 @@ if __name__ == '__main__':
         try:
             system_data = scrape_star_system(inara_url)
             system_data['id'] = system_id  # Add ID
-
-            if not isinstance(system_data, dict):
-                raise TypeError('Expected a dictionary for system_data')
-            if 'name' not in system_data:
-                raise KeyError('Missing key: name')
-            if 'planets' not in system_data or not isinstance(system_data['planets'], list):
-                raise KeyError('Missing key: planets')
-
             for planet in system_data['planets']:
-
-                
-                if not isinstance(planet, dict):
-                    raise TypeError('Expected a dictionary for planet data')
-                if 'name' not in planet:
-                    raise KeyError(f'Missing key in planet data: {planet}')
-
                 process_resources(planet, organic_dict, inorganic_dict)
-                clean_metadata(planet)
+                clean_attributes(planet.get('attributes', {}))
 
             print(f'System Name Processed: {system_data["name"]}') 
             new_data.append(system_data)
@@ -282,11 +353,8 @@ if __name__ == '__main__':
 
         sleep(5)
 
-    all_system_data.extend(new_data)           
-
-
-    with open(RAW_SYSTEM_DATA_PATH, 'w') as output_file:
-        json.dump(all_system_data, output_file, indent=4)
+    all_systems.extend(new_data)           
+    save_system_data(RAW_SYSTEM_DATA_PATH, all_systems)
 
 
 

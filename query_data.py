@@ -14,10 +14,15 @@ def get_unique_values(planets, parameter):
             if atmosphere:
                 unique_values.add(f"{atmosphere['density']} {atmosphere['type']}")
         else:
-            if parameter in planet:
-                unique_values.add(planet[parameter])
+            value = planet.get(parameter)
+            if value:
+                if isinstance(value, list):
+                    unique_values.update(value)  # Add all items in the list
+                else:
+                    unique_values.add(value)  # Add single value
                 
     return unique_values
+
 
 def get_min_max(planets, parameter):
     """Return the planet name with the min and max values for a numerical parameter like gravity or day_length."""
@@ -134,17 +139,17 @@ def top_n_planets(planets, score_type, n=10):
     return [(planet['name'], float(planet['scores'].get(score_type, 0))) for planet in sorted_planets[:n]]
 
 if __name__ == '__main__':
-    systems = load_planets('data/3_scored_systems_data.json')
+    systems = load_system_data(RAW_SYSTEM_DATA_PATH)
     planets = [planet for system in systems for planet in system['planets']]
     
-    VALUES = False
+    VALUES = True
     FUN_FACTS = False
     HIGHS_AND_LOWS = False
     TOP_10S = False
 
     
     if VALUES:
-        planet_fields = ['planet_type', 'temperature', 'atmosphere', 'magnetosphere', 'water']
+        planet_fields = ['planet_type', 'temperature', 'atmosphere', 'magnetosphere', 'water', 'biomes']
         print('----- Unique Values -----')
         for value in planet_fields: 
             print(f"Unique {value}:", get_unique_values(planets, value))

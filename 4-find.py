@@ -37,6 +37,7 @@ def flatten_and_filter_resource_groups(data, unique_resource):
                     # Add to the result with the combined key
                     if filtered_combined:  # Only add if not empty
                         result[f"{sub_key}"] = filtered_combined
+    print(json.dumps(result, indent=4))
     return result
 
 
@@ -228,7 +229,7 @@ if __name__ == '__main__':
     inorganic_dict = load_resources('data/inorganic.csv', shortname=False)
     inorganic_groups = load_resource_groups('data/inorganic_groups.json')
     organic_dict = load_resources('data/organic.csv', shortname=False)
-    systems = load_planets('data/3_scored_systems_data.json')
+    #systems = load_planets('data/3_scored_systems_data.json')
     unique_resources = {resource for resource, rarity in inorganic_dict.items() if rarity == 'Unique'}
     inorganic_groups_flat = flatten_and_filter_resource_groups(inorganic_groups, unique_resources)
 
