@@ -62,20 +62,27 @@ def score_planet(planet, inorganic_dict, organic_dict):
 
 
 def score_system(system, inorganic_dict, organic_dict):
+    all_inorganic_resources = set()
+    all_organic_resources = set()
+
+
     for planet in system['planets']:
         # Calculate scores for each planet
         planet_scores = score_planet(planet, inorganic_dict, organic_dict)
         planet['scores'] = planet_scores  # Append scores to the planet
 
+        # Merge resources into sets for system score
+        all_inorganic_resources.update(planet['resources']['inorganic'])
+        all_organic_resources.update(planet['resources']['organic'])
+
     # Calculate system-level scores based on planets
-    inorganic_system_score = sum(float(planet['scores']['inorganic_score']) for planet in system['planets']) / len(system['planets']) if system['planets'] else 0
-    organic_system_score = sum(float(planet['scores']['organic_score']) for planet in system['planets']) / len(system['planets']) if system['planets'] else 0
-    system_resource_score = inorganic_system_score + organic_system_score
+    system_inorganic_score = score_resources(list(all_inorganic_resources), inorganic_dict) + (int('Helium-3' in planet['resources']['inorganic'])*10)
+    system_organic_score = score_resources(list(all_organic_resources), organic_dict)
 
     return {
-        'resource_score': f"{round(system_resource_score, 3):.3f}",
-        'organic_score': f"{round(organic_system_score, 3):.3f}",
-        'inorganic_score': f"{round(inorganic_system_score, 3):.3f}"
+        'resource_score': f"{round(system_organic_score + system_inorganic_score, 3):.3f}",
+        'organic_score': f"{round(system_organic_score, 3):.3f}",
+        'inorganic_score': f"{round(system_inorganic_score, 3):.3f}"
     }
 
 if __name__ == '__main__':

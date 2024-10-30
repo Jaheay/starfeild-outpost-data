@@ -121,7 +121,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -252,13 +252,15 @@
                     "Boiled"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "1.500",
+                    "resource_score": "3.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "1.500"
+                    "inorganic_score": "3.000"
                 }
             },
             {
@@ -356,14 +358,15 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
+                        "Aluminium": 1,
                         "Chlorine-Main": 2
                     }
                 },
                 "scores": {
                     "habitability_score": "4.000",
-                    "resource_score": "17.400",
+                    "resource_score": "19.200",
                     "organic_score": "12.000",
-                    "inorganic_score": "5.400"
+                    "inorganic_score": "7.200"
                 }
             },
             {
@@ -400,7 +403,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -444,7 +447,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -967,9 +970,9 @@
         "id": 1,
         "name": "Porrima",
         "scores": {
-            "resource_score": "12.338",
-            "organic_score": "1.381",
-            "inorganic_score": "10.958"
+            "resource_score": "97.000",
+            "organic_score": "20.000",
+            "inorganic_score": "77.000"
         }
     },
     {
@@ -1071,7 +1074,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -1171,7 +1174,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -1215,7 +1218,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -1361,9 +1364,9 @@
         "id": 2,
         "name": "Kryx",
         "scores": {
-            "resource_score": "9.770",
-            "organic_score": "0.625",
-            "inorganic_score": "9.145"
+            "resource_score": "43.000",
+            "organic_score": "4.000",
+            "inorganic_score": "39.000"
         }
     },
     {
@@ -1401,7 +1404,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -1711,7 +1714,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -1844,9 +1847,9 @@
         "id": 3,
         "name": "Volii",
         "scores": {
-            "resource_score": "6.584",
-            "organic_score": "0.909",
-            "inorganic_score": "5.675"
+            "resource_score": "38.000",
+            "organic_score": "10.000",
+            "inorganic_score": "28.000"
         }
     },
     {
@@ -2058,7 +2061,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -2099,13 +2102,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -2141,7 +2146,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -2295,13 +2300,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -2460,9 +2467,9 @@
         "id": 4,
         "name": "Olympus",
         "scores": {
-            "resource_score": "8.629",
-            "organic_score": "1.692",
-            "inorganic_score": "6.936"
+            "resource_score": "71.000",
+            "organic_score": "22.000",
+            "inorganic_score": "49.000"
         }
     },
     {
@@ -2631,7 +2638,7 @@
                 "resource_groups": {
                     "inorganic": {
                         "Iron": 1,
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -2677,14 +2684,15 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
+                        "Aluminium": 1,
                         "Uranium": 2
                     }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "4.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "4.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -2763,7 +2771,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -2807,14 +2815,15 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
+                        "Aluminium": 1,
                         "Lead-Main": 1
                     }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "4.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "4.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -2851,7 +2860,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -3062,14 +3071,15 @@
                 "resource_groups": {
                     "inorganic": {
                         "Argon": 2,
+                        "Aluminium": 1,
                         "Nickel": 1
                     }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "4.500",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "4.500"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -3181,9 +3191,9 @@
         "id": 5,
         "name": "Narion",
         "scores": {
-            "resource_score": "16.171",
-            "organic_score": "1.533",
-            "inorganic_score": "14.638"
+            "resource_score": "108.000",
+            "organic_score": "19.000",
+            "inorganic_score": "89.000"
         }
     },
     {
@@ -3426,7 +3436,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -3569,7 +3579,7 @@
                 "resource_groups": {
                     "inorganic": {
                         "Iron": 3,
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Lead-Main": 1
                     }
                 },
@@ -3657,7 +3667,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -3743,7 +3753,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -3757,9 +3767,9 @@
         "id": 6,
         "name": "Linnaeus",
         "scores": {
-            "resource_score": "11.763",
-            "organic_score": "1.917",
-            "inorganic_score": "9.846"
+            "resource_score": "92.000",
+            "organic_score": "23.000",
+            "inorganic_score": "69.000"
         }
     },
     {
@@ -3837,13 +3847,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -3925,7 +3937,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -3969,7 +3981,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -4125,13 +4137,15 @@
                     "Bolide"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "1.500",
+                    "resource_score": "3.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "1.500"
+                    "inorganic_score": "3.000"
                 }
             },
             {
@@ -4262,7 +4276,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -4844,22 +4858,24 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             }
         ],
         "id": 7,
         "name": "Lunara",
         "scores": {
-            "resource_score": "8.985",
-            "organic_score": "0.560",
-            "inorganic_score": "8.425"
+            "resource_score": "90.000",
+            "organic_score": "14.000",
+            "inorganic_score": "76.000"
         }
     },
     {
@@ -4952,13 +4968,15 @@
                     "Boiled"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "1.500",
+                    "resource_score": "3.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "1.500"
+                    "inorganic_score": "3.000"
                 }
             },
             {
@@ -5158,13 +5176,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -5456,9 +5476,9 @@
         "id": 8,
         "name": "Alpha Centauri",
         "scores": {
-            "resource_score": "8.788",
-            "organic_score": "2.583",
-            "inorganic_score": "6.204"
+            "resource_score": "65.000",
+            "organic_score": "22.000",
+            "inorganic_score": "43.000"
         }
     },
     {
@@ -5496,7 +5516,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -6730,9 +6750,9 @@
         "id": 9,
         "name": "Sol",
         "scores": {
-            "resource_score": "7.236",
+            "resource_score": "54.000",
             "organic_score": "0.000",
-            "inorganic_score": "7.236"
+            "inorganic_score": "54.000"
         }
     },
     {
@@ -6849,14 +6869,15 @@
                 "resource_groups": {
                     "inorganic": {
                         "Argon": 2,
+                        "Aluminium": 1,
                         "Nickel": 2
                     }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "29.000",
+                    "resource_score": "30.333",
                     "organic_score": "25.000",
-                    "inorganic_score": "4.000"
+                    "inorganic_score": "5.333"
                 }
             },
             {
@@ -6911,7 +6932,7 @@
                     "inorganic": {
                         "Argon": 2,
                         "Iron": 2,
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Chlorine-Main": 1
                     }
                 },
@@ -6961,6 +6982,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
+                        "Aluminium": 1,
                         "Uranium": 1,
                         "Nickel": 1,
                         "Lead-Main": 1,
@@ -6969,9 +6991,9 @@
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "10.000",
+                    "resource_score": "12.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "10.000"
+                    "inorganic_score": "12.000"
                 }
             },
             {
@@ -7011,7 +7033,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -7113,7 +7135,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -7198,7 +7220,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -7241,7 +7263,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -7478,15 +7500,16 @@
                 "resource_groups": {
                     "inorganic": {
                         "Argon": 3,
+                        "Aluminium": 1,
                         "Nickel": 2,
                         "Chlorine-Main": 1
                     }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "26.500",
+                    "resource_score": "28.125",
                     "organic_score": "20.000",
-                    "inorganic_score": "6.500"
+                    "inorganic_score": "8.125"
                 }
             },
             {
@@ -8212,14 +8235,15 @@
                 "resource_groups": {
                     "inorganic": {
                         "Iron": 2,
+                        "Aluminium": 1,
                         "Copper-Main": 2
                     }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "16.000",
+                    "resource_score": "20.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "16.000"
+                    "inorganic_score": "20.000"
                 }
             },
             {
@@ -8365,9 +8389,9 @@
         "id": 10,
         "name": "Cheyenne",
         "scores": {
-            "resource_score": "11.628",
-            "organic_score": "1.829",
-            "inorganic_score": "9.799"
+            "resource_score": "139.000",
+            "organic_score": "40.000",
+            "inorganic_score": "99.000"
         }
     },
     {
@@ -8512,13 +8536,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -8552,13 +8578,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -8595,7 +8623,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -8674,7 +8702,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -8914,7 +8942,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -8958,7 +8986,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -8999,13 +9027,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -9042,7 +9072,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -9085,7 +9115,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -9313,9 +9343,9 @@
         "id": 11,
         "name": "Piazzi",
         "scores": {
-            "resource_score": "10.676",
-            "organic_score": "0.667",
-            "inorganic_score": "10.010"
+            "resource_score": "82.000",
+            "organic_score": "19.000",
+            "inorganic_score": "63.000"
         }
     },
     {
@@ -9563,14 +9593,15 @@
                     "inorganic": {
                         "Argon": 3,
                         "Iron": 2,
+                        "Aluminium": 1,
                         "Chlorine-Main": 1
                     }
                 },
                 "scores": {
                     "habitability_score": "3.000",
-                    "resource_score": "25.778",
+                    "resource_score": "27.222",
                     "organic_score": "20.000",
-                    "inorganic_score": "5.778"
+                    "inorganic_score": "7.222"
                 }
             },
             {
@@ -9704,9 +9735,9 @@
         "id": 12,
         "name": "Algorab",
         "scores": {
-            "resource_score": "8.145",
-            "organic_score": "3.250",
-            "inorganic_score": "4.895"
+            "resource_score": "45.000",
+            "organic_score": "22.000",
+            "inorganic_score": "23.000"
         }
     },
     {
@@ -9846,13 +9877,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -9927,15 +9960,16 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
+                        "Aluminium": 1,
                         "Lead-Main": 1,
                         "Lead-Tungsten": 1
                     }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "9.333",
+                    "resource_score": "11.667",
                     "organic_score": "0.000",
-                    "inorganic_score": "9.333"
+                    "inorganic_score": "11.667"
                 }
             },
             {
@@ -9969,13 +10003,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -10017,7 +10053,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2,
+                        "Aluminium": 3,
                         "Nickel": 3
                     }
                 },
@@ -10737,13 +10773,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -10955,9 +10993,9 @@
         "id": 13,
         "name": "Alchiba",
         "scores": {
-            "resource_score": "8.155",
+            "resource_score": "67.000",
             "organic_score": "0.000",
-            "inorganic_score": "8.155"
+            "inorganic_score": "67.000"
         }
     },
     {
@@ -11038,7 +11076,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -11082,7 +11120,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -11330,7 +11368,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -11546,7 +11584,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -11743,7 +11781,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -11786,7 +11824,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -11844,9 +11882,9 @@
         "id": 14,
         "name": "Al-Battani",
         "scores": {
-            "resource_score": "8.290",
-            "organic_score": "0.900",
-            "inorganic_score": "7.390"
+            "resource_score": "69.000",
+            "organic_score": "18.000",
+            "inorganic_score": "51.000"
         }
     },
     {
@@ -11892,7 +11930,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -11933,13 +11971,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -11973,13 +12013,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -12013,13 +12055,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -12315,9 +12359,9 @@
         "id": 15,
         "name": "Aranae",
         "scores": {
-            "resource_score": "4.939",
-            "organic_score": "0.000",
-            "inorganic_score": "4.939"
+            "resource_score": "19.000",
+            "organic_score": "4.000",
+            "inorganic_score": "15.000"
         }
     },
     {
@@ -12917,9 +12961,9 @@
         "id": 16,
         "name": "Zosma",
         "scores": {
-            "resource_score": "6.531",
-            "organic_score": "1.538",
-            "inorganic_score": "4.993"
+            "resource_score": "59.000",
+            "organic_score": "20.000",
+            "inorganic_score": "39.000"
         }
     },
     {
@@ -13820,9 +13864,9 @@
         "id": 17,
         "name": "Zelazny",
         "scores": {
-            "resource_score": "13.183",
-            "organic_score": "2.667",
-            "inorganic_score": "10.516"
+            "resource_score": "124.000",
+            "organic_score": "40.000",
+            "inorganic_score": "84.000"
         }
     },
     {
@@ -13864,7 +13908,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -14038,7 +14082,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Uranium": 2,
                         "Nickel": 2
                     }
@@ -14125,7 +14169,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -14166,13 +14210,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -14263,13 +14309,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -14616,7 +14664,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2,
+                        "Aluminium": 3,
                         "Chlorine-Main": 1
                     }
                 },
@@ -14631,9 +14679,9 @@
         "id": 18,
         "name": "Freya",
         "scores": {
-            "resource_score": "11.080",
-            "organic_score": "1.941",
-            "inorganic_score": "9.139"
+            "resource_score": "105.000",
+            "organic_score": "32.000",
+            "inorganic_score": "73.000"
         }
     },
     {
@@ -14681,7 +14729,7 @@
                 "resource_groups": {
                     "inorganic": {
                         "Iron": 1,
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Uranium": 2
                     }
                 },
@@ -14778,13 +14826,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -14870,7 +14920,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -14996,7 +15046,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -15037,13 +15087,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -15368,14 +15420,15 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
+                        "Aluminium": 1,
                         "Copper-Main": 1
                     }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "5.000",
+                    "resource_score": "6.667",
                     "organic_score": "0.000",
-                    "inorganic_score": "5.000"
+                    "inorganic_score": "6.667"
                 }
             },
             {
@@ -15727,7 +15780,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Lead-Main": 1,
                         "Copper-Main": 1
                     }
@@ -15795,9 +15848,9 @@
         "id": 19,
         "name": "Groombridge",
         "scores": {
-            "resource_score": "7.043",
-            "organic_score": "0.885",
-            "inorganic_score": "6.159"
+            "resource_score": "84.000",
+            "organic_score": "27.000",
+            "inorganic_score": "57.000"
         }
     },
     {
@@ -15884,13 +15937,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -15926,7 +15981,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -16025,7 +16080,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -16092,14 +16147,15 @@
                 "resource_groups": {
                     "inorganic": {
                         "Argon": 3,
+                        "Aluminium": 1,
                         "Nickel": 2
                     }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "14.222",
+                    "resource_score": "15.778",
                     "organic_score": "8.000",
-                    "inorganic_score": "6.222"
+                    "inorganic_score": "7.778"
                 }
             },
             {
@@ -16147,14 +16203,15 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Argon": 1
+                        "Argon": 1,
+                        "Aluminium": 1
                     }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "12.200",
+                    "resource_score": "12.800",
                     "organic_score": "11.000",
-                    "inorganic_score": "1.200"
+                    "inorganic_score": "1.800"
                 }
             },
             {
@@ -16189,13 +16246,15 @@
                     "Bolide"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "1.500",
+                    "resource_score": "3.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "1.500"
+                    "inorganic_score": "3.000"
                 }
             },
             {
@@ -16663,9 +16722,9 @@
         "id": 20,
         "name": "Syrma",
         "scores": {
-            "resource_score": "7.875",
-            "organic_score": "1.778",
-            "inorganic_score": "6.098"
+            "resource_score": "81.000",
+            "organic_score": "20.000",
+            "inorganic_score": "61.000"
         }
     },
     {
@@ -16920,7 +16979,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -17011,9 +17070,9 @@
         "id": 21,
         "name": "Nirvana",
         "scores": {
-            "resource_score": "10.531",
-            "organic_score": "3.714",
-            "inorganic_score": "6.816"
+            "resource_score": "64.000",
+            "organic_score": "26.000",
+            "inorganic_score": "38.000"
         }
     },
     {
@@ -17203,7 +17262,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -17709,13 +17768,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -17821,9 +17882,9 @@
         "id": 22,
         "name": "Verne",
         "scores": {
-            "resource_score": "9.447",
-            "organic_score": "0.941",
-            "inorganic_score": "8.506"
+            "resource_score": "109.000",
+            "organic_score": "16.000",
+            "inorganic_score": "93.000"
         }
     },
     {
@@ -18228,7 +18289,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -18656,7 +18717,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -19114,9 +19175,9 @@
         "id": 23,
         "name": "Kumasi",
         "scores": {
-            "resource_score": "13.042",
-            "organic_score": "2.500",
-            "inorganic_score": "10.542"
+            "resource_score": "161.000",
+            "organic_score": "52.000",
+            "inorganic_score": "109.000"
         }
     },
     {
@@ -19203,7 +19264,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -19451,9 +19512,9 @@
         "id": 24,
         "name": "Rasalhague",
         "scores": {
-            "resource_score": "7.864",
-            "organic_score": "1.000",
-            "inorganic_score": "6.864"
+            "resource_score": "54.000",
+            "organic_score": "7.000",
+            "inorganic_score": "47.000"
         }
     },
     {
@@ -19489,13 +19550,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -19586,7 +19649,7 @@
                 "resource_groups": {
                     "inorganic": {
                         "Iron": 2,
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Chlorine-Main": 1
                     }
                 },
@@ -19824,9 +19887,9 @@
         "id": 25,
         "name": "Alpha Andraste",
         "scores": {
-            "resource_score": "10.905",
-            "organic_score": "3.429",
-            "inorganic_score": "7.476"
+            "resource_score": "70.000",
+            "organic_score": "27.000",
+            "inorganic_score": "43.000"
         }
     },
     {
@@ -20071,7 +20134,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -20114,7 +20177,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -20386,7 +20449,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -20442,9 +20505,9 @@
         "id": 26,
         "name": "Altair",
         "scores": {
-            "resource_score": "8.776",
-            "organic_score": "1.000",
-            "inorganic_score": "7.776"
+            "resource_score": "75.000",
+            "organic_score": "13.000",
+            "inorganic_score": "62.000"
         }
     },
     {
@@ -20643,9 +20706,9 @@
         "id": 27,
         "name": "Arcturus",
         "scores": {
-            "resource_score": "9.192",
-            "organic_score": "5.000",
-            "inorganic_score": "4.192"
+            "resource_score": "34.000",
+            "organic_score": "20.000",
+            "inorganic_score": "14.000"
         }
     },
     {
@@ -20913,7 +20976,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -20955,13 +21018,15 @@
                     "Bolide"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "1.500",
+                    "resource_score": "3.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "1.500"
+                    "inorganic_score": "3.000"
                 }
             },
             {
@@ -21598,9 +21663,9 @@
         "id": 28,
         "name": "Bardeen",
         "scores": {
-            "resource_score": "15.113",
-            "organic_score": "3.350",
-            "inorganic_score": "11.763"
+            "resource_score": "143.000",
+            "organic_score": "60.000",
+            "inorganic_score": "83.000"
         }
     },
     {
@@ -21875,24 +21940,25 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
+                        "Aluminium": 1,
                         "Nickel": 1,
                         "Chlorine-Main": 2
                     }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "5.333",
+                    "resource_score": "6.667",
                     "organic_score": "0.000",
-                    "inorganic_score": "5.333"
+                    "inorganic_score": "6.667"
                 }
             }
         ],
         "id": 29,
         "name": "Beta Ternion",
         "scores": {
-            "resource_score": "18.711",
-            "organic_score": "13.400",
-            "inorganic_score": "5.311"
+            "resource_score": "89.000",
+            "organic_score": "46.000",
+            "inorganic_score": "43.000"
         }
     },
     {
@@ -22062,7 +22128,7 @@
                 "resource_groups": {
                     "inorganic": {
                         "Iron": 3,
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Chlorine-Main": 2
                     }
                 },
@@ -22244,13 +22310,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -22611,9 +22679,9 @@
         "id": 30,
         "name": "Enlil",
         "scores": {
-            "resource_score": "9.111",
-            "organic_score": "1.933",
-            "inorganic_score": "7.178"
+            "resource_score": "90.000",
+            "organic_score": "29.000",
+            "inorganic_score": "61.000"
         }
     },
     {
@@ -22988,7 +23056,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -23244,7 +23312,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -23564,9 +23632,9 @@
         "id": 31,
         "name": "Jaffa",
         "scores": {
-            "resource_score": "10.350",
-            "organic_score": "1.650",
-            "inorganic_score": "8.700"
+            "resource_score": "119.000",
+            "organic_score": "26.000",
+            "inorganic_score": "93.000"
         }
     },
     {
@@ -23662,13 +23730,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -23734,14 +23804,15 @@
                     "inorganic": {
                         "Argon": 3,
                         "Iron": 1,
+                        "Aluminium": 1,
                         "Chlorine-Main": 2
                     }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "32.000",
+                    "resource_score": "33.500",
                     "organic_score": "26.000",
-                    "inorganic_score": "6.000"
+                    "inorganic_score": "7.500"
                 }
             },
             {
@@ -23828,13 +23899,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -24051,7 +24124,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Copper-Main": 1
                     }
                 },
@@ -24182,7 +24255,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Uranium": 2,
                         "Nickel": 2
                     }
@@ -24243,9 +24316,9 @@
         "id": 32,
         "name": "Moloch",
         "scores": {
-            "resource_score": "9.907",
-            "organic_score": "1.857",
-            "inorganic_score": "8.049"
+            "resource_score": "79.000",
+            "organic_score": "26.000",
+            "inorganic_score": "53.000"
         }
     },
     {
@@ -24417,7 +24490,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -24509,7 +24582,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -24654,6 +24727,7 @@
                 "resource_groups": {
                     "inorganic": {
                         "Argon": 2,
+                        "Aluminium": 1,
                         "Lead-Main": 1,
                         "Copper-Main": 2,
                         "Copper-Gold": 1
@@ -24661,9 +24735,9 @@
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "22.500",
+                    "resource_score": "24.200",
                     "organic_score": "14.000",
-                    "inorganic_score": "8.500"
+                    "inorganic_score": "10.200"
                 }
             },
             {
@@ -24962,13 +25036,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -25160,9 +25236,9 @@
         "id": 33,
         "name": "Nemeria",
         "scores": {
-            "resource_score": "12.712",
-            "organic_score": "1.842",
-            "inorganic_score": "10.870"
+            "resource_score": "107.000",
+            "organic_score": "26.000",
+            "inorganic_score": "81.000"
         }
     },
     {
@@ -25204,7 +25280,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Uranium": 1,
                         "Nickel": 1
                     }
@@ -25493,9 +25569,9 @@
         "id": 34,
         "name": "Nirah",
         "scores": {
-            "resource_score": "6.833",
-            "organic_score": "3.143",
-            "inorganic_score": "3.690"
+            "resource_score": "43.000",
+            "organic_score": "22.000",
+            "inorganic_score": "21.000"
         }
     },
     {
@@ -25547,9 +25623,9 @@
         "id": 36,
         "name": "Sagan",
         "scores": {
-            "resource_score": "8.000",
+            "resource_score": "4.000",
             "organic_score": "0.000",
-            "inorganic_score": "8.000"
+            "inorganic_score": "4.000"
         }
     },
     {
@@ -25699,7 +25775,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -25849,7 +25925,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -25989,7 +26065,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -26073,13 +26149,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -26113,13 +26191,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -26260,14 +26340,15 @@
                     "inorganic": {
                         "Argon": 1,
                         "Iron": 2,
+                        "Aluminium": 1,
                         "Chlorine-Main": 2
                     }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "28.889",
+                    "resource_score": "30.111",
                     "organic_score": "24.000",
-                    "inorganic_score": "4.889"
+                    "inorganic_score": "6.111"
                 }
             },
             {
@@ -26400,9 +26481,9 @@
         "id": 37,
         "name": "Tau Ceti",
         "scores": {
-            "resource_score": "12.440",
-            "organic_score": "2.056",
-            "inorganic_score": "10.385"
+            "resource_score": "103.000",
+            "organic_score": "32.000",
+            "inorganic_score": "71.000"
         }
     },
     {
@@ -26468,14 +26549,15 @@
                     "inorganic": {
                         "Argon": 3,
                         "Iron": 2,
+                        "Aluminium": 1,
                         "Chlorine-Main": 1
                     }
                 },
                 "scores": {
                     "habitability_score": "3.000",
-                    "resource_score": "26.500",
+                    "resource_score": "28.125",
                     "organic_score": "20.000",
-                    "inorganic_score": "6.500"
+                    "inorganic_score": "8.125"
                 }
             },
             {
@@ -26512,7 +26594,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -26614,9 +26696,9 @@
         "id": 38,
         "name": "Tidacha",
         "scores": {
-            "resource_score": "16.458",
-            "organic_score": "5.000",
-            "inorganic_score": "11.458"
+            "resource_score": "63.000",
+            "organic_score": "20.000",
+            "inorganic_score": "43.000"
         }
     },
     {
@@ -26654,7 +26736,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -26749,9 +26831,9 @@
         "id": 39,
         "name": "Wolf",
         "scores": {
-            "resource_score": "7.333",
+            "resource_score": "13.000",
             "organic_score": "0.000",
-            "inorganic_score": "7.333"
+            "inorganic_score": "13.000"
         }
     },
     {
@@ -26808,9 +26890,9 @@
         "id": 40,
         "name": "Barnard's Star",
         "scores": {
-            "resource_score": "3.000",
+            "resource_score": "14.000",
             "organic_score": "0.000",
-            "inorganic_score": "3.000"
+            "inorganic_score": "14.000"
         }
     },
     {
@@ -26939,7 +27021,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -27047,7 +27129,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -27561,6 +27643,7 @@
                 "resource_groups": {
                     "inorganic": {
                         "Iron": 1,
+                        "Aluminium": 1,
                         "Uranium": 1,
                         "Chlorine-Main": 2,
                         "Copper-Main": 1
@@ -27568,18 +27651,18 @@
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "5.556",
+                    "resource_score": "6.667",
                     "organic_score": "0.000",
-                    "inorganic_score": "5.556"
+                    "inorganic_score": "6.667"
                 }
             }
         ],
         "id": 41,
         "name": "Bara",
         "scores": {
-            "resource_score": "9.503",
-            "organic_score": "1.353",
-            "inorganic_score": "8.150"
+            "resource_score": "68.000",
+            "organic_score": "23.000",
+            "inorganic_score": "45.000"
         }
     },
     {
@@ -27830,7 +27913,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -27871,13 +27954,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -28141,13 +28226,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -28297,9 +28384,9 @@
         "id": 42,
         "name": "Bohr",
         "scores": {
-            "resource_score": "9.167",
-            "organic_score": "1.867",
-            "inorganic_score": "7.300"
+            "resource_score": "95.000",
+            "organic_score": "28.000",
+            "inorganic_score": "67.000"
         }
     },
     {
@@ -28828,9 +28915,9 @@
         "id": 43,
         "name": "Hawking",
         "scores": {
-            "resource_score": "11.217",
-            "organic_score": "2.000",
-            "inorganic_score": "9.217"
+            "resource_score": "74.000",
+            "organic_score": "22.000",
+            "inorganic_score": "52.000"
         }
     },
     {
@@ -28912,7 +28999,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -29043,7 +29130,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -29084,13 +29171,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -29622,7 +29711,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -29770,9 +29859,9 @@
         "id": 44,
         "name": "Huygens",
         "scores": {
-            "resource_score": "10.523",
-            "organic_score": "2.350",
-            "inorganic_score": "8.173"
+            "resource_score": "133.000",
+            "organic_score": "38.000",
+            "inorganic_score": "95.000"
         }
     },
     {
@@ -30028,7 +30117,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -30098,7 +30187,7 @@
                     "inorganic": {
                         "Argon": 2,
                         "Iron": 1,
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Chlorine-Main": 2
                     }
                 },
@@ -30380,7 +30469,7 @@
                 "resource_groups": {
                     "inorganic": {
                         "Iron": 2,
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Lead-Main": 1
                     }
                 },
@@ -30558,7 +30647,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Uranium": 1,
                         "Copper-Main": 2,
                         "Copper-Gold": 1
@@ -30737,7 +30826,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Uranium": 3
                     }
                 },
@@ -31006,9 +31095,9 @@
         "id": 45,
         "name": "Ixyll",
         "scores": {
-            "resource_score": "12.714",
-            "organic_score": "1.846",
-            "inorganic_score": "10.868"
+            "resource_score": "125.000",
+            "organic_score": "40.000",
+            "inorganic_score": "85.000"
         }
     },
     {
@@ -31046,7 +31135,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -31165,7 +31254,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -31263,7 +31352,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -31304,13 +31393,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -31871,6 +31962,7 @@
                 "resource_groups": {
                     "inorganic": {
                         "Iron": 1,
+                        "Aluminium": 1,
                         "Nickel": 1,
                         "Chlorine-Main": 2,
                         "Lead-Main": 1
@@ -31878,9 +31970,9 @@
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "12.500",
+                    "resource_score": "13.750",
                     "organic_score": "5.000",
-                    "inorganic_score": "7.500"
+                    "inorganic_score": "8.750"
                 }
             },
             {
@@ -31916,7 +32008,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -32016,9 +32108,9 @@
         "id": 46,
         "name": "Pyraas",
         "scores": {
-            "resource_score": "11.286",
-            "organic_score": "1.905",
-            "inorganic_score": "9.381"
+            "resource_score": "99.000",
+            "organic_score": "36.000",
+            "inorganic_score": "63.000"
         }
     },
     {
@@ -32060,14 +32152,15 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
+                        "Aluminium": 1,
                         "Uranium": 2
                     }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "4.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "4.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -32124,7 +32217,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Chlorine-Main": 3,
                         "Lead-Main": 1,
                         "Lead-Tungsten": 1
@@ -32168,13 +32261,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -32381,7 +32476,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -32599,7 +32694,7 @@
                 "resource_groups": {
                     "inorganic": {
                         "Iron": 2,
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Nickel": 2
                     }
                 },
@@ -32739,9 +32834,9 @@
         "id": 47,
         "name": "Serpentis",
         "scores": {
-            "resource_score": "8.541",
-            "organic_score": "3.400",
-            "inorganic_score": "5.141"
+            "resource_score": "81.000",
+            "organic_score": "36.000",
+            "inorganic_score": "45.000"
         }
     },
     {
@@ -32848,7 +32943,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -32895,7 +32990,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -32939,7 +33034,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -32980,13 +33075,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -33023,13 +33120,15 @@
                     "Gravitational"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "1.500",
+                    "resource_score": "3.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "1.500"
+                    "inorganic_score": "3.000"
                 }
             },
             {
@@ -33098,13 +33197,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -33144,7 +33245,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -33245,9 +33346,9 @@
         "id": 48,
         "name": "Valo",
         "scores": {
-            "resource_score": "9.608",
-            "organic_score": "2.364",
-            "inorganic_score": "7.245"
+            "resource_score": "64.000",
+            "organic_score": "26.000",
+            "inorganic_score": "38.000"
         }
     },
     {
@@ -33730,7 +33831,7 @@
                 "resource_groups": {
                     "inorganic": {
                         "Iron": 2,
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Nickel": 2,
                         "Chlorine-Main": 1
                     }
@@ -33776,7 +33877,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -33790,9 +33891,9 @@
         "id": 49,
         "name": "Alpha Marae",
         "scores": {
-            "resource_score": "6.747",
-            "organic_score": "0.000",
-            "inorganic_score": "6.747"
+            "resource_score": "53.000",
+            "organic_score": "2.000",
+            "inorganic_score": "51.000"
         }
     },
     {
@@ -33832,7 +33933,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -34293,7 +34394,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -34341,7 +34442,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Chlorine-Main": 3
                     }
                 },
@@ -34610,9 +34711,9 @@
         "id": 50,
         "name": "Alpha Ternion",
         "scores": {
-            "resource_score": "11.672",
-            "organic_score": "1.529",
-            "inorganic_score": "10.142"
+            "resource_score": "107.000",
+            "organic_score": "26.000",
+            "inorganic_score": "81.000"
         }
     },
     {
@@ -34863,7 +34964,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -34907,7 +35008,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -35235,7 +35336,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Chlorine-Main": 1,
                         "Copper-Main": 2,
                         "Copper-Gold": 1
@@ -35615,15 +35716,16 @@
                 "resource_groups": {
                     "inorganic": {
                         "Argon": 2,
+                        "Aluminium": 1,
                         "Chlorine-Main": 2,
                         "Chlorine-Caesium": 1
                     }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "25.000",
+                    "resource_score": "30.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "25.000"
+                    "inorganic_score": "30.000"
                 }
             },
             {
@@ -35836,14 +35938,15 @@
                 "resource_groups": {
                     "inorganic": {
                         "Argon": 3,
+                        "Aluminium": 1,
                         "Uranium": 2
                     }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "18.000",
+                    "resource_score": "22.500",
                     "organic_score": "0.000",
-                    "inorganic_score": "18.000"
+                    "inorganic_score": "22.500"
                 }
             },
             {
@@ -36078,9 +36181,9 @@
         "id": 51,
         "name": "Alpha Tirna",
         "scores": {
-            "resource_score": "11.104",
-            "organic_score": "1.194",
-            "inorganic_score": "9.911"
+            "resource_score": "119.000",
+            "organic_score": "26.000",
+            "inorganic_score": "93.000"
         }
     },
     {
@@ -36251,7 +36354,7 @@
                 "resource_groups": {
                     "inorganic": {
                         "Argon": 2,
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -36594,7 +36697,7 @@
                 "resource_groups": {
                     "inorganic": {
                         "Iron": 2,
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Copper-Main": 2
                     }
                 },
@@ -36609,9 +36712,9 @@
         "id": 52,
         "name": "Andromas",
         "scores": {
-            "resource_score": "11.545",
-            "organic_score": "1.909",
-            "inorganic_score": "9.636"
+            "resource_score": "86.000",
+            "organic_score": "15.000",
+            "inorganic_score": "71.000"
         }
     },
     {
@@ -36703,7 +36806,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -36826,7 +36929,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2,
+                        "Aluminium": 3,
                         "Chlorine-Main": 1,
                         "Lead-Main": 1,
                         "Lead-Tungsten": 1,
@@ -36929,7 +37032,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -37240,9 +37343,9 @@
         "id": 53,
         "name": "Archimedes",
         "scores": {
-            "resource_score": "13.134",
-            "organic_score": "3.417",
-            "inorganic_score": "9.717"
+            "resource_score": "103.000",
+            "organic_score": "32.000",
+            "inorganic_score": "71.000"
         }
     },
     {
@@ -37357,15 +37460,16 @@
                 "resource_groups": {
                     "inorganic": {
                         "Argon": 1,
+                        "Aluminium": 1,
                         "Uranium": 3,
                         "Nickel": 2
                     }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "16.500",
+                    "resource_score": "18.375",
                     "organic_score": "9.000",
-                    "inorganic_score": "7.500"
+                    "inorganic_score": "9.375"
                 }
             },
             {
@@ -37448,7 +37552,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -37588,9 +37692,9 @@
         "id": 54,
         "name": "Bannoc",
         "scores": {
-            "resource_score": "8.976",
-            "organic_score": "1.286",
-            "inorganic_score": "7.690"
+            "resource_score": "49.000",
+            "organic_score": "9.000",
+            "inorganic_score": "40.000"
         }
     },
     {
@@ -37628,7 +37732,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -37642,9 +37746,9 @@
         "id": 55,
         "name": "Bannoc Secondus",
         "scores": {
-            "resource_score": "14.000",
+            "resource_score": "17.000",
             "organic_score": "0.000",
-            "inorganic_score": "14.000"
+            "inorganic_score": "17.000"
         }
     },
     {
@@ -37749,7 +37853,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -37812,14 +37916,15 @@
                 "resource_groups": {
                     "inorganic": {
                         "Argon": 2,
+                        "Aluminium": 1,
                         "Chlorine-Main": 2
                     }
                 },
                 "scores": {
                     "habitability_score": "3.000",
-                    "resource_score": "33.286",
+                    "resource_score": "34.714",
                     "organic_score": "29.000",
-                    "inorganic_score": "4.286"
+                    "inorganic_score": "5.714"
                 }
             },
             {
@@ -37967,7 +38072,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -38011,7 +38116,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -38055,7 +38160,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -38224,7 +38329,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Nickel": 1,
                         "Chlorine-Main": 1
                     }
@@ -38322,7 +38427,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Nickel": 1,
                         "Chlorine-Main": 1
                     }
@@ -38499,9 +38604,9 @@
         "id": 56,
         "name": "Bel",
         "scores": {
-            "resource_score": "13.802",
-            "organic_score": "3.389",
-            "inorganic_score": "10.413"
+            "resource_score": "120.000",
+            "organic_score": "50.000",
+            "inorganic_score": "70.000"
         }
     },
     {
@@ -38575,7 +38680,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -38616,13 +38721,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -38658,7 +38765,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -38716,23 +38823,24 @@
                     "inorganic": {
                         "Argon": 2,
                         "Iron": 1,
+                        "Aluminium": 1,
                         "Nickel": 3
                     }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "10.857",
+                    "resource_score": "13.571",
                     "organic_score": "0.000",
-                    "inorganic_score": "10.857"
+                    "inorganic_score": "13.571"
                 }
             }
         ],
         "id": 57,
         "name": "Bessel",
         "scores": {
-            "resource_score": "8.371",
+            "resource_score": "27.000",
             "organic_score": "0.000",
-            "inorganic_score": "8.371"
+            "inorganic_score": "27.000"
         }
     },
     {
@@ -38963,9 +39071,9 @@
         "id": 58,
         "name": "Beta Andraste",
         "scores": {
-            "resource_score": "12.733",
-            "organic_score": "0.400",
-            "inorganic_score": "12.333"
+            "resource_score": "29.000",
+            "organic_score": "2.000",
+            "inorganic_score": "27.000"
         }
     },
     {
@@ -39177,7 +39285,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -39594,13 +39702,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -39913,9 +40023,9 @@
         "id": 59,
         "name": "Beta Marae",
         "scores": {
-            "resource_score": "9.395",
-            "organic_score": "2.095",
-            "inorganic_score": "7.300"
+            "resource_score": "107.000",
+            "organic_score": "44.000",
+            "inorganic_score": "63.000"
         }
     },
     {
@@ -39967,9 +40077,9 @@
         "id": 60,
         "name": "Beta Tirna",
         "scores": {
-            "resource_score": "10.000",
+            "resource_score": "15.000",
             "organic_score": "0.000",
-            "inorganic_score": "10.000"
+            "inorganic_score": "15.000"
         }
     },
     {
@@ -40046,9 +40156,9 @@
         "id": 61,
         "name": "Bolivar",
         "scores": {
-            "resource_score": "14.667",
+            "resource_score": "17.000",
             "organic_score": "10.000",
-            "inorganic_score": "4.667"
+            "inorganic_score": "7.000"
         }
     },
     {
@@ -40128,13 +40238,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -40172,13 +40284,15 @@
                     "Gravitational"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "1.000",
+                    "resource_score": "2.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "1.000"
+                    "inorganic_score": "2.000"
                 }
             },
             {
@@ -40390,7 +40504,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -40483,9 +40597,9 @@
         "id": 62,
         "name": "Bradbury",
         "scores": {
-            "resource_score": "10.241",
-            "organic_score": "2.444",
-            "inorganic_score": "7.796"
+            "resource_score": "57.000",
+            "organic_score": "19.000",
+            "inorganic_score": "38.000"
         }
     },
     {
@@ -40526,7 +40640,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -40576,7 +40690,7 @@
                 "resource_groups": {
                     "inorganic": {
                         "Argon": 2,
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -40619,7 +40733,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -41106,9 +41220,9 @@
         "id": 63,
         "name": "Carinae",
         "scores": {
-            "resource_score": "11.107",
+            "resource_score": "80.000",
             "organic_score": "0.000",
-            "inorganic_score": "11.107"
+            "inorganic_score": "80.000"
         }
     },
     {
@@ -41433,7 +41547,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -41447,9 +41561,9 @@
         "id": 64,
         "name": "Celebrai",
         "scores": {
-            "resource_score": "15.190",
-            "organic_score": "5.143",
-            "inorganic_score": "10.048"
+            "resource_score": "87.000",
+            "organic_score": "36.000",
+            "inorganic_score": "51.000"
         }
     },
     {
@@ -41672,7 +41786,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -41729,7 +41843,7 @@
                 "resource_groups": {
                     "inorganic": {
                         "Argon": 1,
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Nickel": 1
                     }
                 },
@@ -41825,7 +41939,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -42186,9 +42300,9 @@
         "id": 65,
         "name": "Copernicus",
         "scores": {
-            "resource_score": "12.043",
-            "organic_score": "2.667",
-            "inorganic_score": "9.377"
+            "resource_score": "80.000",
+            "organic_score": "30.000",
+            "inorganic_score": "50.000"
         }
     },
     {
@@ -42335,9 +42449,9 @@
         "id": 66,
         "name": "Copernicus Minor",
         "scores": {
-            "resource_score": "5.417",
-            "organic_score": "1.333",
-            "inorganic_score": "4.083"
+            "resource_score": "15.000",
+            "organic_score": "4.000",
+            "inorganic_score": "11.000"
         }
     },
     {
@@ -42438,7 +42552,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -42538,7 +42652,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -42581,7 +42695,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -42666,7 +42780,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -42785,13 +42899,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -43034,7 +43150,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -43048,9 +43164,9 @@
         "id": 67,
         "name": "Decaran",
         "scores": {
-            "resource_score": "12.062",
-            "organic_score": "1.312",
-            "inorganic_score": "10.750"
+            "resource_score": "92.000",
+            "organic_score": "21.000",
+            "inorganic_score": "71.000"
         }
     },
     {
@@ -43086,13 +43202,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -43153,7 +43271,7 @@
                 "resource_groups": {
                     "inorganic": {
                         "Argon": 1,
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Nickel": 2,
                         "Lead-Main": 1,
                         "Lead-Silver": 1
@@ -43300,7 +43418,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -43596,7 +43714,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -43639,7 +43757,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -43926,9 +44044,9 @@
         "id": 68,
         "name": "Delta Pavonis",
         "scores": {
-            "resource_score": "10.357",
-            "organic_score": "1.211",
-            "inorganic_score": "9.146"
+            "resource_score": "82.000",
+            "organic_score": "23.000",
+            "inorganic_score": "59.000"
         }
     },
     {
@@ -44050,7 +44168,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -44349,6 +44467,7 @@
                 "resource_groups": {
                     "inorganic": {
                         "Iron": 1,
+                        "Aluminium": 1,
                         "Uranium": 1,
                         "Chlorine-Main": 1,
                         "Copper-Main": 1,
@@ -44357,9 +44476,9 @@
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "19.800",
+                    "resource_score": "22.200",
                     "organic_score": "3.000",
-                    "inorganic_score": "16.800"
+                    "inorganic_score": "19.200"
                 }
             },
             {
@@ -44575,9 +44694,9 @@
         "id": 69,
         "name": "Delta Vulpes",
         "scores": {
-            "resource_score": "7.653",
-            "organic_score": "0.200",
-            "inorganic_score": "7.453"
+            "resource_score": "53.000",
+            "organic_score": "3.000",
+            "inorganic_score": "50.000"
         }
     },
     {
@@ -44648,13 +44767,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -44805,15 +44926,16 @@
                 "resource_groups": {
                     "inorganic": {
                         "Iron": 1,
+                        "Aluminium": 1,
                         "Uranium": 1,
                         "Chlorine-Main": 3
                     }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "8.125",
+                    "resource_score": "9.750",
                     "organic_score": "0.000",
-                    "inorganic_score": "8.125"
+                    "inorganic_score": "9.750"
                 }
             },
             {
@@ -44952,9 +45074,9 @@
         "id": 70,
         "name": "Denebola",
         "scores": {
-            "resource_score": "7.891",
-            "organic_score": "2.375",
-            "inorganic_score": "5.516"
+            "resource_score": "62.000",
+            "organic_score": "19.000",
+            "inorganic_score": "43.000"
         }
     },
     {
@@ -45276,13 +45398,15 @@
                     "Bolide"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "1.500",
+                    "resource_score": "3.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "1.500"
+                    "inorganic_score": "3.000"
                 }
             },
             {
@@ -45373,13 +45497,15 @@
                     "Bolide"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "1.500",
+                    "resource_score": "3.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "1.500"
+                    "inorganic_score": "3.000"
                 }
             },
             {
@@ -45417,7 +45543,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 3
+                        "Aluminium": 4
                     }
                 },
                 "scores": {
@@ -45461,7 +45587,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -45769,7 +45895,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Uranium": 1,
                         "Lead-Main": 1,
                         "Lead-Tungsten": 2
@@ -45900,7 +46026,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Nickel": 2,
                         "Lead-Main": 1,
                         "Lead-Silver": 1
@@ -46059,9 +46185,9 @@
         "id": 71,
         "name": "Eridani",
         "scores": {
-            "resource_score": "12.142",
-            "organic_score": "2.000",
-            "inorganic_score": "10.142"
+            "resource_score": "111.000",
+            "organic_score": "32.000",
+            "inorganic_score": "79.000"
         }
     },
     {
@@ -46322,13 +46448,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -46522,9 +46650,9 @@
         "id": 72,
         "name": "Eta Cassiopeia",
         "scores": {
-            "resource_score": "7.895",
-            "organic_score": "2.556",
-            "inorganic_score": "5.339"
+            "resource_score": "50.000",
+            "organic_score": "20.000",
+            "inorganic_score": "30.000"
         }
     },
     {
@@ -46663,7 +46791,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -46778,7 +46906,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -46918,7 +47046,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -46961,7 +47089,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -47056,13 +47184,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -47294,7 +47424,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Lead-Main": 1,
                         "Lead-Tungsten": 2
                     }
@@ -47351,7 +47481,7 @@
                 "resource_groups": {
                     "inorganic": {
                         "Iron": 1,
-                        "Aluminium": 2,
+                        "Aluminium": 3,
                         "Uranium": 1,
                         "Nickel": 1,
                         "Copper-Main": 1
@@ -47770,7 +47900,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -47871,9 +48001,9 @@
         "id": 73,
         "name": "Fermi",
         "scores": {
-            "resource_score": "11.093",
-            "organic_score": "1.690",
-            "inorganic_score": "9.404"
+            "resource_score": "151.000",
+            "organic_score": "48.000",
+            "inorganic_score": "103.000"
         }
     },
     {
@@ -48114,14 +48244,15 @@
                     "inorganic": {
                         "Argon": 2,
                         "Iron": 1,
+                        "Aluminium": 1,
                         "Chlorine-Main": 2
                     }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "18.857",
+                    "resource_score": "20.429",
                     "organic_score": "11.000",
-                    "inorganic_score": "7.857"
+                    "inorganic_score": "9.429"
                 }
             },
             {
@@ -48371,7 +48502,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -48548,7 +48679,7 @@
                 "resource_groups": {
                     "inorganic": {
                         "Argon": 1,
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Uranium": 2,
                         "Lead-Main": 1
                     }
@@ -48906,7 +49037,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -48963,9 +49094,9 @@
         "id": 74,
         "name": "Feynman",
         "scores": {
-            "resource_score": "12.684",
-            "organic_score": "1.348",
-            "inorganic_score": "11.336"
+            "resource_score": "127.000",
+            "organic_score": "26.000",
+            "inorganic_score": "101.000"
         }
     },
     {
@@ -49003,7 +49134,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -49046,7 +49177,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -49087,13 +49218,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -49179,7 +49312,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -49357,13 +49490,15 @@
                     "Bolide"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "1.500",
+                    "resource_score": "3.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "1.500"
+                    "inorganic_score": "3.000"
                 }
             },
             {
@@ -49400,7 +49535,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -49800,15 +49935,16 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
+                        "Aluminium": 1,
                         "Copper-Main": 1,
                         "Copper-Tetrafluorides": 1
                     }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "18.000",
+                    "resource_score": "22.500",
                     "organic_score": "0.000",
-                    "inorganic_score": "18.000"
+                    "inorganic_score": "22.500"
                 }
             },
             {
@@ -50173,7 +50309,7 @@
                 "resource_groups": {
                     "inorganic": {
                         "Argon": 2,
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Uranium": 1,
                         "Lead-Main": 1
                     }
@@ -50277,9 +50413,9 @@
         "id": 75,
         "name": "Foucault",
         "scores": {
-            "resource_score": "10.009",
-            "organic_score": "0.000",
-            "inorganic_score": "10.009"
+            "resource_score": "93.000",
+            "organic_score": "10.000",
+            "inorganic_score": "83.000"
         }
     },
     {
@@ -50585,15 +50721,16 @@
                 "resource_groups": {
                     "inorganic": {
                         "Argon": 2,
+                        "Aluminium": 1,
                         "Nickel": 2,
                         "Chlorine-Main": 1
                     }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "6.000",
+                    "resource_score": "7.500",
                     "organic_score": "0.000",
-                    "inorganic_score": "6.000"
+                    "inorganic_score": "7.500"
                 }
             },
             {
@@ -50877,7 +51014,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -50891,9 +51028,9 @@
         "id": 76,
         "name": "Gamma Vulpes",
         "scores": {
-            "resource_score": "9.654",
-            "organic_score": "3.077",
-            "inorganic_score": "6.577"
+            "resource_score": "89.000",
+            "organic_score": "34.000",
+            "inorganic_score": "55.000"
         }
     },
     {
@@ -50929,13 +51066,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -50973,7 +51112,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -51017,7 +51156,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -51087,7 +51226,7 @@
                 "resource_groups": {
                     "inorganic": {
                         "Iron": 1,
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Chlorine-Main": 1,
                         "Copper-Main": 2,
                         "Copper-Gold": 1
@@ -51220,13 +51359,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -51260,13 +51401,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -51399,7 +51542,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -51830,7 +51973,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -52112,9 +52255,9 @@
         "id": 77,
         "name": "Guniibuu",
         "scores": {
-            "resource_score": "8.756",
-            "organic_score": "1.148",
-            "inorganic_score": "7.607"
+            "resource_score": "95.000",
+            "organic_score": "24.000",
+            "inorganic_score": "71.000"
         }
     },
     {
@@ -52153,7 +52296,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -52249,7 +52392,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -52391,7 +52534,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -52818,7 +52961,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 3
+                        "Aluminium": 4
                     }
                 },
                 "scores": {
@@ -52859,13 +53002,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -53185,9 +53330,9 @@
         "id": 78,
         "name": "Heinlein",
         "scores": {
-            "resource_score": "9.723",
-            "organic_score": "0.565",
-            "inorganic_score": "9.158"
+            "resource_score": "94.000",
+            "organic_score": "11.000",
+            "inorganic_score": "83.000"
         }
     },
     {
@@ -53514,7 +53659,7 @@
                     "inorganic": {
                         "Argon": 2,
                         "Iron": 1,
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Chlorine-Main": 2
                     }
                 },
@@ -54018,7 +54163,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -54077,9 +54222,9 @@
         "id": 79,
         "name": "Heisenberg",
         "scores": {
-            "resource_score": "9.025",
-            "organic_score": "1.316",
-            "inorganic_score": "7.710"
+            "resource_score": "75.000",
+            "organic_score": "22.000",
+            "inorganic_score": "53.000"
         }
     },
     {
@@ -54178,7 +54323,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -54243,7 +54388,7 @@
                 "resource_groups": {
                     "inorganic": {
                         "Argon": 2,
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Lead-Main": 1,
                         "Lead-Silver": 1,
                         "Copper-Main": 1
@@ -54290,7 +54435,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -54375,7 +54520,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2,
+                        "Aluminium": 3,
                         "Lead-Main": 1,
                         "Lead-Silver": 1
                     }
@@ -54548,7 +54693,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Lead-Main": 1,
                         "Lead-Silver": 2
                     }
@@ -55094,9 +55239,9 @@
         "id": 80,
         "name": "Hyla",
         "scores": {
-            "resource_score": "12.585",
-            "organic_score": "1.000",
-            "inorganic_score": "11.585"
+            "resource_score": "125.000",
+            "organic_score": "22.000",
+            "inorganic_score": "103.000"
         }
     },
     {
@@ -55186,13 +55331,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -55249,7 +55396,7 @@
                 "resource_groups": {
                     "inorganic": {
                         "Argon": 2,
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Uranium": 1,
                         "Copper-Main": 2
                     }
@@ -55795,9 +55942,9 @@
         "id": 81,
         "name": "Indum",
         "scores": {
-            "resource_score": "10.654",
-            "organic_score": "0.533",
-            "inorganic_score": "10.121"
+            "resource_score": "77.000",
+            "organic_score": "8.000",
+            "inorganic_score": "69.000"
         }
     },
     {
@@ -55881,7 +56028,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -56051,6 +56198,7 @@
                 "resource_groups": {
                     "inorganic": {
                         "Argon": 1,
+                        "Aluminium": 1,
                         "Uranium": 1,
                         "Nickel": 1,
                         "Lead-Main": 1
@@ -56058,9 +56206,9 @@
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "8.000",
+                    "resource_score": "9.333",
                     "organic_score": "0.000",
-                    "inorganic_score": "8.000"
+                    "inorganic_score": "9.333"
                 }
             },
             {
@@ -56137,13 +56285,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -56292,7 +56442,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -56599,7 +56749,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -56753,9 +56903,9 @@
         "id": 82,
         "name": "Kang",
         "scores": {
-            "resource_score": "9.067",
-            "organic_score": "0.550",
-            "inorganic_score": "8.517"
+            "resource_score": "71.000",
+            "organic_score": "10.000",
+            "inorganic_score": "61.000"
         }
     },
     {
@@ -56803,6 +56953,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
+                        "Aluminium": 1,
                         "Uranium": 2,
                         "Nickel": 2,
                         "Lead-Main": 1
@@ -56810,9 +56961,9 @@
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "12.500",
+                    "resource_score": "15.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "12.500"
+                    "inorganic_score": "15.000"
                 }
             },
             {
@@ -56854,9 +57005,9 @@
         "id": 83,
         "name": "Kapteyn's Star",
         "scores": {
-            "resource_score": "6.250",
+            "resource_score": "15.000",
             "organic_score": "0.000",
-            "inorganic_score": "6.250"
+            "inorganic_score": "15.000"
         }
     },
     {
@@ -57105,7 +57256,7 @@
                 "resource_groups": {
                     "inorganic": {
                         "Iron": 1,
-                        "Aluminium": 2,
+                        "Aluminium": 3,
                         "Lead-Main": 1,
                         "Lead-Silver": 1,
                         "Copper-Main": 1
@@ -57122,9 +57273,9 @@
         "id": 84,
         "name": "Katydid",
         "scores": {
-            "resource_score": "11.467",
-            "organic_score": "2.200",
-            "inorganic_score": "9.267"
+            "resource_score": "59.000",
+            "organic_score": "11.000",
+            "inorganic_score": "48.000"
         }
     },
     {
@@ -57163,7 +57314,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -57314,7 +57465,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -57500,7 +57651,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -57597,13 +57748,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -57940,9 +58093,9 @@
         "id": 85,
         "name": "Khayyam",
         "scores": {
-            "resource_score": "11.449",
-            "organic_score": "1.556",
-            "inorganic_score": "9.893"
+            "resource_score": "109.000",
+            "organic_score": "28.000",
+            "inorganic_score": "81.000"
         }
     },
     {
@@ -57980,7 +58133,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -58145,7 +58298,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -58959,9 +59112,9 @@
         "id": 86,
         "name": "Lantana",
         "scores": {
-            "resource_score": "9.229",
-            "organic_score": "1.667",
-            "inorganic_score": "7.562"
+            "resource_score": "93.000",
+            "organic_score": "24.000",
+            "inorganic_score": "69.000"
         }
     },
     {
@@ -59012,7 +59165,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2,
+                        "Aluminium": 3,
                         "Uranium": 1,
                         "Chlorine-Main": 1,
                         "Lead-Main": 1,
@@ -59060,7 +59213,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -59112,6 +59265,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
+                        "Aluminium": 1,
                         "Uranium": 1,
                         "Nickel": 2,
                         "Lead-Main": 1,
@@ -59120,9 +59274,9 @@
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "8.333",
+                    "resource_score": "10.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "8.333"
+                    "inorganic_score": "10.000"
                 }
             },
             {
@@ -59167,7 +59321,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Uranium": 1,
                         "Lead-Main": 1,
                         "Lead-Silver": 2
@@ -59811,9 +59965,9 @@
         "id": 87,
         "name": "Leonis",
         "scores": {
-            "resource_score": "10.937",
-            "organic_score": "3.706",
-            "inorganic_score": "7.231"
+            "resource_score": "93.000",
+            "organic_score": "36.000",
+            "inorganic_score": "57.000"
         }
     },
     {
@@ -59895,7 +60049,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 3
+                        "Aluminium": 4
                     }
                 },
                 "scores": {
@@ -60005,15 +60159,16 @@
                 "resource_groups": {
                     "inorganic": {
                         "Iron": 2,
+                        "Aluminium": 1,
                         "Chlorine-Main": 1,
                         "Copper-Main": 2
                     }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "18.571",
+                    "resource_score": "20.714",
                     "organic_score": "10.000",
-                    "inorganic_score": "8.571"
+                    "inorganic_score": "10.714"
                 }
             },
             {
@@ -60259,22 +60414,24 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             }
         ],
         "id": 88,
         "name": "Leviathan",
         "scores": {
-            "resource_score": "10.537",
-            "organic_score": "1.000",
-            "inorganic_score": "9.537"
+            "resource_score": "75.000",
+            "organic_score": "10.000",
+            "inorganic_score": "65.000"
         }
     },
     {
@@ -60342,9 +60499,9 @@
         "id": 89,
         "name": "Luyten's Star",
         "scores": {
-            "resource_score": "10.000",
+            "resource_score": "26.000",
             "organic_score": "0.000",
-            "inorganic_score": "10.000"
+            "inorganic_score": "26.000"
         }
     },
     {
@@ -60425,13 +60582,15 @@
                     "Charred"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "1.500",
+                    "resource_score": "3.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "1.500"
+                    "inorganic_score": "3.000"
                 }
             },
             {
@@ -60558,13 +60717,15 @@
                     "Charred"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "1.500",
+                    "resource_score": "3.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "1.500"
+                    "inorganic_score": "3.000"
                 }
             },
             {
@@ -60825,7 +60986,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -60911,7 +61072,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Uranium": 1,
                         "Chlorine-Main": 2,
                         "Lead-Main": 1
@@ -61431,9 +61592,9 @@
         "id": 90,
         "name": "Maal",
         "scores": {
-            "resource_score": "8.810",
-            "organic_score": "1.609",
-            "inorganic_score": "7.201"
+            "resource_score": "113.000",
+            "organic_score": "32.000",
+            "inorganic_score": "81.000"
         }
     },
     {
@@ -61587,7 +61748,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -61630,7 +61791,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -61671,13 +61832,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -61847,7 +62010,7 @@
                 "resource_groups": {
                     "inorganic": {
                         "Argon": 3,
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Chlorine-Main": 1
                     }
                 },
@@ -62016,7 +62179,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -62160,9 +62323,9 @@
         "id": 91,
         "name": "Maheo",
         "scores": {
-            "resource_score": "12.652",
-            "organic_score": "0.125",
-            "inorganic_score": "12.527"
+            "resource_score": "70.000",
+            "organic_score": "2.000",
+            "inorganic_score": "68.000"
         }
     },
     {
@@ -62247,13 +62410,15 @@
                     "Charred"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "1.500",
+                    "resource_score": "3.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "1.500"
+                    "inorganic_score": "3.000"
                 }
             },
             {
@@ -62402,7 +62567,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -62571,7 +62736,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -63025,9 +63190,9 @@
         "id": 92,
         "name": "Marduk",
         "scores": {
-            "resource_score": "12.066",
-            "organic_score": "1.778",
-            "inorganic_score": "10.288"
+            "resource_score": "111.000",
+            "organic_score": "32.000",
+            "inorganic_score": "79.000"
         }
     },
     {
@@ -63065,7 +63230,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -63786,9 +63951,9 @@
         "id": 93,
         "name": "Masada",
         "scores": {
-            "resource_score": "8.746",
-            "organic_score": "2.000",
-            "inorganic_score": "6.746"
+            "resource_score": "85.000",
+            "organic_score": "34.000",
+            "inorganic_score": "51.000"
         }
     },
     {
@@ -63827,7 +63992,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -63972,13 +64137,15 @@
                     "Bolide"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "1.500",
+                    "resource_score": "3.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "1.500"
+                    "inorganic_score": "3.000"
                 }
             },
             {
@@ -64015,7 +64182,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -64118,9 +64285,9 @@
         "id": 94,
         "name": "McClure",
         "scores": {
-            "resource_score": "8.393",
-            "organic_score": "2.571",
-            "inorganic_score": "5.821"
+            "resource_score": "40.000",
+            "organic_score": "18.000",
+            "inorganic_score": "22.000"
         }
     },
     {
@@ -64247,7 +64414,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -64339,7 +64506,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Nickel": 1
                     }
                 },
@@ -64476,13 +64643,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -64517,13 +64686,15 @@
                     "Boiled"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "1.500",
+                    "resource_score": "3.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "1.500"
+                    "inorganic_score": "3.000"
                 }
             },
             {
@@ -64585,14 +64756,15 @@
                     "inorganic": {
                         "Argon": 1,
                         "Iron": 2,
+                        "Aluminium": 1,
                         "Chlorine-Main": 3
                     }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "33.778",
+                    "resource_score": "35.222",
                     "organic_score": "28.000",
-                    "inorganic_score": "5.778"
+                    "inorganic_score": "7.222"
                 }
             },
             {
@@ -64827,15 +64999,16 @@
                 "resource_groups": {
                     "inorganic": {
                         "Argon": 2,
+                        "Aluminium": 1,
                         "Nickel": 2,
                         "Chlorine-Main": 1
                     }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "7.857",
+                    "resource_score": "9.429",
                     "organic_score": "0.000",
-                    "inorganic_score": "7.857"
+                    "inorganic_score": "9.429"
                 }
             },
             {
@@ -64998,13 +65171,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -65471,9 +65646,9 @@
         "id": 95,
         "name": "Muphrid",
         "scores": {
-            "resource_score": "11.035",
-            "organic_score": "1.379",
-            "inorganic_score": "9.656"
+            "resource_score": "141.000",
+            "organic_score": "34.000",
+            "inorganic_score": "107.000"
         }
     },
     {
@@ -65509,13 +65684,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -65549,13 +65726,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -65617,6 +65796,7 @@
                 "resource_groups": {
                     "inorganic": {
                         "Iron": 2,
+                        "Aluminium": 1,
                         "Uranium": 2,
                         "Copper-Main": 1,
                         "Copper-Tetrafluorides": 1
@@ -65624,9 +65804,9 @@
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "37.375",
+                    "resource_score": "39.250",
                     "organic_score": "28.000",
-                    "inorganic_score": "9.375"
+                    "inorganic_score": "11.250"
                 }
             },
             {
@@ -65663,7 +65843,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -66057,9 +66237,9 @@
         "id": 96,
         "name": "Newton",
         "scores": {
-            "resource_score": "8.704",
-            "organic_score": "2.833",
-            "inorganic_score": "5.870"
+            "resource_score": "84.000",
+            "organic_score": "30.000",
+            "inorganic_score": "54.000"
         }
     },
     {
@@ -66108,7 +66288,7 @@
                     "inorganic": {
                         "Argon": 2,
                         "Iron": 3,
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -66307,13 +66487,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -66349,7 +66531,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -66393,7 +66575,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -66479,7 +66661,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -66522,7 +66704,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -66566,7 +66748,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -66740,13 +66922,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -66822,13 +67006,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -66912,9 +67098,9 @@
         "id": 97,
         "name": "Nikola",
         "scores": {
-            "resource_score": "8.242",
+            "resource_score": "47.000",
             "organic_score": "0.000",
-            "inorganic_score": "8.242"
+            "inorganic_score": "47.000"
         }
     },
     {
@@ -67267,7 +67453,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -67367,9 +67553,9 @@
         "id": 98,
         "name": "Oborum Prime",
         "scores": {
-            "resource_score": "8.500",
-            "organic_score": "2.200",
-            "inorganic_score": "6.300"
+            "resource_score": "56.000",
+            "organic_score": "22.000",
+            "inorganic_score": "34.000"
         }
     },
     {
@@ -67428,9 +67614,9 @@
         "id": 99,
         "name": "Oborum Proxima",
         "scores": {
-            "resource_score": "1.800",
+            "resource_score": "3.000",
             "organic_score": "0.000",
-            "inorganic_score": "1.800"
+            "inorganic_score": "3.000"
         }
     },
     {
@@ -67518,9 +67704,9 @@
         "id": 100,
         "name": "Ophion",
         "scores": {
-            "resource_score": "2.000",
+            "resource_score": "4.000",
             "organic_score": "0.000",
-            "inorganic_score": "2.000"
+            "inorganic_score": "4.000"
         }
     },
     {
@@ -67862,13 +68048,15 @@
                     "Bolide"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "1.500",
+                    "resource_score": "3.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "1.500"
+                    "inorganic_score": "3.000"
                 }
             },
             {
@@ -68226,9 +68414,9 @@
         "id": 101,
         "name": "Procyon A",
         "scores": {
-            "resource_score": "7.776",
-            "organic_score": "1.867",
-            "inorganic_score": "5.909"
+            "resource_score": "81.000",
+            "organic_score": "28.000",
+            "inorganic_score": "53.000"
         }
     },
     {
@@ -68273,7 +68461,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -68287,9 +68475,9 @@
         "id": 102,
         "name": "Procyon B",
         "scores": {
-            "resource_score": "2.333",
+            "resource_score": "17.000",
             "organic_score": "0.000",
-            "inorganic_score": "2.333"
+            "inorganic_score": "17.000"
         }
     },
     {
@@ -68361,13 +68549,15 @@
                     "Charred"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "1.500",
+                    "resource_score": "3.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "1.500"
+                    "inorganic_score": "3.000"
                 }
             },
             {
@@ -68556,6 +68746,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
+                        "Aluminium": 1,
                         "Nickel": 1,
                         "Chlorine-Main": 1,
                         "Chlorine-Caesium": 1,
@@ -68564,9 +68755,9 @@
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "22.714",
+                    "resource_score": "24.857",
                     "organic_score": "12.000",
-                    "inorganic_score": "10.714"
+                    "inorganic_score": "12.857"
                 }
             },
             {
@@ -68657,7 +68848,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -68671,9 +68862,9 @@
         "id": 103,
         "name": "Proxima Ternion",
         "scores": {
-            "resource_score": "9.527",
-            "organic_score": "1.750",
-            "inorganic_score": "7.777"
+            "resource_score": "66.000",
+            "organic_score": "12.000",
+            "inorganic_score": "54.000"
         }
     },
     {
@@ -68766,13 +68957,15 @@
                     "Boiled"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "1.500",
+                    "resource_score": "3.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "1.500"
+                    "inorganic_score": "3.000"
                 }
             },
             {
@@ -68851,7 +69044,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -68947,7 +69140,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -69014,6 +69207,7 @@
                 "resource_groups": {
                     "inorganic": {
                         "Argon": 2,
+                        "Aluminium": 1,
                         "Nickel": 2,
                         "Lead-Main": 1,
                         "Lead-Tungsten": 1
@@ -69021,9 +69215,9 @@
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "30.286",
+                    "resource_score": "32.143",
                     "organic_score": "21.000",
-                    "inorganic_score": "9.286"
+                    "inorganic_score": "11.143"
                 }
             },
             {
@@ -69218,7 +69412,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -69308,7 +69502,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Chlorine-Main": 1
                     }
                 },
@@ -69801,9 +69995,9 @@
         "id": 104,
         "name": "Rana",
         "scores": {
-            "resource_score": "11.293",
-            "organic_score": "1.625",
-            "inorganic_score": "9.668"
+            "resource_score": "116.000",
+            "organic_score": "31.000",
+            "inorganic_score": "85.000"
         }
     },
     {
@@ -69917,7 +70111,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2,
+                        "Aluminium": 3,
                         "Chlorine-Main": 2
                     }
                 },
@@ -70014,7 +70208,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -70055,13 +70249,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -70097,7 +70293,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -70223,13 +70419,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -70314,9 +70512,9 @@
         "id": 105,
         "name": "Rivera",
         "scores": {
-            "resource_score": "13.157",
-            "organic_score": "2.273",
-            "inorganic_score": "10.884"
+            "resource_score": "67.000",
+            "organic_score": "25.000",
+            "inorganic_score": "42.000"
         }
     },
     {
@@ -70356,7 +70554,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -70398,13 +70596,15 @@
                     "Boiled"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "1.500",
+                    "resource_score": "3.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "1.500"
+                    "inorganic_score": "3.000"
                 }
             },
             {
@@ -70438,13 +70638,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -70530,7 +70732,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -70642,7 +70844,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -70860,14 +71062,15 @@
                 "resource_groups": {
                     "inorganic": {
                         "Argon": 2,
+                        "Aluminium": 1,
                         "Uranium": 3
                     }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "9.333",
+                    "resource_score": "11.667",
                     "organic_score": "0.000",
-                    "inorganic_score": "9.333"
+                    "inorganic_score": "11.667"
                 }
             },
             {
@@ -71131,7 +71334,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2,
+                        "Aluminium": 3,
                         "Uranium": 1,
                         "Chlorine-Main": 1,
                         "Chlorine-Caesium": 1
@@ -71278,9 +71481,9 @@
         "id": 106,
         "name": "Rutherford",
         "scores": {
-            "resource_score": "8.302",
-            "organic_score": "1.143",
-            "inorganic_score": "7.159"
+            "resource_score": "95.000",
+            "organic_score": "24.000",
+            "inorganic_score": "71.000"
         }
     },
     {
@@ -71319,13 +71522,15 @@
                     "Gravitational"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "1.500",
+                    "resource_score": "3.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "1.500"
+                    "inorganic_score": "3.000"
                 }
             },
             {
@@ -71367,9 +71572,9 @@
         "id": 107,
         "name": "Sakharov",
         "scores": {
-            "resource_score": "0.750",
+            "resource_score": "3.000",
             "organic_score": "0.000",
-            "inorganic_score": "0.750"
+            "inorganic_score": "3.000"
         }
     },
     {
@@ -71405,13 +71610,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -71447,7 +71654,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -71618,7 +71825,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -71683,7 +71890,7 @@
                 "resource_groups": {
                     "inorganic": {
                         "Argon": 1,
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Chlorine-Main": 2,
                         "Copper-Main": 2
                     }
@@ -72040,7 +72247,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -72426,9 +72633,9 @@
         "id": 108,
         "name": "Schrodinger",
         "scores": {
-            "resource_score": "12.218",
-            "organic_score": "3.318",
-            "inorganic_score": "8.900"
+            "resource_score": "159.000",
+            "organic_score": "58.000",
+            "inorganic_score": "101.000"
         }
     },
     {
@@ -72639,6 +72846,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
+                        "Aluminium": 1,
                         "Uranium": 1,
                         "Nickel": 2,
                         "Chlorine-Main": 2
@@ -72646,9 +72854,9 @@
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "9.167",
+                    "resource_score": "11.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "9.167"
+                    "inorganic_score": "11.000"
                 }
             },
             {
@@ -72710,6 +72918,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
+                        "Aluminium": 1,
                         "Chlorine-Main": 3,
                         "Lead-Main": 1,
                         "Copper-Main": 2
@@ -72717,9 +72926,9 @@
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "32.500",
+                    "resource_score": "34.125",
                     "organic_score": "26.000",
-                    "inorganic_score": "6.500"
+                    "inorganic_score": "8.125"
                 }
             },
             {
@@ -72757,7 +72966,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -73042,6 +73251,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
+                        "Aluminium": 1,
                         "Lead-Main": 1,
                         "Lead-Tungsten": 1,
                         "Copper-Main": 2
@@ -73049,9 +73259,9 @@
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "12.500",
+                    "resource_score": "15.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "12.500"
+                    "inorganic_score": "15.000"
                 }
             },
             {
@@ -73093,15 +73303,16 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
+                        "Aluminium": 1,
                         "Nickel": 1,
                         "Lead-Main": 1
                     }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "4.800",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "4.800"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -73149,7 +73360,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2,
+                        "Aluminium": 3,
                         "Nickel": 3,
                         "Lead-Main": 1
                     }
@@ -73280,7 +73491,7 @@
                 "resource_groups": {
                     "inorganic": {
                         "Iron": 1,
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Copper-Main": 2,
                         "Copper-Gold": 1
                     }
@@ -73439,9 +73650,9 @@
         "id": 109,
         "name": "Shoza",
         "scores": {
-            "resource_score": "11.061",
-            "organic_score": "3.350",
-            "inorganic_score": "7.711"
+            "resource_score": "121.000",
+            "organic_score": "50.000",
+            "inorganic_score": "71.000"
         }
     },
     {
@@ -73674,15 +73885,16 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
+                        "Aluminium": 1,
                         "Chlorine-Main": 2,
                         "Copper-Main": 2
                     }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "7.500",
+                    "resource_score": "10.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "7.500"
+                    "inorganic_score": "10.000"
                 }
             },
             {
@@ -73734,9 +73946,9 @@
         "id": 110,
         "name": "Sirius",
         "scores": {
-            "resource_score": "7.583",
+            "resource_score": "32.000",
             "organic_score": "0.000",
-            "inorganic_score": "7.583"
+            "inorganic_score": "32.000"
         }
     },
     {
@@ -73875,13 +74087,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -74018,7 +74232,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -74184,7 +74398,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -74664,7 +74878,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Lead-Main": 1,
                         "Copper-Main": 2
                     }
@@ -74723,9 +74937,9 @@
         "id": 111,
         "name": "Sparta",
         "scores": {
-            "resource_score": "8.726",
-            "organic_score": "1.333",
-            "inorganic_score": "7.393"
+            "resource_score": "93.000",
+            "organic_score": "24.000",
+            "inorganic_score": "69.000"
         }
     },
     {
@@ -74785,7 +74999,7 @@
                 "resource_groups": {
                     "inorganic": {
                         "Iron": 2,
-                        "Aluminium": 1,
+                        "Aluminium": 2,
                         "Uranium": 1,
                         "Copper-Main": 1
                     }
@@ -74974,6 +75188,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
+                        "Aluminium": 1,
                         "Uranium": 1,
                         "Nickel": 2,
                         "Lead-Main": 1,
@@ -74982,9 +75197,9 @@
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "20.200",
+                    "resource_score": "22.400",
                     "organic_score": "7.000",
-                    "inorganic_score": "13.200"
+                    "inorganic_score": "15.400"
                 }
             },
             {
@@ -75448,9 +75663,9 @@
         "id": 112,
         "name": "Strix",
         "scores": {
-            "resource_score": "11.111",
-            "organic_score": "1.600",
-            "inorganic_score": "9.511"
+            "resource_score": "84.000",
+            "organic_score": "21.000",
+            "inorganic_score": "63.000"
         }
     },
     {
@@ -75543,13 +75758,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "1.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -75649,7 +75866,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -75691,13 +75908,15 @@
                     "Bolide"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "1.500",
+                    "resource_score": "3.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "1.500"
+                    "inorganic_score": "3.000"
                 }
             },
             {
@@ -75733,7 +75952,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -75747,9 +75966,9 @@
         "id": 114,
         "name": "Toliman",
         "scores": {
-            "resource_score": "8.100",
-            "organic_score": "3.400",
-            "inorganic_score": "4.700"
+            "resource_score": "39.000",
+            "organic_score": "17.000",
+            "inorganic_score": "22.000"
         }
     },
     {
@@ -75843,7 +76062,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -75887,7 +76106,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -76060,9 +76279,9 @@
         "id": 115,
         "name": "Ursae Majoris",
         "scores": {
-            "resource_score": "13.207",
-            "organic_score": "4.333",
-            "inorganic_score": "8.874"
+            "resource_score": "51.000",
+            "organic_score": "26.000",
+            "inorganic_score": "25.000"
         }
     },
     {
@@ -76154,7 +76373,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -76302,7 +76521,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -76365,9 +76584,9 @@
         "id": 116,
         "name": "Ursae Minoris",
         "scores": {
-            "resource_score": "10.250",
-            "organic_score": "2.333",
-            "inorganic_score": "7.917"
+            "resource_score": "52.000",
+            "organic_score": "14.000",
+            "inorganic_score": "38.000"
         }
     },
     {
@@ -76422,9 +76641,9 @@
         "id": 117,
         "name": "Van Maanen's Star",
         "scores": {
-            "resource_score": "1.333",
+            "resource_score": "2.000",
             "organic_score": "0.000",
-            "inorganic_score": "1.333"
+            "inorganic_score": "2.000"
         }
     },
     {
@@ -76539,13 +76758,15 @@
                     "Craters"
                 ],
                 "resource_groups": {
-                    "inorganic": {}
+                    "inorganic": {
+                        "Aluminium": 1
+                    }
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "3.000",
+                    "resource_score": "6.000",
                     "organic_score": "0.000",
-                    "inorganic_score": "3.000"
+                    "inorganic_score": "6.000"
                 }
             },
             {
@@ -76886,9 +77107,9 @@
         "id": 118,
         "name": "Vega",
         "scores": {
-            "resource_score": "7.000",
-            "organic_score": "1.400",
-            "inorganic_score": "5.600"
+            "resource_score": "51.000",
+            "organic_score": "14.000",
+            "inorganic_score": "37.000"
         }
     },
     {
@@ -76926,7 +77147,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -77837,6 +78058,7 @@
                 "resource_groups": {
                     "inorganic": {
                         "Argon": 1,
+                        "Aluminium": 1,
                         "Uranium": 2,
                         "Lead-Main": 1,
                         "Lead-Silver": 1
@@ -77844,9 +78066,9 @@
                 },
                 "scores": {
                     "habitability_score": "0.000",
-                    "resource_score": "13.000",
+                    "resource_score": "15.167",
                     "organic_score": "0.000",
-                    "inorganic_score": "13.000"
+                    "inorganic_score": "15.167"
                 }
             },
             {
@@ -77981,9 +78203,9 @@
         "id": 119,
         "name": "Xi Ophiuchi",
         "scores": {
-            "resource_score": "8.480",
-            "organic_score": "0.565",
-            "inorganic_score": "7.915"
+            "resource_score": "100.000",
+            "organic_score": "13.000",
+            "inorganic_score": "87.000"
         }
     },
     {
@@ -78093,7 +78315,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -78136,7 +78358,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -78383,7 +78605,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -78853,9 +79075,9 @@
         "id": 120,
         "name": "Zeta Ophiuchi",
         "scores": {
-            "resource_score": "11.033",
-            "organic_score": "2.316",
-            "inorganic_score": "8.718"
+            "resource_score": "117.000",
+            "organic_score": "42.000",
+            "inorganic_score": "75.000"
         }
     },
     {
@@ -78969,7 +79191,7 @@
                 "resource_groups": {
                     "inorganic": {
                         "Argon": 1,
-                        "Aluminium": 3,
+                        "Aluminium": 4,
                         "Chlorine-Main": 2
                     }
                 },
@@ -79136,7 +79358,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 1
+                        "Aluminium": 2
                     }
                 },
                 "scores": {
@@ -79324,7 +79546,7 @@
                 ],
                 "resource_groups": {
                     "inorganic": {
-                        "Aluminium": 2
+                        "Aluminium": 3
                     }
                 },
                 "scores": {
@@ -79778,9 +80000,9 @@
         "id": 121,
         "name": "Charybdis",
         "scores": {
-            "resource_score": "14.559",
-            "organic_score": "3.368",
-            "inorganic_score": "11.190"
+            "resource_score": "143.000",
+            "organic_score": "52.000",
+            "inorganic_score": "91.000"
         }
     },
     {
@@ -80263,9 +80485,9 @@
         "id": 122,
         "name": "Kavnyk",
         "scores": {
-            "resource_score": "14.087",
-            "organic_score": "4.300",
-            "inorganic_score": "9.787"
+            "resource_score": "75.000",
+            "organic_score": "23.000",
+            "inorganic_score": "52.000"
         }
     }
 ]
