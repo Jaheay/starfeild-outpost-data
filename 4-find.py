@@ -40,7 +40,7 @@ def flatten_and_filter_resource_groups(data, unique_resource):
     return result
 
 
-def analyze_planetary_resources(system_data, inorganic_groups, unique_resources):
+def analyze_inorganic_resources(system_data, inorganic_groups, unique_resources):
     results = []
     unique_results = []
 
@@ -179,15 +179,22 @@ def find_best_systems(complete_resource_planets, unique_resource_planets, inorga
 
         # Step 4: Score systems based on uncaptured resources
         system_scores = {}
+        counted_resources = {}
+
         for uncaptured in uncaptured_resources:
             for planet in complete_resource_planets:
                 if planet['system'] not in processed_systems:
                     if planet['system'] not in system_scores:
                         system_scores[planet['system']] = 0
+                        counted_resources[planet['system']] = set()  # Initialize a set for this system
+
                     # Increment score if this system provides an uncaptured resource
                     if planet['resource'] == uncaptured:
-                        system_scores[planet['system']] += 1
-
+                        # Only increment if this resource hasn't been counted yet for the system
+                        if uncaptured not in counted_resources[planet['system']]:
+                            counted_resources[planet['system']].add(uncaptured)
+                            system_scores[planet['system']] += 1
+        
         # Step 5: Sort systems based on score
         max_score = max(system_scores.values(), default=0)
         sorted_systems = sorted(
@@ -226,11 +233,11 @@ if __name__ == '__main__':
     inorganic_groups_flat = flatten_and_filter_resource_groups(inorganic_groups, unique_resources)
 
     # Analyze resources and print results
-    complete_resource_planets, unique_resource_planets = analyze_planetary_resources(systems, inorganic_groups_flat, unique_resources)
+    complete_resource_planets, unique_resource_planets = analyze_inorganic_resources(systems, inorganic_groups_flat, unique_resources)
+    selected_systems = find_best_systems(complete_resource_planets, unique_resource_planets, inorganic_groups_flat)
     #print_highest_score_planet_per_group(inorganic_groups_flat, complete_resource_planets)
 
-    # Find the best systems based on the complete resource planets
-    selected_systems = find_best_systems(complete_resource_planets, unique_resource_planets, inorganic_groups_flat)
+   
 
     # Print the selected systems and the resources they cover
     #print_selected_systems(selected_systems, complete_resource_planets)

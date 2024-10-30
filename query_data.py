@@ -1,6 +1,6 @@
 import json
 import csv
-from common import load_resources, load_planets, load_resource_groups
+from common import *
 
 def get_unique_values(planets, parameter):
     """Return all unique values for a given parameter across all planets."""
@@ -133,86 +133,89 @@ def top_n_planets(planets, score_type, n=10):
     sorted_planets = sorted(planets, key=lambda x: float(x['scores'].get(score_type, 0)), reverse=True)
     return [(planet['name'], float(planet['scores'].get(score_type, 0))) for planet in sorted_planets[:n]]
 
-# Sample usage
 if __name__ == '__main__':
     systems = load_planets('data/3_scored_systems_data.json')
-    
-    # Flatten planets across all systems for planet-specific queries
     planets = [planet for system in systems for planet in system['planets']]
-
-    # Dynamically split planets based on type classification
-    terrestrial_planets = [planet for planet in planets if planet['planet_type'][0] == 'Terrestrial']
-    gas_planets = [planet for planet in planets if planet['planet_type'][0] == 'Gas']
-
-    # Queries
-    """
-    print('Unique Values:')
-    for value in ['planet_type', 'temperature', 'atmosphere', 'magnetosphere', 'water']: 
-        print(f"Unique {value}:", get_unique_values(planets, value))
-    """
-
-    print("Ranges:")
-    print("Gravity range:", get_min_max(terrestrial_planets, "gravity"))
-    print("Day length range (in hours):", get_min_max(terrestrial_planets, "day_length"))
     
-    """
-    print("Planet with most inorganic resources:", planet_with_most_resources(terrestrial_planets, "inorganic"))
-    print("Planet with most organic resources:", planet_with_most_resources(terrestrial_planets, "organic"))
-    """
-    
-    print("System with most planets:", system_with_most_planets(systems))
-    print("System with most gas giants:", system_with_most(systems, "planet_type", {"Gas"}))
-    print("System with least planets:", system_with_least_planets(systems))
+    VALUES = False
+    FUN_FACTS = False
+    HIGHS_AND_LOWS = False
+    TOP_10S = False
 
     
+    if VALUES:
+        planet_fields = ['planet_type', 'temperature', 'atmosphere', 'magnetosphere', 'water']
+        print('----- Unique Values -----')
+        for value in planet_fields: 
+            print(f"Unique {value}:", get_unique_values(planets, value))
 
-    # Queries
-    highest_lowest_res_score = planet_with_highest_lowest_score(planets, 'resource_score')
-    highest_lowest_sys_res_score = system_with_highest_lowest_score(systems, 'resource_score')
-    highest_lowest_sys_org_score = system_with_highest_lowest_score(systems, 'organic_score')
-    highest_lowest_sys_inorg_score = system_with_highest_lowest_score(systems, 'inorganic_score')
-    top_systems = top_n_systems(systems, 'resource_score', 10)
-    top_planets = top_n_planets(planets, 'resource_score', 10)
-    top_inorg_systems = top_n_systems(systems, 'inorganic_score', 10)
-    top_inorg_planets = top_n_planets(planets, 'inorganic_score', 10)
-    top_org_systems = top_n_systems(systems, 'organic_score', 10)
-    top_org_planets = top_n_planets(planets, 'organic_score', 10)
+    if FUN_FACTS:
+        terrestrial_planets = [planet for planet in planets if planet['planet_type'][0] == 'Terrestrial']
+        gas_planets = [planet for planet in planets if planet['planet_type'][0] == 'Gas']
+        
+        print('\n----- Ranges -----')
+        print("Gravity range:", get_min_max(terrestrial_planets, 'gravity'))
+        print("Day length range (in hours):", get_min_max(terrestrial_planets, 'day_length'))
 
-    # Readable printout
-    print("----- Planet Scores -----")
-    print(f"Planet with highest resource score: {highest_lowest_res_score[0][0]} ({highest_lowest_res_score[0][1]})")
-    print(f"Planet with lowest resource score: {highest_lowest_res_score[1][0]} ({highest_lowest_res_score[1][1]})")
+        print('\n----- Resource Queries -----')
+        print("Planet with most inorganic resources:", planet_with_most_resources(terrestrial_planets, 'inorganic'))
+        print("Planet with most organic resources:", planet_with_most_resources(terrestrial_planets, 'organic'))
 
-    print("\n----- System Scores -----")
-    print(f"System with highest resource score: {highest_lowest_sys_res_score[0][0]} ({highest_lowest_sys_res_score[0][1]})")
-    print(f"System with lowest resource score: {highest_lowest_sys_res_score[1][0]} ({highest_lowest_sys_res_score[1][1]})")
-    print(f"System with highest organic score: {highest_lowest_sys_org_score[0][0]} ({highest_lowest_sys_org_score[0][1]})")
-    print(f"System with lowest organic score: {highest_lowest_sys_org_score[1][0]} ({highest_lowest_sys_org_score[1][1]})")
-    print(f"System with highest inorganic score: {highest_lowest_sys_org_score[0][0]} ({highest_lowest_sys_inorg_score[0][1]})")
-    print(f"System with lowest inorganic score: {highest_lowest_sys_org_score[1][0]} ({highest_lowest_sys_inorg_score[1][1]})")
+        print('\n----- System Queries -----')
+        print("System with most planets:", system_with_most_planets(systems))
+        print("System with most gas giants:", system_with_most(systems, 'planet_type', {'Gas'}))
+        print("System with least planets:", system_with_least_planets(systems))
+    
+    if HIGHS_AND_LOWS:
 
-    print("\n----- Top Systems -----")
-    for i, (name, score) in enumerate(top_systems, start=1):
-        print(f"{i}. {name}: {score}")
+        highest_lowest_res_score = planet_with_highest_lowest_score(planets, 'resource_score')
+        highest_lowest_sys_res_score = system_with_highest_lowest_score(systems, 'resource_score')
+        highest_lowest_sys_org_score = system_with_highest_lowest_score(systems, 'organic_score')
+        highest_lowest_sys_inorg_score = system_with_highest_lowest_score(systems, 'inorganic_score')
 
-    print("\n----- Top Planets -----")
-    for i, (planet_name, score) in enumerate(top_planets, start=1):
-        print(f"{i}. {planet_name}: {score}")
+        print("----- Planet Scores -----")
+        print(f"Planet with highest resource score: {highest_lowest_res_score[0][0]} ({highest_lowest_res_score[0][1]})")
+        print(f"Planet with lowest resource score: {highest_lowest_res_score[1][0]} ({highest_lowest_res_score[1][1]})")
 
-    print("\n----- Top Inorganic Systems -----")
-    for i, (name, score) in enumerate(top_inorg_systems, start=1):
-        print(f"{i}. {name}: {score}")
+        print("\n----- System Scores -----")
+        print(f"System with highest resource score: {highest_lowest_sys_res_score[0][0]} ({highest_lowest_sys_res_score[0][1]})")
+        print(f"System with lowest resource score: {highest_lowest_sys_res_score[1][0]} ({highest_lowest_sys_res_score[1][1]})")
+        print(f"System with highest organic score: {highest_lowest_sys_org_score[0][0]} ({highest_lowest_sys_org_score[0][1]})")
+        print(f"System with lowest organic score: {highest_lowest_sys_org_score[1][0]} ({highest_lowest_sys_org_score[1][1]})")
+        print(f"System with highest inorganic score: {highest_lowest_sys_org_score[0][0]} ({highest_lowest_sys_inorg_score[0][1]})")
+        print(f"System with lowest inorganic score: {highest_lowest_sys_org_score[1][0]} ({highest_lowest_sys_inorg_score[1][1]})")
 
-    print("\n----- Top Inorganic Planets -----")
-    for i, (planet_name, score) in enumerate(top_inorg_planets, start=1):
-        print(f"{i}. {planet_name}: {score}")
+    if TOP_10S: 
 
-    print("\n----- Top Organic Systems -----")
-    for i, (name, score) in enumerate(top_org_systems, start=1):
-        print(f"{i}. {name}: {score}")
+        top_systems = top_n_systems(systems, 'resource_score', 10)
+        top_planets = top_n_planets(planets, 'resource_score', 10)
+        top_inorg_systems = top_n_systems(systems, 'inorganic_score', 10)
+        top_inorg_planets = top_n_planets(planets, 'inorganic_score', 10)
+        top_org_systems = top_n_systems(systems, 'organic_score', 10)
+        top_org_planets = top_n_planets(planets, 'organic_score', 10)
 
-    print("\n----- Top Organic Systems -----")
-    for i, (planet_name, score) in enumerate(top_org_planets, start=1):
-        print(f"{i}. {planet_name}: {score}")
+        print("\n----- Top Systems -----")
+        for i, (name, score) in enumerate(top_systems, start=1):
+            print(f"{i}. {name}: {score}")
 
+        print("\n----- Top Planets -----")
+        for i, (planet_name, score) in enumerate(top_planets, start=1):
+            print(f"{i}. {planet_name}: {score}")
+
+        print("\n----- Top Inorganic Systems -----")
+        for i, (name, score) in enumerate(top_inorg_systems, start=1):
+            print(f"{i}. {name}: {score}")
+
+        print("\n----- Top Inorganic Planets -----")
+        for i, (planet_name, score) in enumerate(top_inorg_planets, start=1):
+            print(f"{i}. {planet_name}: {score}")
+
+        print("\n----- Top Organic Systems -----")
+        for i, (name, score) in enumerate(top_org_systems, start=1):
+            print(f"{i}. {name}: {score}")
+
+        print("\n----- Top Organic Systems -----")
+        for i, (planet_name, score) in enumerate(top_org_planets, start=1):
+            print(f"{i}. {planet_name}: {score}")
+    
 

@@ -1,0 +1,968 @@
+[
+    {
+        "name": "Porrima",
+        "planets": [
+            {
+                "name": "Porrima I",
+                "planet_type": [
+                    "Terrestrial",
+                    "Barren"
+                ],
+                "gravity": "0.38g",
+                "temperature": "Scorched",
+                "atmosphere": {
+                    "density": "None",
+                    "type": "None",
+                    "property": null
+                },
+                "magnetosphere": "Very weak",
+                "water": "None",
+                "day_length": "48.0 hours",
+                "planetary_habitation": "0",
+                "fauna": "0",
+                "flora": "0",
+                "resources": {
+                    "inorganic": [
+                        "Iron",
+                        "Helium-3"
+                    ],
+                    "organic": [],
+                    "special": []
+                },
+                "biomes": [
+                    "Craters",
+                    "Boiled"
+                ],
+                "domesticable": {
+                    "flora": {},
+                    "fauna": {}
+                },
+                "gatherable": {
+                    "flora": {},
+                    "fauna": {}
+                },
+                "traits": [
+                    "Boiled Seas"
+                ]
+            },
+            {
+                "name": "Porrima I-a",
+                "planet_type": [
+                    "Terrestrial",
+                    "Barren"
+                ],
+                "gravity": "0.21g",
+                "temperature": "Scorched",
+                "atmosphere": {
+                    "density": "None",
+                    "type": "None",
+                    "property": null
+                },
+                "magnetosphere": "None",
+                "water": "None",
+                "day_length": "1200.0 hours",
+                "planetary_habitation": "0",
+                "fauna": "0",
+                "flora": "0",
+                "resources": {
+                    "inorganic": [
+                        "Iron",
+                        "Alkanes",
+                        "Helium-3"
+                    ],
+                    "organic": [],
+                    "special": []
+                },
+                "biomes": [
+                    "Craters"
+                ],
+                "domesticable": {
+                    "flora": {},
+                    "fauna": {}
+                },
+                "gatherable": {
+                    "flora": {},
+                    "fauna": {}
+                }
+            },
+            {
+                "name": "Porrima I-b",
+                "planet_type": [
+                    "Terrestrial",
+                    "Barren"
+                ],
+                "gravity": "0.09g",
+                "temperature": "Scorched",
+                "atmosphere": {
+                    "density": "None",
+                    "type": "None",
+                    "property": null
+                },
+                "magnetosphere": "None",
+                "water": "None",
+                "day_length": "2040.0 hours",
+                "planetary_habitation": "0",
+                "fauna": "0",
+                "flora": "0",
+                "resources": {
+                    "inorganic": [
+                        "Aluminum",
+                        "Beryllium",
+                        "Helium-3",
+                        "Europium"
+                    ],
+                    "organic": [],
+                    "special": []
+                },
+                "biomes": [
+                    "Craters"
+                ],
+                "domesticable": {
+                    "flora": {},
+                    "fauna": {}
+                },
+                "gatherable": {
+                    "flora": {},
+                    "fauna": {}
+                }
+            },
+            {
+                "name": "Porrima II",
+                "planet_type": [
+                    "Terrestrial",
+                    "Rock"
+                ],
+                "gravity": "1.24g",
+                "temperature": "Temperate",
+                "atmosphere": {
+                    "density": "Extreme",
+                    "type": "O2",
+                    "property": null
+                },
+                "magnetosphere": "Powerful",
+                "water": "Safe",
+                "day_length": "16.0 hours",
+                "planetary_habitation": "2",
+                "fauna": "6",
+                "flora": "5",
+                "resources": {
+                    "inorganic": [
+                        "Chlorine",
+                        "Water",
+                        "Lithium",
+                        "Caesium"
+                    ],
+                    "organic": [
+                        "Spice",
+                        "Aromatic"
+                    ],
+                    "special": []
+                },
+                "biomes": [
+                    "Tropical",
+                    "Ocean",
+                    "Ecological"
+                ],
+                "domesticable": {
+                    "flora": {
+                        "Spice": "Bristle Barrel"
+                    },
+                    "fauna": {
+                        "Aromatic": "Leafbug"
+                    }
+                },
+                "gatherable": {
+                    "flora": {
+                        "Fiber": "Dunetangle",
+                        "Sealant": "Hecate's Fireleaf",
+                        "Aromatic": "Sandclaw",
+                        "Spice": "Stinging Flutterleaf"
+                    },
+                    "fauna": {
+                        "Nutrient": "Cassowary",
+                        "Spice": "Finhead",
+                        "Structural Material": "Milliwhale",
+                        "Fiber": "Seabat"
+                    }
+                },
+                "traits": [
+                    "Ecological Consortium"
+                ]
+            },
+            {
+                "name": "Porrima II-a",
+                "planet_type": [
+                    "Terrestrial",
+                    "Asteroid"
+                ],
+                "gravity": "0.05g",
+                "temperature": "Temperate",
+                "atmosphere": {
+                    "density": "None",
+                    "type": "None",
+                    "property": null
+                },
+                "magnetosphere": "None",
+                "water": "None",
+                "day_length": "- hours",
+                "planetary_habitation": "0",
+                "fauna": "0",
+                "flora": "0",
+                "resources": {
+                    "inorganic": [],
+                    "organic": [],
+                    "special": []
+                },
+                "biomes": [],
+                "domesticable": {
+                    "flora": {},
+                    "fauna": {}
+                },
+                "gatherable": {
+                    "flora": {},
+                    "fauna": {}
+                }
+            },
+            {
+                "name": "Porrima II-b",
+                "planet_type": [
+                    "Terrestrial",
+                    "Barren"
+                ],
+                "gravity": "0.41g",
+                "temperature": "Temperate",
+                "atmosphere": {
+                    "density": "Thin",
+                    "type": "M",
+                    "property": null
+                },
+                "magnetosphere": "None",
+                "water": "None",
+                "day_length": "33.0 hours",
+                "planetary_habitation": "0",
+                "fauna": "0",
+                "flora": "0",
+                "resources": {
+                    "inorganic": [
+                        "Aluminum",
+                        "Helium-3"
+                    ],
+                    "organic": [],
+                    "special": []
+                },
+                "biomes": [
+                    "Craters",
+                    "Boiled"
+                ],
+                "domesticable": {
+                    "flora": {},
+                    "fauna": {}
+                },
+                "gatherable": {
+                    "flora": {},
+                    "fauna": {}
+                },
+                "traits": [
+                    "Boiled Seas"
+                ]
+            },
+            {
+                "name": "Porrima II-c",
+                "planet_type": [
+                    "Terrestrial",
+                    "Rock"
+                ],
+                "gravity": "0.34g",
+                "temperature": "Temperate",
+                "atmosphere": {
+                    "density": "Thin",
+                    "type": "CO2",
+                    "property": null
+                },
+                "magnetosphere": "None",
+                "water": "None",
+                "day_length": "192.0 hours",
+                "planetary_habitation": "0",
+                "fauna": "0",
+                "flora": "0",
+                "resources": {
+                    "inorganic": [
+                        "Chlorine",
+                        "Lead",
+                        "Water"
+                    ],
+                    "organic": [],
+                    "special": []
+                },
+                "biomes": [
+                    "Sandy",
+                    "Rocky",
+                    "Prismatic",
+                    "Solar"
+                ],
+                "domesticable": {
+                    "flora": {},
+                    "fauna": {}
+                },
+                "gatherable": {
+                    "flora": {},
+                    "fauna": {}
+                },
+                "traits": [
+                    "Prismatic Plumes",
+                    "Solar Storm Seasons"
+                ]
+            },
+            {
+                "name": "Porrima III",
+                "planet_type": [
+                    "Terrestrial",
+                    "Rock"
+                ],
+                "gravity": "2.01g",
+                "temperature": "Cold",
+                "atmosphere": {
+                    "density": "Thin",
+                    "type": "M",
+                    "property": null
+                },
+                "magnetosphere": "Average",
+                "water": "Safe",
+                "day_length": "10.0 hours",
+                "planetary_habitation": "4",
+                "fauna": "4",
+                "flora": "4",
+                "resources": {
+                    "inorganic": [
+                        "Aluminum",
+                        "Chlorine",
+                        "Water",
+                        "Helium-3",
+                        "Lithium"
+                    ],
+                    "organic": [
+                        "Fiber",
+                        "Metabolic Agent",
+                        "Nutrient",
+                        "Sealant",
+                        "Structural Material",
+                        "Toxin",
+                        "Cosmetic"
+                    ],
+                    "special": []
+                },
+                "biomes": [
+                    "Frozen",
+                    "Ocean",
+                    "Craters",
+                    "Coniferous",
+                    "Sentient"
+                ],
+                "domesticable": {
+                    "flora": {
+                        "Structural Material": "Broadleaf Rose",
+                        "Toxin": "Forest Wisp",
+                        "Nutrient": "Sweet Canis Vine",
+                        "Fiber": "Terra Root"
+                    },
+                    "fauna": {
+                        "Cosmetic": "Beetlecrab",
+                        "Metabolic Agent": "Leafbug",
+                        "Sealant": "Spaceroach"
+                    }
+                },
+                "gatherable": {
+                    "flora": {},
+                    "fauna": {
+                        "Analgesic": "Red Mile Mauler"
+                    }
+                },
+                "traits": [
+                    "Sentient Microbial Colonies"
+                ]
+            },
+            {
+                "name": "Porrima III-a",
+                "planet_type": [
+                    "Terrestrial",
+                    "Barren"
+                ],
+                "gravity": "0.10g",
+                "temperature": "Cold",
+                "atmosphere": {
+                    "density": "None",
+                    "type": "None",
+                    "property": null
+                },
+                "magnetosphere": "None",
+                "water": "None",
+                "day_length": "1056.0 hours",
+                "planetary_habitation": "0",
+                "fauna": "0",
+                "flora": "0",
+                "resources": {
+                    "inorganic": [
+                        "Aluminum",
+                        "Helium-3",
+                        "Europium"
+                    ],
+                    "organic": [],
+                    "special": []
+                },
+                "biomes": [
+                    "Craters",
+                    "Bolide"
+                ],
+                "domesticable": {
+                    "flora": {},
+                    "fauna": {}
+                },
+                "gatherable": {
+                    "flora": {},
+                    "fauna": {}
+                },
+                "traits": [
+                    "Bolide Bombardment"
+                ]
+            },
+            {
+                "name": "Porrima III-b",
+                "planet_type": [
+                    "Terrestrial",
+                    "Barren"
+                ],
+                "gravity": "0.15g",
+                "temperature": "Cold",
+                "atmosphere": {
+                    "density": "None",
+                    "type": "None",
+                    "property": null
+                },
+                "magnetosphere": "None",
+                "water": "None",
+                "day_length": "1320.0 hours",
+                "planetary_habitation": "0",
+                "fauna": "0",
+                "flora": "0",
+                "resources": {
+                    "inorganic": [
+                        "Aluminum",
+                        "Beryllium",
+                        "Helium-3",
+                        "Neodymium"
+                    ],
+                    "organic": [],
+                    "special": []
+                },
+                "biomes": [
+                    "Craters"
+                ],
+                "domesticable": {
+                    "flora": {},
+                    "fauna": {}
+                },
+                "gatherable": {
+                    "flora": {},
+                    "fauna": {}
+                }
+            },
+            {
+                "name": "Porrima IV",
+                "planet_type": [
+                    "Jovian",
+                    "Gas giant"
+                ],
+                "gravity": "2.17g",
+                "temperature": "Frozen",
+                "atmosphere": {
+                    "density": "None",
+                    "type": "None",
+                    "property": null
+                },
+                "magnetosphere": "Strong",
+                "water": "None",
+                "day_length": "19.0 hours",
+                "planetary_habitation": "0",
+                "fauna": "0",
+                "flora": "0",
+                "resources": {
+                    "inorganic": [],
+                    "organic": [],
+                    "special": []
+                },
+                "biomes": [],
+                "domesticable": {
+                    "flora": {},
+                    "fauna": {}
+                },
+                "gatherable": {
+                    "flora": {},
+                    "fauna": {}
+                }
+            },
+            {
+                "name": "Porrima IV-a",
+                "planet_type": [
+                    "Terrestrial",
+                    "Ice"
+                ],
+                "gravity": "0.18g",
+                "temperature": "Frozen",
+                "atmosphere": {
+                    "density": "None",
+                    "type": "None",
+                    "property": null
+                },
+                "magnetosphere": "None",
+                "water": "Safe",
+                "day_length": "12.0 hours",
+                "planetary_habitation": "0",
+                "fauna": "0",
+                "flora": "0",
+                "resources": {
+                    "inorganic": [
+                        "Argon",
+                        "Water",
+                        "Benzene"
+                    ],
+                    "organic": [],
+                    "special": []
+                },
+                "biomes": [
+                    "Frozen",
+                    "Crystalline"
+                ],
+                "domesticable": {
+                    "flora": {},
+                    "fauna": {}
+                },
+                "gatherable": {
+                    "flora": {},
+                    "fauna": {}
+                },
+                "traits": [
+                    "Crystalline Crust"
+                ]
+            },
+            {
+                "name": "Porrima IV-b",
+                "planet_type": [
+                    "Terrestrial",
+                    "Ice"
+                ],
+                "gravity": "0.08g",
+                "temperature": "Frozen",
+                "atmosphere": {
+                    "density": "None",
+                    "type": "None",
+                    "property": null
+                },
+                "magnetosphere": "None",
+                "water": "Safe",
+                "day_length": "27.0 hours",
+                "planetary_habitation": "0",
+                "fauna": "0",
+                "flora": "0",
+                "resources": {
+                    "inorganic": [
+                        "Argon",
+                        "Water",
+                        "Benzene"
+                    ],
+                    "organic": [],
+                    "special": []
+                },
+                "biomes": [
+                    "Frozen",
+                    "Slushy"
+                ],
+                "domesticable": {
+                    "flora": {},
+                    "fauna": {}
+                },
+                "gatherable": {
+                    "flora": {},
+                    "fauna": {}
+                },
+                "traits": [
+                    "Slushy Subsurface Seas"
+                ]
+            },
+            {
+                "name": "Porrima IV-c",
+                "planet_type": [
+                    "Terrestrial",
+                    "Rock"
+                ],
+                "gravity": "0.52g",
+                "temperature": "Cold",
+                "atmosphere": {
+                    "density": "Thin",
+                    "type": "CO2",
+                    "property": null
+                },
+                "magnetosphere": "Weak",
+                "water": "Radioactive",
+                "day_length": "96.0 hours",
+                "planetary_habitation": "0",
+                "fauna": "4",
+                "flora": "3",
+                "resources": {
+                    "inorganic": [
+                        "Argon",
+                        "Chlorine",
+                        "Iron",
+                        "Water",
+                        "Alkanes",
+                        "Chlorosilanes",
+                        "Carboxylic Acids",
+                        "Neon"
+                    ],
+                    "organic": [
+                        "Fiber",
+                        "Nutrient",
+                        "Cosmetic"
+                    ],
+                    "special": []
+                },
+                "biomes": [
+                    "Frozen",
+                    "Ocean",
+                    "Mountains",
+                    "Coniferous",
+                    "Amphibious",
+                    "Psychotropic"
+                ],
+                "domesticable": {
+                    "flora": {
+                        "Nutrient": "Cold Cave Nettle",
+                        "Fiber": "Stunted Pine",
+                        "Cosmetic": "Terra Root"
+                    },
+                    "fauna": {}
+                },
+                "gatherable": {
+                    "flora": {},
+                    "fauna": {
+                        "Cosmetic": "Ankylosaurus",
+                        "Antimicrobial": "Trident",
+                        "Sealant": "Tongueface"
+                    }
+                },
+                "traits": [
+                    "Amphibious Foothold",
+                    "Psychotropic Biota"
+                ]
+            },
+            {
+                "name": "Porrima IV-d",
+                "planet_type": [
+                    "Terrestrial",
+                    "Rock"
+                ],
+                "gravity": "0.55g",
+                "temperature": "Temperate",
+                "atmosphere": {
+                    "density": "Standard",
+                    "type": "O2",
+                    "property": null
+                },
+                "magnetosphere": "None",
+                "water": "Biological",
+                "day_length": "120.0 hours",
+                "planetary_habitation": "0",
+                "fauna": "0",
+                "flora": "0",
+                "resources": {
+                    "inorganic": [
+                        "Argon",
+                        "Lead",
+                        "Nickel",
+                        "Uranium",
+                        "Water",
+                        "Carboxylic Acids",
+                        "Neon",
+                        "Plutonium"
+                    ],
+                    "organic": [],
+                    "special": []
+                },
+                "biomes": [
+                    "Ocean",
+                    "Sandy",
+                    "Swamp",
+                    "Hills",
+                    "Frozen",
+                    "Mountains",
+                    "Aeriform",
+                    "Primordial"
+                ],
+                "domesticable": {
+                    "flora": {},
+                    "fauna": {}
+                },
+                "gatherable": {
+                    "flora": {},
+                    "fauna": {}
+                },
+                "traits": [
+                    "Aeriform Life",
+                    "Primordial Network"
+                ]
+            },
+            {
+                "name": "Porrima V",
+                "planet_type": [
+                    "Jovian",
+                    "Gas giant"
+                ],
+                "gravity": "3.11g",
+                "temperature": "Deep freeze",
+                "atmosphere": {
+                    "density": "None",
+                    "type": "None",
+                    "property": null
+                },
+                "magnetosphere": "Extreme",
+                "water": "None",
+                "day_length": "4.0 hours",
+                "planetary_habitation": "0",
+                "fauna": "0",
+                "flora": "0",
+                "resources": {
+                    "inorganic": [],
+                    "organic": [],
+                    "special": []
+                },
+                "biomes": [],
+                "domesticable": {
+                    "flora": {},
+                    "fauna": {}
+                },
+                "gatherable": {
+                    "flora": {},
+                    "fauna": {}
+                }
+            },
+            {
+                "name": "Porrima V-a",
+                "planet_type": [
+                    "Terrestrial",
+                    "Rock"
+                ],
+                "gravity": "0.40g",
+                "temperature": "Deep freeze",
+                "atmosphere": {
+                    "density": "Standard",
+                    "type": "N2",
+                    "property": null
+                },
+                "magnetosphere": "None",
+                "water": "Safe",
+                "day_length": "61.0 hours",
+                "planetary_habitation": "1",
+                "fauna": "0",
+                "flora": "0",
+                "resources": {
+                    "inorganic": [
+                        "Argon",
+                        "Chlorine",
+                        "Copper",
+                        "Water",
+                        "Benzene",
+                        "Fluorine",
+                        "Lithium",
+                        "Caesium"
+                    ],
+                    "organic": [],
+                    "special": []
+                },
+                "biomes": [
+                    "Frozen",
+                    "Hills",
+                    "Plateau",
+                    "Sandy",
+                    "Crystalline"
+                ],
+                "domesticable": {
+                    "flora": {},
+                    "fauna": {}
+                },
+                "gatherable": {
+                    "flora": {},
+                    "fauna": {}
+                },
+                "traits": [
+                    "Crystalline Crust"
+                ]
+            },
+            {
+                "name": "Porrima V-b",
+                "planet_type": [
+                    "Terrestrial",
+                    "Ice"
+                ],
+                "gravity": "0.07g",
+                "temperature": "Deep freeze",
+                "atmosphere": {
+                    "density": "None",
+                    "type": "None",
+                    "property": null
+                },
+                "magnetosphere": "None",
+                "water": "Safe",
+                "day_length": "216.0 hours",
+                "planetary_habitation": "1",
+                "fauna": "0",
+                "flora": "0",
+                "resources": {
+                    "inorganic": [
+                        "Copper",
+                        "Water",
+                        "Fluorine",
+                        "Gold"
+                    ],
+                    "organic": [],
+                    "special": []
+                },
+                "biomes": [
+                    "Frozen"
+                ],
+                "domesticable": {
+                    "flora": {},
+                    "fauna": {}
+                },
+                "gatherable": {
+                    "flora": {},
+                    "fauna": {}
+                }
+            },
+            {
+                "name": "Porrima V-c",
+                "planet_type": [
+                    "Terrestrial",
+                    "Ice"
+                ],
+                "gravity": "0.15g",
+                "temperature": "Deep freeze",
+                "atmosphere": {
+                    "density": "None",
+                    "type": "None",
+                    "property": null
+                },
+                "magnetosphere": "None",
+                "water": "Chemical",
+                "day_length": "72.0 hours",
+                "planetary_habitation": "1",
+                "fauna": "0",
+                "flora": "0",
+                "resources": {
+                    "inorganic": [
+                        "Copper",
+                        "Water",
+                        "Gold",
+                        "Antimony"
+                    ],
+                    "organic": [],
+                    "special": []
+                },
+                "biomes": [
+                    "Frozen"
+                ],
+                "domesticable": {
+                    "flora": {},
+                    "fauna": {}
+                },
+                "gatherable": {
+                    "flora": {},
+                    "fauna": {}
+                }
+            },
+            {
+                "name": "Porrima VI",
+                "planet_type": [
+                    "Terrestrial",
+                    "Ice"
+                ],
+                "gravity": "0.09g",
+                "temperature": "Deep freeze",
+                "atmosphere": {
+                    "density": "None",
+                    "type": "None",
+                    "property": null
+                },
+                "magnetosphere": "None",
+                "water": "Heavy metal",
+                "day_length": "50.0 hours",
+                "planetary_habitation": "1",
+                "fauna": "0",
+                "flora": "0",
+                "resources": {
+                    "inorganic": [
+                        "Chlorine",
+                        "Water",
+                        "Lithium"
+                    ],
+                    "organic": [],
+                    "special": []
+                },
+                "biomes": [
+                    "Frozen"
+                ],
+                "domesticable": {
+                    "flora": {},
+                    "fauna": {}
+                },
+                "gatherable": {
+                    "flora": {},
+                    "fauna": {}
+                }
+            },
+            {
+                "name": "Porrima VI-a",
+                "planet_type": [
+                    "Terrestrial",
+                    "Ice"
+                ],
+                "gravity": "0.08g",
+                "temperature": "Deep freeze",
+                "atmosphere": {
+                    "density": "None",
+                    "type": "None",
+                    "property": null
+                },
+                "magnetosphere": "None",
+                "water": "Safe",
+                "day_length": "216.0 hours",
+                "planetary_habitation": "1",
+                "fauna": "0",
+                "flora": "0",
+                "resources": {
+                    "inorganic": [
+                        "Chlorine",
+                        "Water",
+                        "Chlorosilanes"
+                    ],
+                    "organic": [],
+                    "special": []
+                },
+                "biomes": [
+                    "Frozen",
+                    "Slushy"
+                ],
+                "domesticable": {
+                    "flora": {},
+                    "fauna": {}
+                },
+                "gatherable": {
+                    "flora": {},
+                    "fauna": {}
+                },
+                "traits": [
+                    "Slushy Subsurface Seas"
+                ]
+            }
+        ],
+        "id": 1
+    }
+]

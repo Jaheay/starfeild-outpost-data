@@ -1,7 +1,7 @@
 {
     "Argon": ["Argon", "Benzene", "Carboxylic Acids", "Neon", "Veryl"],
     "Iron": ["Iron", "Alkanes", "Tantalum", "Ytterbium", "Rothicite"],
-    "Aluminium": ["Aluminum", "Beryllium", "Neodymium", "Europium", "Indicite"],
+    "Aluminum": ["Aluminum", "Beryllium", "Neodymium", "Europium", "Indicite"],
     "Uranium": ["Uranium", "Iridium", "Vanadium", "Plutonium", "Vytinium"],
     "Nickel": ["Nickel", "Cobalt", "Platinum", "Palladium", "Tasine"],
     "Chlorine": {
