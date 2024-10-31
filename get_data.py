@@ -176,13 +176,13 @@ def scrape_star_system(url):
 
 
         # Initialize moon attributes
-        planet['isMoon'] = False
+        planet['attributes']['isMoon'] = False
         planet['moons'] = []
         
          # Check for moons
         find_moons = tree_item.find_next_sibling('ul', class_='treelevel treeitem')
         if find_moons:
-            planet['hasMoon'] = True
+            planet['attributes']['hasMoon'] = True
             find_moons_items = find_moons.find_all('li', class_='treeitem')
             for moon_item in find_moons_items:
                 find_moon_name_name = moon_item.find('h3', class_='bodyname')
@@ -191,19 +191,20 @@ def scrape_star_system(url):
                 moon_name = clean_output(find_moon_name_name.text.strip())
                 planet['moons'].append(moon_name)
         else:
-            planet['hasMoon'] = False
+            planet['attributes']['hasMoon'] = False
         
         planets.append(planet)
 
     # Update isMoon attribute for moons
     for planet in planets:
         if planet['name'] in [moon for p in planets for moon in p['moons']]:
-            planet['isMoon'] = True
+            planet['attributes']['isMoon'] = True
 
     # Get rid of errant empty moons key
-        if planet['hasMoon'] == False:
+        if planet['attributes']['hasMoon'] == False:
             if planet['moons']: 
                 del planet['moons']
+
 
     return {
         'name': system_name,
@@ -317,9 +318,6 @@ def clean_attributes(attributes):
     # Update planet with modified attributes
 
     return attributes
-
-
-
 
 if __name__ == '__main__':
     

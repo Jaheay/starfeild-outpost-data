@@ -1,29 +1,93 @@
 import json
 import csv
 from common import *
+from itertools import product
+import matplotlib.pyplot as plt
 
-def get_unique_values(planets, parameter):
-    """Return all unique values for a given parameter across all planets."""
+def get_attribute_value(planet, attribute):
+    """Extracts a comparable value for a specific attribute from the planet data."""
+    if attribute == 'planet_type':
+        return planet['attributes'].get(attribute, [None, None])[1]  # Return subtype only
+    elif attribute == 'atmosphere':
+        atmosphere = planet['attributes'].get('atmosphere')
+        return f"{atmosphere.get('density', 'Unknown')} {atmosphere.get('type', 'Unknown')}" if atmosphere else None
+    elif attribute == 'biomes':
+        return planet.get(attribute, [])
+    else:
+        return planet['attributes'].get(attribute)
+
+def get_unique_values(planets, attribute):
+    """Fetch unique values for a given attribute from the dataset."""
     unique_values = set()
-    
     for planet in planets:
-        if parameter == 'planet_type':
-            unique_values.add(planet[parameter][1])  # Add subtype only
-        elif parameter == 'atmosphere':
-            atmosphere = planet.get('atmosphere')
-            if atmosphere:
-                unique_values.add(f"{atmosphere['density']} {atmosphere['type']}")
+        value = get_attribute_value(planet, attribute)
+        if isinstance(value, list):
+            unique_values.update(value)  # For lists like 'biomes'
         else:
-            value = planet.get(parameter)
-            if value:
-                if isinstance(value, list):
-                    unique_values.update(value)  # Add all items in the list
-                else:
-                    unique_values.add(value)  # Add single value
-                
+            unique_values.add(value)
+    print(f'Unique values for {attribute}: {unique_values}')  # Debug print
     return unique_values
 
+def get_attribute_combos(planets, attribute1, attribute2):
+    """Find combinations of unique attribute values, count planets, and save data."""
+    unique_values1 = get_unique_values(planets, attribute1)
+    unique_values2 = get_unique_values(planets, attribute2)
+    
+    combinations = list(product(unique_values1, unique_values2))
+    combo_data = []
 
+    for val1, val2 in combinations:
+        matching_planets = [
+            planet['name'] for planet in planets 
+            if (get_attribute_value(planet, attribute1) == val1 or
+                (attribute1 == 'biomes' and val1 in get_attribute_value(planet, attribute1))) and
+               (get_attribute_value(planet, attribute2) == val2 or
+                (attribute2 == 'biomes' and val2 in get_attribute_value(planet, attribute2)))
+        ]
+        count = len(matching_planets)
+        combo_data.append([val1, val2, count, matching_planets])
+        print(f'Combination {val1}, {val2}: count={count}, planets={matching_planets}')  # Debug print
+
+    output_csv = f"graph_{attribute1}_{attribute2}.csv"
+    with open(output_csv, mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow([attribute1, attribute2, 'count', 'planet_list'])
+        for row in combo_data:
+            writer.writerow(row)
+    print(f'Data written to {output_csv}')  # Debug print
+
+    plot_bar_graph(combo_data, attribute1, attribute2)
+
+def plot_bar_graph(combo_data, attribute1, attribute2):
+    """Plot a bar graph for the attribute combinations and their counts with callouts for values."""
+    labels = [f'{val1}, {val2}' for val1, val2, _, _ in combo_data]
+    counts = [count for _, _, count, _ in combo_data]
+
+    plt.figure(figsize=(10, 6))
+    bars = plt.bar(labels, counts)
+    plt.xticks(rotation=90)
+    plt.xlabel(f'{attribute1} and {attribute2} combinations')
+    plt.ylabel('Count')
+    plt.title(f'Planet Count by {attribute1} and {attribute2}')
+    
+    # Adding callouts above each bar with the count value
+    for bar in bars:
+        yval = bar.get_height()
+        plt.text(
+            bar.get_x() + bar.get_width() / 2,
+            yval,
+            int(yval),
+            ha='center',
+            va='bottom',
+            fontsize=9
+        )
+    
+    plt.tight_layout()
+    plt.show()
+
+
+
+    
 def get_min_max(planets, parameter):
     """Return the planet name with the min and max values for a numerical parameter like gravity or day_length."""
     min_value, max_value = float('inf'), float('-inf')
@@ -31,7 +95,7 @@ def get_min_max(planets, parameter):
 
     for planet in planets:
         if parameter in planet:
-            value = planet[parameter]
+            value = planet['attributes'][parameter]
             try:
                 # Convert value to a float (e.g., '0.89g' to 0.89)
                 if 'g' in value:
@@ -74,7 +138,7 @@ def system_with_most(systems, parameter, values):
 
     for system in systems:
         count = sum(1 for planet in system['planets'] 
-                    if parameter == 'planet_type' and planet[parameter][0] in values)
+                    if parameter == 'planet_type' and planet['attributes'][parameter][0] in values)
         
         # Track the systems with the highest count
         if count > max_count:
@@ -139,13 +203,14 @@ def top_n_planets(planets, score_type, n=10):
     return [(planet['name'], float(planet['scores'].get(score_type, 0))) for planet in sorted_planets[:n]]
 
 if __name__ == '__main__':
-    systems = load_system_data(RAW_SYSTEM_DATA_PATH)
+    systems = load_system_data(SCORED_SYSTEM_DATA_PATH)
     planets = [planet for system in systems for planet in system['planets']]
     
-    VALUES = True
+    VALUES = False
+    TWO_VALUE_HISTOGRAM = False
     FUN_FACTS = False
-    HIGHS_AND_LOWS = False
-    TOP_10S = False
+    HIGHS_AND_LOWS = True
+    TOP_10S = True
 
     
     if VALUES:
@@ -153,6 +218,13 @@ if __name__ == '__main__':
         print('----- Unique Values -----')
         for value in planet_fields: 
             print(f"Unique {value}:", get_unique_values(planets, value))
+
+
+    if TWO_VALUE_HISTOGRAM:
+      
+        #get_attribute_combos(planets, 'magnetosphere', 'planet_type')
+        get_attribute_combos(planets, 'atmosphere', 'planetary_habitation')
+
 
     if FUN_FACTS:
         terrestrial_planets = [planet for planet in planets if planet['planet_type'][0] == 'Terrestrial']
@@ -173,38 +245,45 @@ if __name__ == '__main__':
     
     if HIGHS_AND_LOWS:
 
-        highest_lowest_res_score = planet_with_highest_lowest_score(planets, 'resource_score')
-        highest_lowest_sys_res_score = system_with_highest_lowest_score(systems, 'resource_score')
+        highest_lowest_hab_score = planet_with_highest_lowest_score(planets, 'habitability_score')
+        highest_lowest_org_score = planet_with_highest_lowest_score(planets, 'organic_score')
+        highest_lowest_inorg_score = planet_with_highest_lowest_score(planets, 'inorganic_score')
+
+        highest_lowest_sys_hab_score = system_with_highest_lowest_score(systems, 'habitability_score')
         highest_lowest_sys_org_score = system_with_highest_lowest_score(systems, 'organic_score')
         highest_lowest_sys_inorg_score = system_with_highest_lowest_score(systems, 'inorganic_score')
 
         print("----- Planet Scores -----")
-        print(f"Planet with highest resource score: {highest_lowest_res_score[0][0]} ({highest_lowest_res_score[0][1]})")
-        print(f"Planet with lowest resource score: {highest_lowest_res_score[1][0]} ({highest_lowest_res_score[1][1]})")
+        print(f"Planet with highest habitability score: {highest_lowest_hab_score[0][0]} ({highest_lowest_hab_score[0][1]})")
+        print(f"Planet with lowest habitability score: {highest_lowest_hab_score[1][0]} ({highest_lowest_hab_score[1][1]})")
+        print(f"Planet with highest organic score: {highest_lowest_org_score[0][0]} ({highest_lowest_org_score[0][1]})")
+        print(f"Planet with lowest organic score: {highest_lowest_org_score[1][0]} ({highest_lowest_org_score[1][1]})")
+        print(f"Planet with highest inorganic score: {highest_lowest_inorg_score[0][0]} ({highest_lowest_inorg_score[0][1]})")
+        print(f"Planet with lowest inorganic score: {highest_lowest_inorg_score[1][0]} ({highest_lowest_inorg_score[1][1]})")
 
         print("\n----- System Scores -----")
-        print(f"System with highest resource score: {highest_lowest_sys_res_score[0][0]} ({highest_lowest_sys_res_score[0][1]})")
-        print(f"System with lowest resource score: {highest_lowest_sys_res_score[1][0]} ({highest_lowest_sys_res_score[1][1]})")
+        print(f"System with highest habitability score: {highest_lowest_sys_hab_score[0][0]} ({highest_lowest_sys_hab_score[0][1]})")
+        print(f"System with lowest habitability score: {highest_lowest_sys_hab_score[1][0]} ({highest_lowest_sys_hab_score[1][1]})")
         print(f"System with highest organic score: {highest_lowest_sys_org_score[0][0]} ({highest_lowest_sys_org_score[0][1]})")
         print(f"System with lowest organic score: {highest_lowest_sys_org_score[1][0]} ({highest_lowest_sys_org_score[1][1]})")
-        print(f"System with highest inorganic score: {highest_lowest_sys_org_score[0][0]} ({highest_lowest_sys_inorg_score[0][1]})")
-        print(f"System with lowest inorganic score: {highest_lowest_sys_org_score[1][0]} ({highest_lowest_sys_inorg_score[1][1]})")
+        print(f"System with highest inorganic score: {highest_lowest_sys_inorg_score[0][0]} ({highest_lowest_sys_inorg_score[0][1]})")
+        print(f"System with lowest inorganic score: {highest_lowest_sys_inorg_score[1][0]} ({highest_lowest_sys_inorg_score[1][1]})")
 
     if TOP_10S: 
 
-        top_systems = top_n_systems(systems, 'resource_score', 10)
-        top_planets = top_n_planets(planets, 'resource_score', 10)
+        top_hab_systems = top_n_systems(systems, 'habitability_score', 10)
+        top_hab_planets = top_n_planets(planets, 'habitability_score', 10)
         top_inorg_systems = top_n_systems(systems, 'inorganic_score', 10)
         top_inorg_planets = top_n_planets(planets, 'inorganic_score', 10)
         top_org_systems = top_n_systems(systems, 'organic_score', 10)
         top_org_planets = top_n_planets(planets, 'organic_score', 10)
 
-        print("\n----- Top Systems -----")
-        for i, (name, score) in enumerate(top_systems, start=1):
+        print("\n----- Top Habitable Systems -----")
+        for i, (name, score) in enumerate(top_hab_systems, start=1):
             print(f"{i}. {name}: {score}")
 
-        print("\n----- Top Planets -----")
-        for i, (planet_name, score) in enumerate(top_planets, start=1):
+        print("\n----- Top Habitable Planets -----")
+        for i, (planet_name, score) in enumerate(top_hab_planets, start=1):
             print(f"{i}. {planet_name}: {score}")
 
         print("\n----- Top Inorganic Systems -----")

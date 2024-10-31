@@ -3,7 +3,7 @@ import json
 import os
 
 RAW_SYSTEM_DATA_PATH = 'data/raw_systems_data.json'
-SCORED_SYSTEM_DATA_PATH = 'data/raw_systems_data.json'
+SCORED_SYSTEM_DATA_PATH = 'data/scored_systems_data.json'
 INORGANIC_DATA_PATH = 'data/inorganic.csv'
 ORGANIC_DATA_PATH = 'data/organic.csv'
 INORGANIC_GROUPS_PATH='data/inorganic_groups.json'
@@ -65,6 +65,29 @@ def load_resource_groups(filename, unique_resource):
                         result[f"{sub_key}"] = filtered_combined
     return result
 
+def get_grouped_resources(resources, resource_groups, full_chain=False):
+    group_counts = {}
+    flat_resources = {}
+
+    # Flatten and map resources
+    for group, group_resources in resource_groups.items():
+        for item in group_resources:
+            flat_resources[item] = group
+        group_counts[group] = False if full_chain else 0  # Initialize based on `full_chain`
+
+    if full_chain:
+        # Set to True if a complete group is found
+        for group_name, required_resources in resource_groups.items():
+            if all(item in resources for item in required_resources):
+                group_counts[group_name] = True
+    else:
+        # Count individual resource occurrences
+        for resource in resources:
+            if resource in flat_resources:
+                group = flat_resources[resource]
+                group_counts[group] += 1
+
+    return {group: count for group, count in group_counts.items() if count}
     
 def get_gatherable_domesticable(planet, flora_only=False, fauna_only=False):
     """Collect gatherable and domesticable resources from a planet."""
