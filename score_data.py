@@ -4,7 +4,7 @@ import json
 
 def score_bonus(resources):
     bonus = 0
-    if any(item in resources for item in GATHERABLE_INORGANIC):
+    if any(item in resources for item in GATHERABLE_ONLY_INORGANIC):
         bonus += 12
     if 'Helium-3' in resources: 
         bonus += 14  # On top of +2 for being uncommon

@@ -1,60 +1,56 @@
 from common import *
 import json
 
-def get_base_info(system, planet):
-    """Extracts base information for a given planet within a system."""
-    planet_scores = planet['scores']
-    return {
-        'system': system['name'],
-        'planet': planet['name'],
-        'inorganic_score': float(planet_scores['inorganic_score']),
-        'organic_score': float(planet_scores['organic_score']),
-        'habitability_score': float(planet_scores['habitability_score'])
-    }
+def get_grouped_resources(resources, resource_groups, full_chain=False):
+    group_counts = {}
+    flat_resources = {}
 
-def get_unique_resources(planet_resources, unique_resources):
-    """Get unique resources present on the planet."""
-    unique_res = [resource for resource in planet_resources if resource in unique_resources]
-    return unique_res
+    # Flatten and map resources
+    for group, group_resources in resource_groups.items():
+        for item in group_resources:
+            flat_resources[item] = group
+        group_counts[group] = False if full_chain else 0  # Initialize based on `full_chain`
+
+    if full_chain:
+        # Set to True if a complete group is found
+        for group_name, required_resources in resource_groups.items():
+            if all(item in resources for item in required_resources):
+                group_counts[group_name] = True
+    else:
+        # Count individual resource occurrences
+        for resource in resources:
+            if resource in flat_resources:
+                group = flat_resources[resource]
+                group_counts[group] += 1
+
+    return {group: count for group, count in group_counts.items() if count}
 
 def find_fullchain_planets(system_data, inorganic_groups):
-    fullchain_planets = []
 
-    # Loop through systems and planets to check resources
     for system in system_data:
-        for planet in system.get('planets', []):
-            base_info = get_base_info(system, planet)  # Retrieve base info
-
-            # Check for complete groups using get_grouped_resources with full_chain=True
+        for planet in system['planets']:
             grouped_resources = get_grouped_resources(planet['resources']['inorganic'], inorganic_groups, full_chain=True)
-            for group_name, is_complete in grouped_resources.items():
-                if is_complete:
-                    group_info = base_info.copy()
-                    group_info['resource'] = group_name
-                    fullchain_planets.append(group_info)
-
-    # Sort by inorganic score in descending order
-    fullchain_planets.sort(key=lambda x: x['inorganic_score'], reverse=True)
-
-    return fullchain_planets
+            
+            # Determine if full resource chain exists
+            full_chain = any(is_complete for is_complete in grouped_resources.values())
+            if full_chain:
+                planet.setdefault('outpost_candidacy', {})
+                planet['outpost_candidacy']['full_resource_chain'] = list(grouped_resources.keys())
 
 def find_unique_resources(system_data, unique_resources):
-    unique_planets = []
 
-    # Loop through systems and planets to check unique resources
     for system in system_data:
-        for planet in system.get('planets', []):
-            base_info = get_base_info(system, planet)  # Retrieve base info
+        for planet in system['planets']:
+            unique_found = any(
+                [resource for resource in planet['resources'][resource_type] if resource in unique_resources[resource_type]]
+                for resource_type in unique_resources
+            )
+            
+            # Update the unique resource status
+            if unique_found:
+                planet.setdefault('outpost_candidacy', {})
+                planet['outpost_candidacy']['unique'] = unique_found
 
-            # Check for unique resources
-            for type in unique_resources:
-                found_unique_resources = get_unique_resources(planet['resources'][type], unique_resources[type])
-                for unique_resource in found_unique_resources:
-                    unique_info = base_info.copy()
-                    unique_info['resource'] = unique_resource
-                    unique_planets.append(unique_info)
-
-    return unique_planets
 
 
 def score_by_desired(candidate_systems, all_systems, desired_inorganics=[], desired_organics=[], resources_by_rarity=None):
@@ -170,7 +166,7 @@ def find_best_systems(all_systems, fullchain_inorganic_planets, unique_resource_
     while True:
         # Identify uncaptured groups and resources
         uncaptured_inorganic_groups = [resource for resource in inorganic_groups if resource not in captured_inorganic_groups]
-        uncaptured_inorganics = [resource for resource in inorganic_resources if resource not in captured_inorganics and resource not in GATHERABLE_INORGANIC]
+        uncaptured_inorganics = [resource for resource in inorganic_resources if resource not in captured_inorganics and resource not in GATHERABLE_ONLY_INORGANIC]
         uncaptured_organics = [resource for resource in organic_resources if resource not in captured_organics]
 
         if not uncaptured_inorganic_groups:
@@ -252,7 +248,7 @@ def find_best_systems(all_systems, fullchain_inorganic_planets, unique_resource_
     
 
     uncaptured_inorganic_groups = [resource for resource in inorganic_groups if resource not in captured_inorganic_groups]
-    uncaptured_inorganics = [resource for resource in inorganic_resources if resource not in captured_inorganics and resource not in GATHERABLE_INORGANIC]
+    uncaptured_inorganics = [resource for resource in inorganic_resources if resource not in captured_inorganics and resource not in GATHERABLE_ONLY_INORGANIC]
     uncaptured_organics = [resource for resource in organic_resources if resource not in captured_organics]
 
     print(f"{uncaptured_inorganic_groups}")
@@ -261,40 +257,93 @@ def find_best_systems(all_systems, fullchain_inorganic_planets, unique_resource_
     return final_planets
 
 
-
-
-
-def write_to_csv(data, filename, output_folder='output', include_unique_resources=False):
-    """Write data to a CSV file in an output folder, sorted by 'system' and 'planet' alphabetically."""
+def find_best_systems(all_systems, resources_by_rarity, groups):
+    final_planets = []
+    processed_systems = set()
     
-    # Ensure the output folder exists
-    os.makedirs(output_folder, exist_ok=True)
+    inorganic_groups = groups['inorganic']
+    inorganic_resources = set(resources_by_rarity['inorganic'].keys())
+    organic_resources = set(resources_by_rarity['organic'].keys())
     
-    # Sort data by 'system' and 'planet' alphabetically
-    sorted_data = sorted(data, key=lambda x: (x.get('system', ''), x['planet']))
+    captured_inorganic_groups = set()
+    captured_inorganics = set()
+    captured_organics = set()
     
-    # Full path for the output file
-    file_path = os.path.join(output_folder, filename)
-
-    with open(file_path, mode='w', newline='') as file:
-        writer = csv.writer(file)
+    # Part 1: Capture unique resource planets and fullchain inorganics from systems with unique resources
+    for system in all_systems:
+        for planet in system['planets']:
+            candidacy = planet['outpost_candidacy']
+            if candidacy['unique'] or candidacy['full_resource_chain']:
+                final_planets.append(planet)
+                processed_systems.add(system['name'])
+                for resource in candidacy['resources']:
+                    if resource in inorganic_groups:
+                        captured_inorganic_groups.add(resource)
+                        captured_inorganics.update(groups['inorganic'][resource])
+                    elif resource in inorganic_resources:
+                        captured_inorganics.add(resource)
+                    elif resource in organic_resources:
+                        captured_organics.add(resource)
+    
+    # Part 2: Identify systems with the most uncaptured full resource chains and score them
+    while True:
+        uncaptured_inorganic_groups = [group for group in inorganic_groups if group not in captured_inorganic_groups]
         
-        # Adjusted header order with single quotes for static text
-        header = [
-            'System', 'Planet', 'Resource Group' if not include_unique_resources else 'Unique Resources', 
-            'Inorganic Score', 'Organic Score', 'Habitability Score', 
-        ]
-        writer.writerow(header)
+        if not uncaptured_inorganic_groups:
+            break  # Exit if no more uncaptured groups
         
-        # Write sorted data rows with reordered columns
-        for row in sorted_data:
-            writer.writerow([
-                row.get('system', ''), row['planet'], 
-                row.get('resource', '') if not include_unique_resources else ', '.join(row.get('unique_resources', [])),
-                row['inorganic_score'], row['organic_score'], row['habitability_score'],
-            ])
+        system_scores = {}
+        for system in all_systems:
+            if system['name'] in processed_systems:
+                continue
+            
+            score, counted_groups = 0, set()
+            for planet in system['planets']:
+                candidacy = planet['outpost_candidacy']
+                for resource in candidacy['resources']:
+                    if resource in uncaptured_inorganic_groups and resource not in counted_groups:
+                        counted_groups.add(resource)
+                        score += 1
+            
+            if score > 0:
+                system_scores[system['name']] = score
+        
+        if not system_scores:
+            break  # No more systems with uncaptured groups
+        
+        max_score = max(system_scores.values())
+        best_systems = [sys for sys, score in system_scores.items() if score == max_score]
+        
+        # Gather planets from the best scoring systems
+        for system_name in best_systems:
+            processed_systems.add(system_name)
+            for system in all_systems:
+                if system['name'] == system_name:
+                    for planet in system['planets']:
+                        candidacy = planet['outpost_candidacy']
+                        if candidacy['full_resource_chain']:
+                            final_planets.append(planet)
+                            for resource in candidacy['resources']:
+                                if resource in inorganic_groups:
+                                    captured_inorganic_groups.add(resource)
+                                    captured_inorganics.update(groups['inorganic'][resource])
+                                elif resource in inorganic_resources:
+                                    captured_inorganics.add(resource)
+                                elif resource in organic_resources:
+                                    captured_organics.add(resource)
+
+    # Debugging for uncaptured resources
+    uncaptured_inorganic_groups = [group for group in inorganic_groups if group not in captured_inorganic_groups]
+    uncaptured_inorganics = [res for res in inorganic_resources if res not in captured_inorganics]
+    uncaptured_organics = [res for res in organic_resources if res not in captured_organics]
     
-    print(f"Data written to {file_path}")
+    print(f"Uncaptured Inorganic Groups: {uncaptured_inorganic_groups}")
+    print(f"Uncaptured Inorganics: {uncaptured_inorganics}")
+    print(f"Uncaptured Organics: {uncaptured_organics}")
+    
+    return final_planets
+
+
 
 
 if __name__ == '__main__':
@@ -304,13 +353,13 @@ if __name__ == '__main__':
     
     # I do it like this to keep the door open for organic groups. 
     unique = {
-    category: {
-        key: value
-        for key, value in items.items()
-        if value == 'Unique' and key not in GATHERABLE_INORGANIC
+        category: {
+            key: value
+            for key, value in items.items()
+            if value == 'Unique' and key not in GATHERABLE_ONLY_INORGANIC and key not in GATHERABLE_ONLY_ORGANIC
+        }
+        for category, items in rarity.items()
     }
-    for category, items in rarity.items()
-}
 
     inorganic_groups = load_resource_groups(INORGANIC_GROUPS_PATH, unique['inorganic'])
     groups = {'inorganic': inorganic_groups}

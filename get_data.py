@@ -229,7 +229,7 @@ def process_resources(planet, organic_dict, inorganic_dict):
     # Process each resource
     for resource in planet.get('resources', []):
         cleaned_resource = clean_output(resource)
-        if cleaned_resource in GATHERABLE_INORGANIC:
+        if cleaned_resource in GATHERABLE_ONLY_INORGANIC:
             special.append(resource)  # Add to special instead of inorganic
         elif cleaned_resource in inorganic_dict:
             inorganic.append(inorganic_dict[cleaned_resource]['Resource'])
