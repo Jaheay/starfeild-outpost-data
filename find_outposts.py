@@ -1,35 +1,11 @@
 from common import *
 import json
 
-def get_grouped_resources(resources, resource_groups, full_chain=False):
-    group_counts = {}
-    flat_resources = {}
-
-    # Flatten and map resources
-    for group, group_resources in resource_groups.items():
-        for item in group_resources:
-            flat_resources[item] = group
-        group_counts[group] = False if full_chain else 0  # Initialize based on `full_chain`
-
-    if full_chain:
-        # Set to True if a complete group is found
-        for group_name, required_resources in resource_groups.items():
-            if all(item in resources for item in required_resources):
-                group_counts[group_name] = True
-    else:
-        # Count individual resource occurrences
-        for resource in resources:
-            if resource in flat_resources:
-                group = flat_resources[resource]
-                group_counts[group] += 1
-
-    return {group: count for group, count in group_counts.items() if count}
-
 def find_fullchain_planets(system_data, inorganic_groups):
 
     for system in system_data:
         for planet in system['planets']:
-            grouped_resources = get_grouped_resources(planet['resources']['inorganic'], inorganic_groups, full_chain=True)
+            grouped_resources = get_grouped_inorganics(planet['resources']['inorganic'], inorganic_groups, full_chain=True)
             
             # Determine if full resource chain exists
             full_chain = any(is_complete for is_complete in grouped_resources.values())

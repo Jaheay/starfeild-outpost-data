@@ -228,7 +228,7 @@
                 ],
                 "scores": {
                     "habitability_score": "4.000",
-                    "organic_score": "6.000",
+                    "organic_score": "2.000",
                     "inorganic_score": "12.000"
                 }
             },
@@ -456,7 +456,7 @@
                 ],
                 "scores": {
                     "habitability_score": "-5.000",
-                    "organic_score": "8.000",
+                    "organic_score": "4.000",
                     "inorganic_score": "23.500"
                 }
             },
@@ -1244,7 +1244,7 @@
                 "moons": [],
                 "scores": {
                     "habitability_score": "-0.500",
-                    "organic_score": "1.000",
+                    "organic_score": "0.000",
                     "inorganic_score": "45.000"
                 }
             },
@@ -1843,7 +1843,7 @@
                 ],
                 "scores": {
                     "habitability_score": "2.500",
-                    "organic_score": "9.000",
+                    "organic_score": "0.000",
                     "inorganic_score": "42.600"
                 }
             },
@@ -3009,7 +3009,7 @@
                 ],
                 "scores": {
                     "habitability_score": "-5.000",
-                    "organic_score": "2.000",
+                    "organic_score": "1.000",
                     "inorganic_score": "26.250"
                 }
             },
@@ -3727,7 +3727,7 @@
                 "moons": [],
                 "scores": {
                     "habitability_score": "11.500",
-                    "organic_score": "3.000",
+                    "organic_score": "1.000",
                     "inorganic_score": "37.000"
                 }
             },
@@ -3920,7 +3920,7 @@
                 ],
                 "scores": {
                     "habitability_score": "-2.500",
-                    "organic_score": "18.000",
+                    "organic_score": "17.000",
                     "inorganic_score": "32.333"
                 }
             },
@@ -4861,7 +4861,7 @@
                 ],
                 "scores": {
                     "habitability_score": "1.500",
-                    "organic_score": "4.000",
+                    "organic_score": "1.000",
                     "inorganic_score": "12.429"
                 }
             },
@@ -6027,7 +6027,7 @@
                 ],
                 "scores": {
                     "habitability_score": "8.000",
-                    "organic_score": "8.000",
+                    "organic_score": "6.000",
                     "inorganic_score": "7.500"
                 }
             },
@@ -8923,7 +8923,7 @@
                 "moons": [],
                 "scores": {
                     "habitability_score": "17.000",
-                    "organic_score": "16.000",
+                    "organic_score": "10.000",
                     "inorganic_score": "13.667"
                 }
             },
@@ -10030,7 +10030,7 @@
                 ],
                 "scores": {
                     "habitability_score": "0.500",
-                    "organic_score": "0.000",
+                    "organic_score": "1.500",
                     "inorganic_score": "0.333"
                 }
             },
@@ -15293,7 +15293,7 @@
                 "moons": [],
                 "scores": {
                     "habitability_score": "6.000",
-                    "organic_score": "6.000",
+                    "organic_score": "2.000",
                     "inorganic_score": "33.667"
                 }
             },
@@ -15556,7 +15556,7 @@
                 ],
                 "scores": {
                     "habitability_score": "14.500",
-                    "organic_score": "8.000",
+                    "organic_score": "4.000",
                     "inorganic_score": "14.286"
                 }
             },
@@ -15705,7 +15705,7 @@
                 ],
                 "scores": {
                     "habitability_score": "3.000",
-                    "organic_score": "27.000",
+                    "organic_score": "24.000",
                     "inorganic_score": "14.333"
                 }
             },
@@ -20022,7 +20022,7 @@
                 ],
                 "scores": {
                     "habitability_score": "-1.000",
-                    "organic_score": "6.000",
+                    "organic_score": "4.000",
                     "inorganic_score": "27.000"
                 }
             },
@@ -20484,7 +20484,7 @@
                 ],
                 "scores": {
                     "habitability_score": "9.000",
-                    "organic_score": "10.000",
+                    "organic_score": "4.000",
                     "inorganic_score": "17.000"
                 }
             },
@@ -22983,7 +22983,7 @@
                 ],
                 "scores": {
                     "habitability_score": "6.000",
-                    "organic_score": "5.000",
+                    "organic_score": "1.000",
                     "inorganic_score": "37.667"
                 }
             },
@@ -23363,7 +23363,7 @@
                 "moons": [],
                 "scores": {
                     "habitability_score": "0.500",
-                    "organic_score": "0.000",
+                    "organic_score": "1.500",
                     "inorganic_score": "25.000"
                 }
             },
@@ -23445,7 +23445,7 @@
                 "moons": [],
                 "scores": {
                     "habitability_score": "9.000",
-                    "organic_score": "17.000",
+                    "organic_score": "13.000",
                     "inorganic_score": "14.333"
                 }
             },
@@ -23774,7 +23774,7 @@
                 ],
                 "scores": {
                     "habitability_score": "2.500",
-                    "organic_score": "3.000",
+                    "organic_score": "2.000",
                     "inorganic_score": "8.333"
                 }
             },
@@ -24502,7 +24502,7 @@
                 ],
                 "scores": {
                     "habitability_score": "6.500",
-                    "organic_score": "10.000",
+                    "organic_score": "2.000",
                     "inorganic_score": "13.800"
                 }
             },
@@ -24884,7 +24884,7 @@
                 ],
                 "scores": {
                     "habitability_score": "12.000",
-                    "organic_score": "38.000",
+                    "organic_score": "17.714",
                     "inorganic_score": "13.667"
                 }
             },
@@ -25320,7 +25320,7 @@
                 "moons": [],
                 "scores": {
                     "habitability_score": "16.000",
-                    "organic_score": "5.000",
+                    "organic_score": "2.000",
                     "inorganic_score": "25.000"
                 }
             },
@@ -25953,7 +25953,7 @@
                 ],
                 "scores": {
                     "habitability_score": "7.000",
-                    "organic_score": "18.000",
+                    "organic_score": "15.000",
                     "inorganic_score": "14.500"
                 }
             },
@@ -30183,7 +30183,7 @@
                 "moons": [],
                 "scores": {
                     "habitability_score": "10.500",
-                    "organic_score": "8.000",
+                    "organic_score": "2.000",
                     "inorganic_score": "7.000"
                 }
             },
@@ -30543,7 +30543,7 @@
                 ],
                 "scores": {
                     "habitability_score": "6.500",
-                    "organic_score": "12.000",
+                    "organic_score": "1.000",
                     "inorganic_score": "9.667"
                 }
             },
@@ -31514,7 +31514,7 @@
                 ],
                 "scores": {
                     "habitability_score": "0.000",
-                    "organic_score": "16.000",
+                    "organic_score": "7.000",
                     "inorganic_score": "36.333"
                 }
             },
@@ -32149,7 +32149,7 @@
                 ],
                 "scores": {
                     "habitability_score": "6.000",
-                    "organic_score": "4.000",
+                    "organic_score": "2.000",
                     "inorganic_score": "14.000"
                 }
             },
@@ -33769,7 +33769,7 @@
                 ],
                 "scores": {
                     "habitability_score": "1.000",
-                    "organic_score": "8.000",
+                    "organic_score": "5.000",
                     "inorganic_score": "10.333"
                 }
             },
@@ -34715,7 +34715,7 @@
                 ],
                 "scores": {
                     "habitability_score": "11.000",
-                    "organic_score": "8.000",
+                    "organic_score": "6.000",
                     "inorganic_score": "13.000"
                 }
             },
@@ -34787,7 +34787,7 @@
                 ],
                 "scores": {
                     "habitability_score": "8.500",
-                    "organic_score": "2.000",
+                    "organic_score": "1.000",
                     "inorganic_score": "7.000"
                 }
             },
@@ -37055,7 +37055,7 @@
                 ],
                 "scores": {
                     "habitability_score": "6.500",
-                    "organic_score": "12.000",
+                    "organic_score": "5.000",
                     "inorganic_score": "14.286"
                 }
             },
@@ -37946,7 +37946,7 @@
                 "moons": [],
                 "scores": {
                     "habitability_score": "-7.500",
-                    "organic_score": "1.000",
+                    "organic_score": "0.000",
                     "inorganic_score": "49.571"
                 }
             },
@@ -38514,7 +38514,7 @@
                 ],
                 "scores": {
                     "habitability_score": "8.000",
-                    "organic_score": "14.000",
+                    "organic_score": "4.000",
                     "inorganic_score": "12.000"
                 }
             },
@@ -39081,7 +39081,7 @@
                 ],
                 "scores": {
                     "habitability_score": "4.000",
-                    "organic_score": "12.000",
+                    "organic_score": "6.000",
                     "inorganic_score": "14.000"
                 }
             },
@@ -40463,7 +40463,7 @@
                 ],
                 "scores": {
                     "habitability_score": "11.500",
-                    "organic_score": "17.000",
+                    "organic_score": "13.000",
                     "inorganic_score": "13.000"
                 }
             },
@@ -41384,7 +41384,7 @@
                 ],
                 "scores": {
                     "habitability_score": "8.500",
-                    "organic_score": "10.000",
+                    "organic_score": "5.000",
                     "inorganic_score": "27.000"
                 }
             },
@@ -42577,7 +42577,7 @@
                 "moons": [],
                 "scores": {
                     "habitability_score": "8.000",
-                    "organic_score": "15.000",
+                    "organic_score": "2.000",
                     "inorganic_score": "16.500"
                 }
             },
@@ -42868,7 +42868,7 @@
                 "moons": [],
                 "scores": {
                     "habitability_score": "-5.500",
-                    "organic_score": "4.000",
+                    "organic_score": "0.000",
                     "inorganic_score": "41.000"
                 }
             },
@@ -44492,7 +44492,7 @@
                 ],
                 "scores": {
                     "habitability_score": "5.000",
-                    "organic_score": "6.000",
+                    "organic_score": "3.000",
                     "inorganic_score": "37.667"
                 }
             },
@@ -44904,7 +44904,7 @@
                 ],
                 "scores": {
                     "habitability_score": "-3.000",
-                    "organic_score": "10.000",
+                    "organic_score": "5.000",
                     "inorganic_score": "17.000"
                 }
             },
@@ -46471,7 +46471,7 @@
                 ],
                 "scores": {
                     "habitability_score": "11.000",
-                    "organic_score": "21.000",
+                    "organic_score": "4.000",
                     "inorganic_score": "8.750"
                 }
             },
@@ -49069,7 +49069,7 @@
                 ],
                 "scores": {
                     "habitability_score": "6.500",
-                    "organic_score": "12.000",
+                    "organic_score": "5.000",
                     "inorganic_score": "12.200"
                 }
             },
@@ -49481,7 +49481,7 @@
                 ],
                 "scores": {
                     "habitability_score": "7.000",
-                    "organic_score": "9.000",
+                    "organic_score": "5.000",
                     "inorganic_score": "46.000"
                 }
             },
@@ -51392,7 +51392,7 @@
                 ],
                 "scores": {
                     "habitability_score": "1.000",
-                    "organic_score": "10.000",
+                    "organic_score": "5.000",
                     "inorganic_score": "12.333"
                 }
             },
@@ -52809,7 +52809,7 @@
                 "moons": [],
                 "scores": {
                     "habitability_score": "-3.500",
-                    "organic_score": "1.000",
+                    "organic_score": "0.000",
                     "inorganic_score": "33.400"
                 }
             },
@@ -55265,7 +55265,7 @@
                 "moons": [],
                 "scores": {
                     "habitability_score": "-4.500",
-                    "organic_score": "11.000",
+                    "organic_score": "9.000",
                     "inorganic_score": "15.400"
                 }
             },
@@ -59891,7 +59891,7 @@
                 ],
                 "scores": {
                     "habitability_score": "2.500",
-                    "organic_score": "11.000",
+                    "organic_score": "3.000",
                     "inorganic_score": "33.667"
                 }
             },
@@ -60027,7 +60027,7 @@
                 "moons": [],
                 "scores": {
                     "habitability_score": "13.000",
-                    "organic_score": "6.000",
+                    "organic_score": "5.000",
                     "inorganic_score": "13.333"
                 }
             },
@@ -60796,7 +60796,7 @@
                 ],
                 "scores": {
                     "habitability_score": "-6.500",
-                    "organic_score": "8.000",
+                    "organic_score": "7.000",
                     "inorganic_score": "40.200"
                 }
             },
@@ -61638,7 +61638,7 @@
                 "moons": [],
                 "scores": {
                     "habitability_score": "-1.500",
-                    "organic_score": "3.000",
+                    "organic_score": "2.000",
                     "inorganic_score": "16.333"
                 }
             },
@@ -71341,7 +71341,7 @@
                 ],
                 "scores": {
                     "habitability_score": "9.500",
-                    "organic_score": "5.000",
+                    "organic_score": "3.000",
                     "inorganic_score": "17.000"
                 }
             },
@@ -72180,7 +72180,7 @@
                 ],
                 "scores": {
                     "habitability_score": "6.500",
-                    "organic_score": "7.000",
+                    "organic_score": "4.000",
                     "inorganic_score": "12.200"
                 }
             },
@@ -72263,7 +72263,7 @@
                 ],
                 "scores": {
                     "habitability_score": "14.500",
-                    "organic_score": "9.000",
+                    "organic_score": "4.000",
                     "inorganic_score": "10.143"
                 }
             },
@@ -72861,7 +72861,7 @@
                 "moons": [],
                 "scores": {
                     "habitability_score": "-12.500",
-                    "organic_score": "1.000",
+                    "organic_score": "0.000",
                     "inorganic_score": "21.000"
                 }
             },
@@ -74124,7 +74124,7 @@
                 ],
                 "scores": {
                     "habitability_score": "-4.000",
-                    "organic_score": "0.000",
+                    "organic_score": "0.500",
                     "inorganic_score": "6.000"
                 }
             },
@@ -74267,7 +74267,7 @@
                 ],
                 "scores": {
                     "habitability_score": "-2.000",
-                    "organic_score": "17.000",
+                    "organic_score": "5.000",
                     "inorganic_score": "28.500"
                 }
             },
@@ -75119,7 +75119,7 @@
                 ],
                 "scores": {
                     "habitability_score": "9.500",
-                    "organic_score": "19.000",
+                    "organic_score": "16.000",
                     "inorganic_score": "13.571"
                 }
             },
@@ -76015,7 +76015,7 @@
                 ],
                 "scores": {
                     "habitability_score": "10.500",
-                    "organic_score": "8.000",
+                    "organic_score": "5.000",
                     "inorganic_score": "31.000"
                 }
             },
@@ -79629,7 +79629,7 @@
                 ],
                 "scores": {
                     "habitability_score": "6.000",
-                    "organic_score": "12.000",
+                    "organic_score": "5.000",
                     "inorganic_score": "29.500"
                 }
             },
@@ -80525,7 +80525,7 @@
                 ],
                 "scores": {
                     "habitability_score": "-1.500",
-                    "organic_score": "13.000",
+                    "organic_score": "7.000",
                     "inorganic_score": "58.000"
                 }
             },
@@ -81519,7 +81519,7 @@
                 ],
                 "scores": {
                     "habitability_score": "5.500",
-                    "organic_score": "2.000",
+                    "organic_score": "1.000",
                     "inorganic_score": "17.000"
                 }
             },
@@ -81584,7 +81584,7 @@
                 ],
                 "scores": {
                     "habitability_score": "-7.000",
-                    "organic_score": "2.000",
+                    "organic_score": "0.000",
                     "inorganic_score": "18.500"
                 }
             },
@@ -82061,7 +82061,7 @@
                 ],
                 "scores": {
                     "habitability_score": "2.000",
-                    "organic_score": "9.000",
+                    "organic_score": "3.000",
                     "inorganic_score": "15.833"
                 }
             },
@@ -82185,7 +82185,7 @@
                 ],
                 "scores": {
                     "habitability_score": "3.000",
-                    "organic_score": "11.000",
+                    "organic_score": "9.000",
                     "inorganic_score": "11.000"
                 }
             },
@@ -83082,7 +83082,7 @@
                 ],
                 "scores": {
                     "habitability_score": "-9.500",
-                    "organic_score": "19.000",
+                    "organic_score": "2.000",
                     "inorganic_score": "12.429"
                 }
             },
@@ -83960,7 +83960,7 @@
                 ],
                 "scores": {
                     "habitability_score": "12.000",
-                    "organic_score": "16.000",
+                    "organic_score": "6.000",
                     "inorganic_score": "10.000"
                 }
             },
@@ -85122,7 +85122,7 @@
                 ],
                 "scores": {
                     "habitability_score": "9.500",
-                    "organic_score": "27.000",
+                    "organic_score": "9.800",
                     "inorganic_score": "10.600"
                 }
             },
@@ -86328,7 +86328,7 @@
                 ],
                 "scores": {
                     "habitability_score": "-1.000",
-                    "organic_score": "15.000",
+                    "organic_score": "7.000",
                     "inorganic_score": "11.000"
                 }
             },
@@ -86485,7 +86485,7 @@
                 ],
                 "scores": {
                     "habitability_score": "11.000",
-                    "organic_score": "17.000",
+                    "organic_score": "8.000",
                     "inorganic_score": "13.667"
                 }
             },
@@ -88939,7 +88939,7 @@
                 ],
                 "scores": {
                     "habitability_score": "3.000",
-                    "organic_score": "9.000",
+                    "organic_score": "3.000",
                     "inorganic_score": "26.333"
                 }
             },
@@ -90140,7 +90140,7 @@
                 ],
                 "scores": {
                     "habitability_score": "6.500",
-                    "organic_score": "0.000",
+                    "organic_score": "1.500",
                     "inorganic_score": "2.667"
                 }
             },
@@ -90389,7 +90389,7 @@
                 "moons": [],
                 "scores": {
                     "habitability_score": "14.000",
-                    "organic_score": "22.000",
+                    "organic_score": "7.000",
                     "inorganic_score": "26.000"
                 }
             },
@@ -90694,7 +90694,7 @@
                 ],
                 "scores": {
                     "habitability_score": "1.500",
-                    "organic_score": "8.000",
+                    "organic_score": "4.000",
                     "inorganic_score": "16.000"
                 }
             },
@@ -91314,7 +91314,7 @@
                 "moons": [],
                 "scores": {
                     "habitability_score": "12.000",
-                    "organic_score": "9.000",
+                    "organic_score": "4.000",
                     "inorganic_score": "38.000"
                 }
             },
@@ -92498,7 +92498,7 @@
                 "moons": [],
                 "scores": {
                     "habitability_score": "-6.500",
-                    "organic_score": "8.000",
+                    "organic_score": "2.000",
                     "inorganic_score": "9.000"
                 }
             },
@@ -92812,7 +92812,7 @@
                 ],
                 "scores": {
                     "habitability_score": "18.500",
-                    "organic_score": "14.000",
+                    "organic_score": "12.000",
                     "inorganic_score": "13.571"
                 }
             },
@@ -93910,7 +93910,7 @@
                 ],
                 "scores": {
                     "habitability_score": "12.500",
-                    "organic_score": "21.000",
+                    "organic_score": "9.000",
                     "inorganic_score": "13.571"
                 }
             },

@@ -1,11 +1,9 @@
 import json
 import csv
 from common import *
-from find_outposts import get_grouped_resources, find_fullchain_planets
 from itertools import product
 import matplotlib.pyplot as plt
 from scipy.stats import chi2_contingency
-from pprint import pprint
 
 ### VALUES ###
 
@@ -336,8 +334,8 @@ if __name__ == '__main__':
     FUN_FACTS = False
     HIGHS_AND_LOWS = False
     TOP_10S = False
-    FLORA_FAUNA = False
-    BIOME_GROUP_TENDENCY = True
+    FLORA_FAUNA = True
+    BIOME_GROUP_TENDENCY = False
 
     
     if VALUES:
@@ -450,9 +448,9 @@ if __name__ == '__main__':
         domesticable_flora = [resource for resource in domesticable_flora]
         domesticable_fauna_only = [resource for resource in domesticable_fauna if resource not in domesticable_flora]
 
-        print(gatherable_only)
-        print(domesticable_flora)
-        print(domesticable_fauna_only)
+        print(json.dumps(gatherable_only, indent=4))
+        organics = {'flora': domesticable_flora, 'fauna': domesticable_fauna_only}
+        print(json.dumps(organics, indent=4))
 
     if BIOME_GROUP_TENDENCY: 
         resource_biome_data = []
@@ -467,7 +465,7 @@ if __name__ == '__main__':
         print(json.dumps(inorganic_groups, indent=4))
         for system in systems:
             for planet in system.get('planets', []):
-                grouped_resources = get_grouped_resources(planet['resources']['inorganic'], inorganic_groups)
+                grouped_resources = get_grouped_inorganics(planet['resources']['inorganic'], inorganic_groups)
                 for resource in grouped_resources: 
                     resource_biomes = {
                         'planet': planet['name'],

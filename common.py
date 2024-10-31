@@ -7,9 +7,9 @@ SCORED_SYSTEM_DATA_PATH = 'data/scored_systems_data.json'
 INORGANIC_DATA_PATH = 'data/inorganic.csv'
 ORGANIC_DATA_PATH = 'data/organic.csv'
 INORGANIC_GROUPS_PATH='data/inorganic_groups.json'
+ORGANIC_GROUPS_PATH='data/organic_groups.json'
+GATHERABLE_ONLY_PATH='data/gatherable_only.json'
 
-GATHERABLE_ONLY_INORGANIC = ['Aqueous Hematite', 'Caelumite']
-GATHERABLE_ONLY_ORGANIC = ['Neurologic']
 RARITY_SCORES = {'Common': 1, 'Uncommon': 2, 'Rare': 4, 'Exotic': 8, 'Unique': 16}
 
 def load_resources(filename, shortname=False):
@@ -43,7 +43,7 @@ def save_system_data(path, data):
     with open(path, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
     
-def load_resource_groups(filename, unique_resource):
+def load_resource_groups(filename, unique_resource=[]):
     with open(filename, 'r', encoding='utf-8') as file:
         data = json.load(file)
 
@@ -107,3 +107,46 @@ def score_resources(resource_list, resource_rarity):
         rarity = resource_rarity.get(resource, 'Common')
         score += RARITY_SCORES.get(rarity, 1)  # Default to common score if unknown
     return score
+
+def get_grouped_inorganics(resources, resource_groups, full_chain=False):
+    group_counts = {}
+    flat_resources = {}
+
+    # Flatten and map resources
+    for group, group_resources in resource_groups.items():
+        for item in group_resources:
+            flat_resources[item] = group
+        group_counts[group] = False if full_chain else 0  # Initialize based on `full_chain`
+
+    if full_chain:
+        # Set to True if a complete group is found
+        for group_name, required_resources in resource_groups.items():
+            if all(item in resources for item in required_resources):
+                group_counts[group_name] = True
+    else:
+        # Count individual resource occurrences
+        for resource in resources:
+            if resource in flat_resources:
+                group = flat_resources[resource]
+                group_counts[group] += 1
+
+    return {group: count for group, count in group_counts.items() if count}
+
+
+def get_grouped_organics(resources, flora, fauna, resource_groups):
+    group_counts = {'flora': 0, 'fauna': 0}
+
+    for resource in resources:
+        # Check flora grouping
+        if resource in flora:
+            group_counts['flora'] += 1 if resource in resource_groups['flora'] else 0.25
+
+        # Check fauna grouping
+        elif resource in fauna:
+            group_counts['fauna'] += 1 if resource in resource_groups['fauna'] else 0.25
+
+    return {group: count for group, count in group_counts.items()}
+
+
+
+

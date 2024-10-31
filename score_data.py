@@ -2,9 +2,10 @@ from common import *
 import json
 
 
-def score_bonus(resources):
+def score_bonus(resources, gatherable_only):
+    flat_gatherables = [item for sublist in gatherable_only.values() for item in sublist]
     bonus = 0
-    if any(item in resources for item in GATHERABLE_ONLY_INORGANIC):
+    if any(item in resources for item in flat_gatherables):
         bonus += 12
     if 'Helium-3' in resources: 
         bonus += 14  # On top of +2 for being uncommon
@@ -115,22 +116,36 @@ def score_planet(planet, rarity, groups, full_chain=False, bonus=False):
     biome_group_ratio = 1
     habitability_score = calculate_habitability(planet)
 
-    resource_groups = get_grouped_resources(planet['resources']['inorganic'], groups['inorganic'], full_chain)
+    inorganic_groups = get_grouped_inorganics(resources=planet['resources']['inorganic'], resource_groups=groups['inorganic'], full_chain=full_chain)
+    organic_groups = get_grouped_organics(resources=planet['resources']['organic'], flora=planet['flora']['domesticable'], fauna=planet['fauna']['domesticable'], resource_groups=groups['organic'])
     
     # Don't do the biome bonus when calcualting for full chains, 
     # as full chains will always be in one biome
     if not full_chain: 
         num_biomes = len(planet['biomes'])
-        inorganic_group_count = len(resource_groups)
+        inorganic_group_count = len(inorganic_groups)
         biome_group_ratio = inorganic_group_count / num_biomes if num_biomes else 1
 
     # Inorganic resource score calculation
     resource_score_inorganic = score_resources(planet['resources']['inorganic'], rarity['inorganic']) * biome_group_ratio
-    resource_score_inorganic += score_bonus(planet['resources']['inorganic'])
+    resource_score_inorganic += score_bonus(planet['resources']['inorganic'], groups['gatherable_only'])
 
-    # Organic resource score calculation, checking if organic resources are available
-    if 'Water' in planet['resources']['inorganic']:
-        resource_score_organic = score_resources(planet['resources']['organic'], rarity['organic'])
+    # Organic resource score calculation, only score farmable resources
+    if len(planet['resources']['organic']) != 0:
+        resource_score_flora = score_resources(planet['flora']['domesticable'], rarity['organic'])
+        resource_score_fauna = score_resources(planet['fauna']['domesticable'], rarity['organic'])
+        # Calculate weights based on counts of relevant resources
+        total_relevant_resources = organic_groups['flora'] + organic_groups['fauna']
+        flora_score_weight = organic_groups['flora'] / total_relevant_resources if total_relevant_resources else 0
+        fauna_score_weight = organic_groups['fauna'] / total_relevant_resources if total_relevant_resources else 0
+
+        # Calculate resource scores based only on relevant resources
+        resource_score_organic = (resource_score_flora * flora_score_weight) + (resource_score_fauna * fauna_score_weight)
+
+
+    # Half the organic score if we don't have any water. 
+    if 'Water' not in planet['resources']['inorganic']:
+        resource_score_organic /= 2
 
     return {
         'habitability_score': f"{round(habitability_score, 3):.3f}",
@@ -166,13 +181,14 @@ if __name__ == '__main__':
     organic_rarity = load_resources(ORGANIC_DATA_PATH, shortname=False)
     rarity = { 'inorganic': inorganic_rarity, 'organic': organic_rarity}
     
-    # I do it like this to keep the door open for organic groups. 
     unique = {
         category: {key: value for key, value in items.items() if value == 'Unique'}
         for category, items in rarity.items()
     }
     inorganic_groups = load_resource_groups(INORGANIC_GROUPS_PATH, unique['inorganic'])
-    groups = {'inorganic': inorganic_groups}
+    organic_groups = load_resource_groups(ORGANIC_GROUPS_PATH, unique['inorganic'])
+    gatherable_only = load_resource_groups(GATHERABLE_ONLY_PATH) 
+    groups = {'inorganic': inorganic_groups, 'organic': organic_groups, 'gatherable_only': gatherable_only}
 
     all_systems = load_system_data(RAW_SYSTEM_DATA_PATH)
 
