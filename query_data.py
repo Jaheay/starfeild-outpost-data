@@ -224,15 +224,18 @@ def calculate_statistical_significance(frequency_data, expected_biome_distributi
 
         for biome, count in biomes.items():
             observed_counts.append(count)
-            # Scale expected count to match observed total for this resource
             expected = expected_biome_distribution.get(biome, 0) * sum(observed_counts)
             expected_counts.append(expected)
-            observed_vs_expected[biome] = count / expected if expected > 0 else 0
+            observed_vs_expected[biome] = {
+                'observed': count,
+                'expected': expected,
+                'ratio': count / expected if expected > 0 else 0
+            }
 
         # Perform chi-squared test
         chi2, p_value = chi2_contingency([observed_counts, expected_counts])[:2]
         
-        # Store results, including observed vs expected ratios
+        # Store results, including observed vs expected data
         significance_results[resource] = {
             'p_value': p_value,
             'significant': p_value < 0.05,
@@ -242,7 +245,6 @@ def calculate_statistical_significance(frequency_data, expected_biome_distributi
 
     return significance_results
 
-
 def print_significance_results(significance_results):
     print("\nSignificance Results:\n" + "="*30)
     for resource, data in significance_results.items():
@@ -250,41 +252,79 @@ def print_significance_results(significance_results):
         print(f"  - P-Value: {data['p_value']:.4f}")
         print(f"  - Significant: {'Yes' if data['significant'] else 'No'}")
         print("  - Observed vs. Expected Ratios:")
-        for biome, ratio in data['observed_vs_expected'].items():
+        for biome, values in data['observed_vs_expected'].items():
+            observed = values['observed']
+            expected = values['expected']
+            ratio = values['ratio']
             significance = " (significant)" if data['significant'] and ratio > 1 else ""
-            print(f"      {biome}: {ratio:.2f}{significance}")
+            print(f"      {biome}: observed {observed:.2f} vs expected {expected:.2f} -> ratio {ratio:.2f}{significance}")
     print("="*30 + "\n")
+
+import matplotlib.pyplot as plt
+
+import matplotlib.pyplot as plt
 
 def plot_biome_distribution(significance_results):
     for resource, data in significance_results.items():
         biomes = list(data['observed_vs_expected'].keys())
-        ratios = list(data['observed_vs_expected'].values())
-        
+        observed_values = [values['observed'] for values in data['observed_vs_expected'].values()]
+        expected_values = [values['expected'] for values in data['observed_vs_expected'].values()]
+
         plt.figure(figsize=(10, 6))
-        bars = plt.bar(biomes, ratios)
+        bars = plt.bar(biomes, observed_values, label='Observed')
         plt.xticks(rotation=90)
         plt.xlabel('Biomes')
-        plt.ylabel('Observed / Expected Ratio')
+        plt.ylabel('Observed Value')
         plt.title(f'Observed vs Expected Biome Distribution for {resource}')
         
-        # Adding callouts above each bar with the ratio value
-        for bar in bars:
+        # Add observed labels and individual expected lines for each bar
+        for bar, expected, observed in zip(bars, expected_values, observed_values):
+            # Label with the observed value above each bar
             yval = bar.get_height()
             plt.text(
                 bar.get_x() + bar.get_width() / 2,
                 yval,
-                f'{yval:.2f}',
+                f'{observed:.2f}',
                 ha='center',
                 va='bottom',
                 fontsize=9
+            )
+            # Draw a horizontal line at the expected value over the width of each bar
+            plt.hlines(
+                y=expected,
+                xmin=bar.get_x(),
+                xmax=bar.get_x() + bar.get_width(),
+                color='red',
+                linestyle='--',
+                linewidth=1
+            )
+
+            # Adjust expected text position if it overlaps with observed text
+            text_offset = 5  # Offset in points to nudge the text up or down
+            expected_va = 'bottom' if abs(expected - observed) > 10 else 'top'
+            expected_y = expected + (text_offset if expected_va == 'bottom' else -text_offset)
+            
+            # Label the expected line with its value
+            plt.text(
+                bar.get_x() + bar.get_width() / 2,
+                expected_y,
+                f'Expected {expected:.2f}',
+                ha='center',
+                va=expected_va,
+                color='red',
+                fontsize=5
             )
         
         plt.tight_layout()
         
         # Save the plot as an image file
         filename = f"{resource.replace(' ', '_')}_biome_distribution_vs_expected.png"
-        plt.savefig(filename)
+        plt.savefig(filename, dpi=150)
         plt.close()  # Close the figure to free memory and prevent display
+
+
+
+
 
 
 if __name__ == '__main__':
@@ -424,8 +464,7 @@ if __name__ == '__main__':
         }
 
         inorganic_groups = load_resource_groups(INORGANIC_GROUPS_PATH, unique)
-        find_fullchain_planets(systems, inorganic_groups)
-
+        print(json.dumps(inorganic_groups, indent=4))
         for system in systems:
             for planet in system.get('planets', []):
                 grouped_resources = get_grouped_resources(planet['resources']['inorganic'], inorganic_groups)
