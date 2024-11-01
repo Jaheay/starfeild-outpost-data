@@ -211,30 +211,56 @@ def find_best_systems(system_data, unique_resources, resources_by_rarity, groups
                 break
     
     print(f"BEFORE HIGHLANDER: {len(final_planets)}")
-    # Step 3: Apply Highlander Rules - Deduplicate Planets with the Same Full Resource Chain
-    unique_full_chain_planets = {}
+    ## Step 3: Apply Highlander Rules - Deduplicate Planets with the Same Full Resource Chain
+    # Separate list to ensure unique resource planets are always included
+    unique_resource_planets = []
+    # Track full chains provided by unique-resource planets
+    locked_full_chains = set()
+
+    # First, process planets with unique resources to lock their chains
     for planet in final_planets:
-        # Skip planets with unique resources
+        # Check if this planet has a unique resource
+        if planet.get('outpost_candidacy', {}).get('unique'):
+            unique_resource_planets.append(planet)
+            
+            # If it has a full resource chain, lock it to prevent duplicates
+            full_resource_chain = tuple(planet['outpost_candidacy'].get('full_resource_chain', []))
+            if full_resource_chain:
+                locked_full_chains.add(full_resource_chain)
+
+    # Dictionary to track the best representative for each remaining full resource chain
+    unique_full_chain_planets = {}
+
+    # Now, process non-unique planets and only add them if their chain is unlocked
+    for planet in final_planets:
+        # Skip unique-resource planets, as they are already handled
         if planet.get('outpost_candidacy', {}).get('unique'):
             continue
         
-        full_resource_chain = tuple(planet['outpost_candidacy'].get('full_resource_chain', []))  # Use tuple for hashing
+        # Apply Highlander rules for non-unique planets with full chains
+        full_resource_chain = tuple(planet['outpost_candidacy'].get('full_resource_chain', []))
+        if not full_resource_chain or full_resource_chain in locked_full_chains:
+            continue  # Skip if no chain or if the chain is already locked by a unique resource planet
+
         planet_organics = set()
-        
+
         # Calculate unique organics on this planet
         for resource_type in groups['organic']:
             for resource in planet.get(resource_type, {}).get('domesticable', {}):
                 if resource in groups['organic'][resource_type] and resource not in captured_organics:
                     planet_organics.add(resource)
-        
-        # Score planet based on unique organics count
+
+        # For non-unique planets, keep only the best representative for each chain
         if full_resource_chain not in unique_full_chain_planets or len(planet_organics) > len(unique_full_chain_planets[full_resource_chain][1]):
             unique_full_chain_planets[full_resource_chain] = (planet, planet_organics)
 
-    # Retain only the best planet for each full resource chain
-    final_planets = [planet for planet, organics in unique_full_chain_planets.values()] + [
-        planet for planet in final_planets if planet.get('outpost_candidacy', {}).get('unique')
-    ]
+    # Retain the final list of planets, including all unique resource planets and the best representatives for each full resource chain
+    final_planets = unique_resource_planets + [planet for planet, organics in unique_full_chain_planets.values()]
+
+
+
+
+
 
     # Reset captured_inorganics and captured_organics
     captured_inorganics.clear()
@@ -266,7 +292,6 @@ def find_best_systems(system_data, unique_resources, resources_by_rarity, groups
 
     # TODO: Thoughts. We have 22 at this point. So, only 2 more and already over our ideal budget.
     # Maybe I need to rework, to find planets that can replace full chain planets. 
-    # We could weight on uncaptured inorganics, to give us a better shot. 
 
     return final_planets
 
