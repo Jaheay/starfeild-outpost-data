@@ -229,7 +229,7 @@ def process_resources(planet, organic_dict, inorganic_dict):
     # Process each resource
     for resource in planet.get('resources', []):
         cleaned_resource = clean_output(resource)
-        if cleaned_resource in GATHERABLE_ONLY_INORGANIC:
+        if cleaned_resource in gatherable_dict:
             special.append(resource)  # Add to special instead of inorganic
         elif cleaned_resource in inorganic_dict:
             inorganic.append(inorganic_dict[cleaned_resource]['Resource'])
@@ -323,6 +323,7 @@ if __name__ == '__main__':
     
     inorganic_dict = load_resources(INORGANIC_DATA_PATH, shortname=True)
     organic_dict = load_resources(ORGANIC_DATA_PATH, shortname=True)
+    gatherable_dict = load_resource_groups(GATHERABLE_ONLY_PATH) 
 
     all_systems = load_system_data(RAW_SYSTEM_DATA_PATH)
     system_ids = {system['id'] for system in all_systems}
@@ -338,7 +339,7 @@ if __name__ == '__main__':
             system_data = scrape_star_system(inara_url)
             system_data['id'] = system_id  # Add ID
             for planet in system_data['planets']:
-                process_resources(planet, organic_dict, inorganic_dict)
+                process_resources(planet, organic_dict, inorganic_dict, gatherable_dict)
                 clean_attributes(planet.get('attributes', {}))
 
             print(f'System Name Processed: {system_data["name"]}') 
