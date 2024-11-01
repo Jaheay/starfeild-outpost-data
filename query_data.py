@@ -1,9 +1,12 @@
 import json
 import csv
-from common import *
 from itertools import product
 import matplotlib.pyplot as plt
 from scipy.stats import chi2_contingency
+
+# Local Imports
+from config import *
+from common import load_resources, load_resource_groups, load_system_data, get_grouped_inorganics
 
 ### VALUES ###
 
@@ -455,10 +458,11 @@ if __name__ == '__main__':
     if BIOME_GROUP_TENDENCY: 
         resource_biome_data = []
         inorganic_rarity = load_resources(INORGANIC_DATA_PATH, shortname=False)
+        gatherable_only = load_resource_groups(GATHERABLE_ONLY_PATH) 
         
         unique = {
             key for key, value in inorganic_rarity.items()
-            if value == 'Unique' and key not in GATHERABLE_ONLY_INORGANIC
+            if value == 'Unique' and key not in gatherable_only['inorganic']
         }
 
         inorganic_groups = load_resource_groups(INORGANIC_GROUPS_PATH, unique)

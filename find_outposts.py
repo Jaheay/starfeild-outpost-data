@@ -1,5 +1,6 @@
-from common import *
-import json
+# Local Imports
+from config import *
+from common import get_grouped_inorganics, get_grouped_organics, score_inorganic, score_organics, load_resource_groups, load_resources, load_system_data
 
 def find_fullchain_planets(system_data, inorganic_groups):
 
@@ -38,18 +39,21 @@ def score_by_desired(candidate_planets, groups, desired_inorganics=[], desired_o
     planet_scores = {}
 
     for planet in candidate_planets:
-
-        organic_group_counts = get_grouped_organics(resources=planet['resources']['organic'], flora=planet['flora']['domesticable'], fauna=planet['fauna']['domesticable'], resource_groups=groups['organic'])
+        resource_score_organic = 0
+        resource_score_inorganic = 0
+        
 
         # Gather only desired organics for scoring
-        planet_flora = [resource for resource in planet['flora']['domesticable'] if resource in desired_organics]
-        planet_fauna = [resource for resource in planet['flora']['domesticable'] if resource in desired_organics]
-        planet_inorganics = [resource for resource in planet['resources']['inorganic'] if resource in desired_inorganics]
+        if len(desired_organics) > 0:
+            organic_group_counts = get_grouped_organics(resources=planet['resources']['organic'], flora=planet['flora']['domesticable'], fauna=planet['fauna']['domesticable'], resource_groups=groups['organic'])
+            planet_flora = [resource for resource in planet['flora']['domesticable'] if resource in desired_organics]
+            planet_fauna = [resource for resource in planet['flora']['domesticable'] if resource in desired_organics]
+            resource_score_organic = score_organics(planet_flora, planet_fauna, organic_group_counts, rarity['organic'])
+        if len(desired_inorganics) > 0:
+            planet_inorganics = [resource for resource in planet['resources']['inorganic'] if resource in desired_inorganics]
+            resource_score_inorganic = score_inorganic(planet_inorganics, rarity['inorganic'], full_chain=True)
         
-        # Score resources based on rarity, if available
-        resource_score_inorganic = score_inorganic(planet_inorganics, rarity['inorganic'], full_chain=True)
-        resource_score_organic = score_organics(planet_flora, planet_fauna, organic_group_counts, rarity['organic'])
-
+        
         planet_scores[planet['name']] = resource_score_inorganic + resource_score_organic  
     
     return planet_scores
@@ -169,7 +173,7 @@ def find_best_systems(system_data, unique_resources, resources_by_rarity, groups
         # Use `score_by_desired` to rank candidates based on desired organics and desired inorganics
         scored_planets = score_by_desired(
             candidate_planets,
-            desired_inorganics=uncaptured_inorganics, #['Helium-3', 'Water']
+            desired_inorganics=uncaptured_inorganics + ['Helium-3', 'Water'], # Make sure these are in here
             desired_organics=uncaptured_organics,
             resources_by_rarity=resources_by_rarity,
             groups=groups
@@ -211,6 +215,10 @@ def find_best_systems(system_data, unique_resources, resources_by_rarity, groups
                 break
     
     print(f"BEFORE HIGHLANDER: {len(final_planets)}")
+    for planet in final_planets:
+        full_resource_chain = planet['outpost_candidacy'].get('full_resource_chain', "")
+        unique_resource = planet['outpost_candidacy'].get('unique', "")
+        print(f"{planet['name']}: Reason: {full_resource_chain}{unique_resource}")
     ## Step 3: Apply Highlander Rules - Deduplicate Planets with the Same Full Resource Chain
     # Separate list to ensure unique resource planets are always included
     unique_resource_planets = []
@@ -242,22 +250,30 @@ def find_best_systems(system_data, unique_resources, resources_by_rarity, groups
         if not full_resource_chain or full_resource_chain in locked_full_chains:
             continue  # Skip if no chain or if the chain is already locked by a unique resource planet
 
-        planet_organics = set()
+        # Collect planets by resource chain for scoring
+        if full_resource_chain not in unique_full_chain_planets:
+            unique_full_chain_planets[full_resource_chain] = []
+        unique_full_chain_planets[full_resource_chain].append(planet)
 
-        # Calculate unique organics on this planet
-        for resource_type in groups['organic']:
-            for resource in planet.get(resource_type, {}).get('domesticable', {}):
-                if resource in groups['organic'][resource_type] and resource not in captured_organics:
-                    planet_organics.add(resource)
+    # Determine the best planet for each full resource chain
+    best_planets = []
+    for chain, candidates in unique_full_chain_planets.items():
+        # Score candidate planets for this chain
+        scored_planets = score_by_desired(
+            candidates,
+            groups=groups,
+            desired_inorganics=uncaptured_inorganics + ['Helium-3', 'Water'],
+            desired_organics=uncaptured_organics,
+            resources_by_rarity=resources_by_rarity
+        )
 
-        # For non-unique planets, keep only the best representative for each chain
-        if full_resource_chain not in unique_full_chain_planets or len(planet_organics) > len(unique_full_chain_planets[full_resource_chain][1]):
-            unique_full_chain_planets[full_resource_chain] = (planet, planet_organics)
+        # Find the planet with the highest score
+        best_planet_name = max(scored_planets, key=scored_planets.get)
+        best_planet = next(planet for planet in candidates if planet['name'] == best_planet_name)
+        best_planets.append(best_planet)
 
     # Retain the final list of planets, including all unique resource planets and the best representatives for each full resource chain
-    final_planets = unique_resource_planets + [planet for planet, organics in unique_full_chain_planets.values()]
-
-
+    final_planets = unique_resource_planets + best_planets
 
 
 
@@ -280,8 +296,7 @@ def find_best_systems(system_data, unique_resources, resources_by_rarity, groups
     uncaptured_inorganics = [res for res in all_inorganic_resources if res not in captured_inorganics]
     uncaptured_organics = [res for res in all_organic_resources if res not in captured_organics]
 
-    print(f"Uncaptured Inorganics: {uncaptured_inorganics}")
-    print(f"Uncaptured Organics: {uncaptured_organics}")
+   
 
 
     print(f"AFTER HIGHLANDER: {len(final_planets)}")
@@ -290,7 +305,10 @@ def find_best_systems(system_data, unique_resources, resources_by_rarity, groups
         unique_resource = planet['outpost_candidacy'].get('unique', "")
         print(f"{planet['name']}: Reason: {full_resource_chain}{unique_resource}")
 
-    # TODO: Thoughts. We have 22 at this point. So, only 2 more and already over our ideal budget.
+    print(f"Uncaptured Inorganics: {uncaptured_inorganics}")
+    print(f"Uncaptured Organics: {uncaptured_organics}")
+
+    # TODO: Thoughts. We have 21 at this point. So, only 2 more and already over our ideal budget.
     # Maybe I need to rework, to find planets that can replace full chain planets. 
 
     return final_planets

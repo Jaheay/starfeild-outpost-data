@@ -5,7 +5,9 @@ import json
 import re
 import os
 import json
-from common import *
+from common import load_resource_groups, load_resources, load_system_data, get_gatherable_domesticable, save_system_data
+from config import *
+
 
 
 def clean_output(text):
