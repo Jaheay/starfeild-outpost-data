@@ -635,7 +635,7 @@ def print_final_results(final_planets, uncaptured_resources):
         print("FAILURE")
         success = False
 
-    print(f"\nFinal Planets ({len(final_planets)}):")
+    print(f"\nFinal Planets:")
     for planet in final_planets:
         outpost_candidacy = planet.get('outpost_candidacy', {})
         system_name = planet.get('system_name', 'Unknown System')
@@ -663,12 +663,10 @@ def print_final_results(final_planets, uncaptured_resources):
                 reasons.append("- Has Water")
             for reason in reasons:
                 print(f"\t{reason}")
-
-    print("\nUncaptured Inorganics:")
-    print(sorted(uncaptured_resources['inorganic']))
-
-    print("\nUncaptured Organics:")
-    print(sorted(uncaptured_resources['organic']))
+    
+    print(f"\nNumber of Planets: {len(final_planets)}")
+    print(f"Uncaptured Inorganics: {'\n' + sorted(uncaptured_resources['inorganic']) if len(uncaptured_resources['inorganic']) > 0 else 'None'}")
+    print(f"Uncaptured Organics: {'\n' + sorted(uncaptured_resources['organic']) if len(uncaptured_resources['organic']) > 0 else 'None'}")
 
 
 
