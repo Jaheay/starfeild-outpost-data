@@ -583,7 +583,7 @@ def find_best_systems(system_data, unique_resources, resources_by_rarity, groups
     )
 
 
-    # We do a second pass, this time, weighting the only resources not captured by the first pass. 
+    # Step 2: Capture systems with full chains that contibute the most to uncaptured organics.
     final_planets, processed_systems, captured_resources = capture_full_chain_systems(
         system_data, processed_systems, final_planets, captured_resources, resources_by_rarity, groups
     )
@@ -665,9 +665,11 @@ def print_final_results(final_planets, uncaptured_resources):
                 print(f"\t{reason}")
     
     print(f"\nNumber of Planets: {len(final_planets)}")
-    print(f"Uncaptured Inorganics: {'\n' + sorted(uncaptured_resources['inorganic']) if len(uncaptured_resources['inorganic']) > 0 else 'None'}")
-    print(f"Uncaptured Organics: {'\n' + sorted(uncaptured_resources['organic']) if len(uncaptured_resources['organic']) > 0 else 'None'}")
 
+    print(f"Uncaptured Inorganics: {'\n' + sorted(uncaptured_resources['inorganic']) if len(uncaptured_resources['inorganic']) > 0 else 'None'}")
+
+
+    print(f"Uncaptured Organics: {'\n' + sorted(uncaptured_resources['organic']) if len(uncaptured_resources['organic']) > 0 else 'None'}")
 
 
 
